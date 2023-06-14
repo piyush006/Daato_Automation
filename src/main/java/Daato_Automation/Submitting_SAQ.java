@@ -40,6 +40,7 @@ public void submitting_SAQ() throws InterruptedException {
 	driver.get("https://yopmail.com/en/");
 	driver.findElement(By.xpath("//input[@id='login']")).sendKeys(Email);
 	driver.findElement(By.xpath("//i[@class='material-icons-outlined f36']")).click();
+	Thread.sleep(4000);
 	driver.switchTo().frame(driver.findElement(By.id("ifmail")));
 	driver.findElement(By.xpath("//a[contains(text(),'View the request')]")).click();
 	

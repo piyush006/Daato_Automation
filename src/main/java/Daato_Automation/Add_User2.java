@@ -88,7 +88,9 @@ driver.switchTo().newWindow(WindowType.TAB);
 driver.get("https://yopmail.com/en/");
 driver.findElement(By.xpath("//input[@id='login']")).sendKeys(Email);
 driver.findElement(By.xpath("//i[@class='material-icons-outlined f36']")).click();
+Thread.sleep(3000);
 driver.switchTo().frame(driver.findElement(By.id("ifmail")));
+Thread.sleep(3000);
 driver.findElement(By.xpath("//table/tbody/tr[3]/td[2]/a")).click();
 System.out.println("piyush");
 
