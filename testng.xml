@@ -3,10 +3,12 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="Daato_Automation.Add_User"/>
+      <class name="Daato_Automation.Add_User2"/>
+       <class name="Daato_Automation.Change_Language"/>
       <class name="Daato_Automation.Add_Supplier"/>
       <class name="Daato_Automation.Submitting_SAQ"/>
       <class name="Daato_Automation.Accepting_SAQ"/>
+     
      
       
       

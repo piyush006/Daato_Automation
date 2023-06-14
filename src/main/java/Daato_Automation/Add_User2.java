@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import Excel.utility.Xls_Reader;
 
-public class Add_User extends Base_Class{
+public class Add_User2 extends Base_Class{
 	
 	
 String User_Invited;
