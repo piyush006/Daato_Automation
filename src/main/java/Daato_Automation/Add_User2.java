@@ -196,7 +196,7 @@ public void add_isolated_data_provider() throws InterruptedException {
 	Thread.sleep(2000);
 	driver.findElement(By.xpath("//header/div[1]/div[3]/div[4]/button[1]/span[1]/*[1]")).click();
 	
-	driver.findElement(By.xpath("//button[normalize-space()='Ad']")).click();
+	driver.findElement(By.xpath("//button[normalize-space()='Add']")).click();
 	
 	 Xls_Reader reader = new Xls_Reader("C:\\Users\\47Billion\\Desktop\\xlsx\\add_isolated_data_provider.xlsx");
 	 
