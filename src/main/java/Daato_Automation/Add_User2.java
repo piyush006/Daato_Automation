@@ -21,7 +21,7 @@ String Name;
 
 
 	
-@Test(priority=1)
+@Test
 
 
 public void add_user_admin() throws InterruptedException {
@@ -108,8 +108,8 @@ Thread.sleep(4000);
 }
 
 
-@Test(priority=2)
-//@Test(enabled=false)
+@Test
+
 
 public void add_user_data_provider() throws InterruptedException {
 	
@@ -167,8 +167,9 @@ public void add_user_data_provider() throws InterruptedException {
 	 
 }
 }
-@Test(priority=3)
-//@Test(enabled=false)
+
+@Test
+
 
 public void add_isolated_data_provider() throws InterruptedException {
 	
