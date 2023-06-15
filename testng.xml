@@ -9,10 +9,8 @@
       <class name="Daato_Automation.Submitting_SAQ"/>
       <class name="Daato_Automation.Accepting_SAQ"/>
      </classes>
-<<<<<<< HEAD
+
   </test> <!-- Test -->
-=======
-     </test> <!-- Test -->
->>>>>>> 47ae64928d0aab5e611dcb22143b08d5eca27a27
+
 </suite> <!-- Suite -->
    
