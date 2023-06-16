@@ -21,7 +21,7 @@ String Name;
 
 
 	
-@Test(enabled = false)
+@Test
 
 public void add_user_admin() throws InterruptedException {
 	
@@ -107,7 +107,7 @@ Thread.sleep(4000);
 }
 
 
-@Test(enabled = false)
+@Test
 
 
 
