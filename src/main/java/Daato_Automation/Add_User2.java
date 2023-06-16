@@ -23,7 +23,6 @@ String Name;
 	
 @Test
 
-
 public void add_user_admin() throws InterruptedException {
 	
 	
