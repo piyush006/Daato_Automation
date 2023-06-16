@@ -75,7 +75,7 @@ public void add_supplier() throws InterruptedException {
 		
 		
 	
-	
+
 	
 	driver.findElement(By.xpath("//input[@placeholder='Legal company name']")).sendKeys(Company_Name);
 	driver.findElement(By.id("searchSelectID-undefined")).click();
