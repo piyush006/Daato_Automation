@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Daato_Automation.Accept_CoC">
+      <class name="Daato_Automation.Send_CoC">
         <methods>
-          <include name="accept_CoC"/>
           <include name="chrome_setup"/>
           <include name="tearDown"/>
+          <include name="send_coc"/>
         </methods>
-      </class> <!-- Daato_Automation.Accept_CoC -->
+      </class> <!-- Daato_Automation.Send_CoC -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -82,7 +82,7 @@ public void add_supplier() throws InterruptedException {
 		 int Product1 = (int) P;
 		
 	
-	
+
 	
 	driver.findElement(By.xpath("//input[@id='singleLineTextID-Company name (required)']")).sendKeys(Company_Name);
 	driver.findElement(By.xpath("//input[@id='singleLineTextID-Contact email']")).sendKeys(Contact_Email);

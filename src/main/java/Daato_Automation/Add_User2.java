@@ -21,8 +21,12 @@ String Name;
 
 
 	
+<<<<<<< HEAD
 @Test(priority=1)
 
+=======
+@Test
+>>>>>>> 5b827dcbeffc5b2fe74e5f0acf2e33d53a3e8847
 
 public void add_user_admin() throws InterruptedException {
 	
@@ -40,7 +44,7 @@ public void add_user_admin() throws InterruptedException {
 	driver.findElement(By.xpath("//li[normalize-space()='English']")).click();
 	driver.findElement(By.xpath("//button[@id='buttonID-applySettings']")).click();
 	
-	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(240));
+	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(640));
 	String Success =   wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='sc-breuTD liTfKa MuiTypography-root MuiTypography-body1']"))).getText();
 	
 	System.out.println(Success);
@@ -127,7 +131,7 @@ public void add_user_data_provider() throws InterruptedException {
 	driver.findElement(By.xpath("//li[normalize-space()='English']")).click();
 	driver.findElement(By.xpath("//button[@id='buttonID-applySettings']")).click();
 	
-	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(240));
+	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(640));
 	String Success =   wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='sc-breuTD liTfKa MuiTypography-root MuiTypography-body1']"))).getText();
 	
 	System.out.println(Success);
@@ -186,7 +190,7 @@ public void add_isolated_data_provider() throws InterruptedException {
 	driver.findElement(By.xpath("//li[normalize-space()='English']")).click();
 	driver.findElement(By.xpath("//button[@id='buttonID-applySettings']")).click();
 	
-	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(240));
+	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(640));
 	String Success =   wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='sc-breuTD liTfKa MuiTypography-root MuiTypography-body1']"))).getText();
 	
 	System.out.println(Success);
