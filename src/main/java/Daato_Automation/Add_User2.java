@@ -21,7 +21,7 @@ String Name;
 
 
 	
-@Test(enabled = false)
+@Test(priority=1)
 
 
 public void add_user_admin() throws InterruptedException {
@@ -32,7 +32,7 @@ public void add_user_admin() throws InterruptedException {
 	driver.findElement(By.id("password")).sendKeys("681993@Virat");
 	Thread.sleep(2000);
 	driver.findElement(By.xpath("(//button[@name='action'][normalize-space()='Continue'])[2]")).click();
-	Thread.sleep(2000);
+	Thread.sleep(5000);
 	
 	driver.findElement(By.xpath("//p[@class='sc-breuTD dAOWMV MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter']")).click();
 	driver.findElement(By.id("menuItemId-profile")).click();
@@ -108,7 +108,7 @@ Thread.sleep(4000);
 }
 
 
-@Test(enabled = false)
+@Test
 
 
 
@@ -119,7 +119,7 @@ public void add_user_data_provider() throws InterruptedException {
 	driver.findElement(By.id("password")).sendKeys("681993@Virat");
 	Thread.sleep(2000);
 	driver.findElement(By.xpath("(//button[@name='action'][normalize-space()='Continue'])[2]")).click();
-	Thread.sleep(2000);
+	Thread.sleep(5000);
 	
 	driver.findElement(By.xpath("//p[@class='sc-breuTD dAOWMV MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter']")).click();
 	driver.findElement(By.id("menuItemId-profile")).click();
@@ -171,7 +171,6 @@ public void add_user_data_provider() throws InterruptedException {
 
 @Test
 
-
 public void add_isolated_data_provider() throws InterruptedException {
 	
 	
@@ -179,7 +178,7 @@ public void add_isolated_data_provider() throws InterruptedException {
 	driver.findElement(By.id("password")).sendKeys("681993@Virat");
 	Thread.sleep(2000);
 	driver.findElement(By.xpath("(//button[@name='action'][normalize-space()='Continue'])[2]")).click();
-	Thread.sleep(2000);
+	Thread.sleep(5000);
 	
 	driver.findElement(By.xpath("//p[@class='sc-breuTD dAOWMV MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter']")).click();
 	driver.findElement(By.id("menuItemId-profile")).click();

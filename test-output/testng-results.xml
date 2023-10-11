@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-10-11T16:47:32 IST" name="Default suite" finished-at="2023-10-11T16:48:18 IST" duration-ms="46440">
+    <groups>
+    </groups>
+    <test started-at="2023-10-11T16:47:32 IST" name="Default test" finished-at="2023-10-11T16:48:18 IST" duration-ms="46440">
+      <class name="Daato_Automation.Accept_CoC">
+        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:Daato_Automation.Accept_CoC@4229bb3f]" started-at="2023-10-11T16:47:32 IST" name="chrome_setup" finished-at="2023-10-11T16:47:37 IST" duration-ms="5280" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chrome_setup -->
+        <test-method signature="accept_CoC()[pri:0, instance:Daato_Automation.Accept_CoC@4229bb3f]" started-at="2023-10-11T16:47:37 IST" name="accept_CoC" finished-at="2023-10-11T16:48:18 IST" duration-ms="40926" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accept_CoC -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Daato_Automation.Accept_CoC@4229bb3f]" started-at="2023-10-11T16:48:18 IST" name="tearDown" finished-at="2023-10-11T16:48:18 IST" duration-ms="206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Daato_Automation.Accept_CoC -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

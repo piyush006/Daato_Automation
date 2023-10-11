@@ -3,7 +3,21 @@
 <suite name="Suite">
   <test  name="Test">
     <classes>
-      <class name="Daato_Automation.Add_User2"/>
+      <class name="Daato_Automation.Add_Supplier"/>
+        <class name="Daato_Automation.Abstract_Risk_Calculation"/>
+      <class name="Daato_Automation.Self_Assessment_SAQ"/>
+      <class name="Daato_Automation.Self_Assessment"/>
+      <class name="Daato_Automation.Accepting_SAQ"/>
+       <class name="Daato_Automation.Risk_Priority_Self_Assessment"/>
+       <class name="Daato_Automation.Send_CoC"/>
+       <class name="Daato_Automation.Accept_CoC"/>
+       
+      
+
+      
+      
+      
+     
       
      </classes>
 
