@@ -68,10 +68,10 @@ public class Self_Assessment extends Base_Class{
 		
 		
 		
-	   // driver.findElement(By.id("username")).sendKeys(Email);
+	  //  driver.findElement(By.id("username")).sendKeys(Email);
 		driver.findElement(By.id("password")).sendKeys("681993@Virat");
 		driver.findElement(By.xpath("//button[contains(text(),'Continue')]")).click();
-		//driver.findElement(By.xpath("(//button[@name='action'][normalize-space()='Continue'])[2]")).click();
+	//	driver.findElement(By.xpath("(//button[@name='action'][normalize-space()='Continue'])[2]")).click();
 		Thread.sleep(3000);
 		reader.setCellData("Add_Supplier","User_Registered",i+2,"Yes");
         Thread.sleep(2000);
@@ -138,6 +138,7 @@ public class Self_Assessment extends Base_Class{
 		
 		
 }
+
 
 @Test(priority=2)
 	

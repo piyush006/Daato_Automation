@@ -12,6 +12,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Excel.utility.Xls_Reader;
+import daato_automation_page.LoginPage;
 
 public class Abstract_Risk_Calculation_1 extends Base_Class{
 	
@@ -27,30 +28,18 @@ public void abstract_risk_changes_to_default_settings() throws InterruptedExcept
 	ArrayList<String> Actual_Result = new ArrayList<String>();
 	
 	Xls_Reader reader = new Xls_Reader("C:\\Users\\47Billion\\Desktop\\xlsx\\Add_Supplier_Afghanistan.xlsx");
-	
-	
-	
 	 
 	 int count = reader.getRowCount("abstract_logic_1");
-	
 
 	 for (int i=0;i<count-1;i++) {
 		 
 		 String Expected =reader.getCellData("abstract_logic_1","Expected_Abstract_Risk_Assement_Category_Wise",i+2);
 
 		 Expected_Result.add(Expected);	 
-		 
-		 
 	 }
-	
-	
-	
-	
-	driver.findElement(By.id("username")).sendKeys("piyush.soni@47billion.com");
-	driver.findElement(By.id("password")).sendKeys("681993@Virat");
-	Thread.sleep(2000);
-	driver.findElement(By.xpath("(//button[@name='action'][normalize-space()='Continue'])[2]")).click();
-	Thread.sleep(2000);
+
+	LoginPage login = new LoginPage(driver);
+	login.LoginApplication("piyush.soni@47billion.com", "681993@Virat");
 	
 	driver.findElement(By.xpath("//p[@class='sc-breuTD dAOWMV MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter']")).click();
 	driver.findElement(By.id("menuItemId-profile")).click();

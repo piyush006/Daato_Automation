@@ -3,27 +3,14 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Daato_Automation.Self_Assessment">
-        <methods>
-          <include name="add_environmental_performance"/>
-          <include name="chrome_setup"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- Daato_Automation.Self_Assessment -->
-      <class name="Daato_Automation.Accepting_SAQ">
-        <methods>
-          <include name="chrome_setup"/>
-          <include name="accepting_SAQ"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- Daato_Automation.Accepting_SAQ -->
-      <class name="Daato_Automation.Abstract_Risk_Calculation">
+      <class name="Daato_Automation.Self_Assessment_SAQ">
         <methods>
           <include name="chrome_setup"/>
           <include name="tearDown"/>
-          <include name="to_verify_abstrac_risk"/>
+          <include name="sendSAQ"/>
+          <include name="self_assessment_before_saq"/>
         </methods>
-      </class> <!-- Daato_Automation.Abstract_Risk_Calculation -->
+      </class> <!-- Daato_Automation.Self_Assessment_SAQ -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
