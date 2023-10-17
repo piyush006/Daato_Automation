@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-13T17:42:02 IST" name="Default suite" finished-at="2023-10-13T17:42:51 IST" duration-ms="49177">
+  <suite started-at="2023-10-17T16:55:27 IST" name="Default suite" finished-at="2023-10-17T16:56:22 IST" duration-ms="54926">
     <groups>
     </groups>
-    <test started-at="2023-10-13T17:42:02 IST" name="Default test" finished-at="2023-10-13T17:42:51 IST" duration-ms="49177">
-      <class name="daato_automation_test.AddSupplierTest">
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.AddSupplierTest@2ddc9a9f]" started-at="2023-10-13T17:42:02 IST" name="chrome_setup" finished-at="2023-10-13T17:42:10 IST" duration-ms="8537" status="PASS">
+    <test started-at="2023-10-17T16:55:27 IST" name="Default test" finished-at="2023-10-17T16:56:22 IST" duration-ms="54926">
+      <class name="daato_automation_test.AcceptCOCTest">
+        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.AcceptCOCTest@2a7f1f10]" started-at="2023-10-17T16:55:27 IST" name="chrome_setup" finished-at="2023-10-17T16:55:32 IST" duration-ms="5223" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chrome_setup -->
-        <test-method signature="add_supplier()[pri:0, instance:daato_automation_test.AddSupplierTest@2ddc9a9f]" started-at="2023-10-13T17:42:10 IST" name="add_supplier" finished-at="2023-10-13T17:42:51 IST" duration-ms="40312" status="PASS">
+        <test-method signature="accept_CoC()[pri:0, instance:daato_automation_test.AcceptCOCTest@2a7f1f10]" started-at="2023-10-17T16:55:32 IST" name="accept_CoC" finished-at="2023-10-17T16:56:21 IST" duration-ms="49420" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- add_supplier -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.AddSupplierTest@2ddc9a9f]" started-at="2023-10-13T17:42:51 IST" name="tearDown" finished-at="2023-10-13T17:42:51 IST" duration-ms="262" status="PASS">
+        </test-method> <!-- accept_CoC -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.AcceptCOCTest@2a7f1f10]" started-at="2023-10-17T16:56:21 IST" name="tearDown" finished-at="2023-10-17T16:56:22 IST" duration-ms="211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- daato_automation_test.AddSupplierTest -->
+      </class> <!-- daato_automation_test.AcceptCOCTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

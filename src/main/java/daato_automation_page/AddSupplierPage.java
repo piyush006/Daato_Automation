@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import daato_automation_pagecomponent.BasePage;
+import daato_automation_pagecomponent.PageConstants;
 
 /**
  * @author 47Billion
@@ -46,7 +47,7 @@ public class AddSupplierPage extends BasePage{
 	@FindBy(xpath="//input[@id='singleLineTextID-Contact name']")
 	WebElement contactName;
 	
-	@FindBy(xpath="//input[@id='searchSelectID-Countries of operation']")
+	@FindBy(xpath="//input[@id='searchSelectID-Countries of Operation']")
 	WebElement countriesOfOperation;
 	
 	@FindBy(xpath="//input[@id='searchSelectID-Products or services']")
@@ -71,13 +72,13 @@ public class AddSupplierPage extends BasePage{
 		contactEmail.sendKeys(contactE);
 		contactName.sendKeys(contactN);
 		countriesOfOperation.click();
-		driver.findElement(By.xpath("//li[@id='searchSelectID-Countries of operation-option-"+0+"']")).click();
-		driver.findElement(By.xpath("//li[@id='searchSelectID-Countries of operation-option-"+company1+"']")).click();
+		driver.findElement(By.xpath("//li[@id='searchSelectID-Countries of Operation-option-"+0+"']")).click();
+		driver.findElement(By.xpath("//li[@id='searchSelectID-Countries of Operation-option-"+company1+"']")).click();
 		productsOrServices.click();
 		driver.findElement(By.xpath("//li[@id='searchSelectID-Products or services-option-"+product1+"']")).click();
 		spendVolume.sendKeys(spendV);
-		threadSleep(3000);
+		threadSleep(PageConstants.WAIT_THREE);
 		createButton.click();
-		threadSleep(20000);
+		threadSleep(PageConstants.WAIT_TWENTY);
 	}	
 }

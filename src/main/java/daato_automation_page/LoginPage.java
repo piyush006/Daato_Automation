@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import daato_automation_pagecomponent.BasePage;
+import daato_automation_pagecomponent.PageConstants;
 
 
 public class LoginPage extends BasePage{
@@ -26,12 +27,29 @@ public class LoginPage extends BasePage{
 	
 	@FindBy(xpath="(//button[@name='action'][normalize-space()='Continue'])[2]")
 	WebElement login;
+	
+	@FindBy(xpath="//button[contains(text(),'Continue')]")
+	WebElement customerLogin;
 
 	public void LoginApplication(String email, String pass) throws InterruptedException {
 		emailId.sendKeys(email);
 		password.sendKeys(pass);
-		threadSleep(2000);
+		threadSleep(PageConstants.WAIT_TWO);
 		login.click();
-		threadSleep(2000);
+		threadSleep(PageConstants.WAIT_TWO);
+	}
+	
+	public void CustomerLoginApplication(String email, String pass) throws InterruptedException {
+		emailId.sendKeys(email);
+		password.sendKeys(pass);
+		threadSleep(PageConstants.WAIT_TWO);
+		customerLogin.click();
+		threadSleep(PageConstants.WAIT_THREE);
+	}
+	
+	public void YopmailLoginApplication(String pass) throws InterruptedException {
+		password.sendKeys(pass);
+		customerLogin.click();
+		threadSleep(PageConstants.WAIT_THREE);
 	}
 }

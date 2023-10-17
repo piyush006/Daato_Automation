@@ -15,9 +15,7 @@ import java.util.Set;
  */
 public class PropertyFileUtils {
 	Properties properties;
-	 String path = "C:\\Users\\47Billion\\eclipse-workspace\\Daato_Automation_Functional\\src\\test\\resources\\globaldata.properties";
-
-
+	String path = "C:\\Users\\47Billion\\eclipse-workspace\\Daato_Automation_Functional\\src\\test\\resources\\globaldata.properties";
 
 	public PropertyFileUtils() throws IOException {
 
@@ -31,35 +29,22 @@ public class PropertyFileUtils {
 			e.printStackTrace();
 		}
 
-		}
+	}
 
+	public String getuser() {
 
-public String getuser() {
-
-String email = properties.getProperty("globalemail");
+		String email = properties.getProperty("globalemail");
 
 		return email;
 
+	}
 
+	public String getpassword() {
+
+		String password = properties.getProperty("globalpass");
+
+		return password;
 
 	}
 
-
-public String getpassword() {
-
-	String password = properties.getProperty("globalpass");
-
-	return password;
-
 }
-
-
-
-
-
-
-}
-
-
-
-

@@ -3,12 +3,15 @@
 <suite name="Suite">
   <test  name="Test">
     <classes>
-
-      <class name="daato_automation_test.AddSupplierTest"/>
-     
-     
-      <class name="Daato_Automation.Self_Assessment_SAQ"/>
-     
+		
+	  <class name="daato_automation_test.AddSupplierTest"/>
+	  <class name="daato_automation_test.AbstractRiskCalculationTest"/>
+      <class name="daato_automation_test.SelfAssessmentSAQTest"/>
+      <class name="daato_automation_test.SelfAssessmentTest"/>
+      <class name="daato_automation_test.AcceptingSAQTest"/>
+      <class name="daato_automation_test.RiskPrioritySelfAssessmentTest"/>
+      <class name="daato_automation_test.SendCOCTest"/>
+      <class name="daato_automation_test.AcceptCOCTest"/>
       </classes>
 
   </test> <!-- Test -->

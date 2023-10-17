@@ -10,6 +10,7 @@ import daato_automation_page.AddSupplierPage;
 import daato_automation_page.LoginPage;
 import daato_automation_pagecomponent.PropertyFileUtils;
 import daato_automation_testcomponent.BaseTest;
+import daato_automation_testcomponent.TestConstants;
 
 /**
  * @author 47Billion
@@ -37,7 +38,7 @@ public void add_supplier() throws InterruptedException, IOException {
 	AddSupplierPage addSupplierpage = new AddSupplierPage(driver);
 	addSupplierpage.navigateToSupplier();
 	
-	Xls_Reader reader = new Xls_Reader("C:\\Users\\47Billion\\Desktop\\xlsx\\Add_Supplier_Afghanistan.xlsx");
+	Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH);
 	 
 	 int count = reader.getRowCount("Add_Supplier");
 	 
