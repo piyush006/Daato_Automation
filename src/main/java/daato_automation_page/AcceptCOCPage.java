@@ -1,13 +1,11 @@
 /* Hello, Welcome to Divya Coding */
 package daato_automation_page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import daato_automation_pagecomponent.BasePage;
 import daato_automation_pagecomponent.PageConstants;
 
@@ -86,7 +84,7 @@ public class AcceptCOCPage extends BasePage {
 		threadSleep(PageConstants.WAIT_ONE);
 		submit.click();
 		threadSleep(PageConstants.WAIT_FIVE);
-		comment.sendKeys("Piyush");
+		comment.sendKeys(PageConstants.PAGE_COMMENT_NAME);
 		threadSleep(PageConstants.WAIT_ONE);
 		submit1.click();
 		threadSleep(PageConstants.WAIT_EIGHT);

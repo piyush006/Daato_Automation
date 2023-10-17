@@ -536,7 +536,7 @@ public class SelfAssessmentPage extends BasePage {
 	public void submitSAQ() throws InterruptedException {
 		submitButton.click();
 		threadSleep(PageConstants.WAIT_FIVE);
-		comment.sendKeys("Piyush");
+		comment.sendKeys(PageConstants.PAGE_COMMENT_NAME);
 		threadSleep(PageConstants.WAIT_ONE);
 		submitButton1.click();
 		threadSleep(PageConstants.WAIT_EIGHT);
