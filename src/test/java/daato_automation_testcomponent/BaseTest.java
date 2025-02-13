@@ -22,16 +22,14 @@ public class BaseTest {
 	@BeforeMethod
 	public void chrome_setup() {
 
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\47Billion\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+		System.setProperty(TestConstants.TEST_CHROME_DRIVER, TestConstants.TEST_CHROME_DRIVER_PATH);
 		ChromeOptions ops = new ChromeOptions();
 		ops.addArguments("--remote-allow-origins=*");
 		driver = new ChromeDriver(ops);
-
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.manage().window().maximize();
-		driver.get("https://demo.daato.io/");
+		driver.get(TestConstants.TEST_DAATO_URL);
 
 	}
 
@@ -39,13 +37,18 @@ public class BaseTest {
 
 		Thread.sleep(second);
 	}
+	
+	public void printMessage(String message) {
+
+		System.out.println(message);
+	}
 
 	@AfterMethod
 	public void tearDown() {
 
 		driver.quit();
 	}
-	
+
 	public void openNewTabAndNavigate(String url) throws InterruptedException {
 		threadSleep(TestConstants.WAIT_TWO);
 		driver.switchTo().newWindow(WindowType.TAB);

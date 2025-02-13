@@ -20,7 +20,7 @@ import daato_automation_testcomponent.TestConstants;
  * @author 47Billion
  *
  */
-public class RiskPrioritySelfAssessmentTest extends BaseTest {
+public class RiskPriorityCodeOfConductTest extends BaseTest {
 
 	String Company;
 

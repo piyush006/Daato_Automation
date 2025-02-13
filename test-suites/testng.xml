@@ -5,7 +5,7 @@
     <classes>
 
       <class name="Daato_Automation.Add_Supplier"/>
-     
+     <class name="daato_automation_test.AbstractRiskCalculationTest"/>
       <class name="Daato_Automation.Self_Assessment_SAQ"/>
       <class name="Daato_Automation.Self_Assessment"/>
       <class name="Daato_Automation.Accepting_SAQ"/>

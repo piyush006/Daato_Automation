@@ -2,8 +2,13 @@
 package daato_automation_page;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
@@ -38,6 +43,15 @@ public class SelfAssessmentPage extends BasePage {
 	@FindBy(id = "ifmail")
 	WebElement mailFrame;
 
+	@FindBy(id = "ifinbox")
+	WebElement mailInboxFrame;
+	
+	@FindBy(xpath = "//p/b[contains(text(),'Code:')]")
+	WebElement otpElement;
+	
+	@FindBy(xpath = "//input[@name='submit']")
+	WebElement submitOTPButton;
+	
 	@FindBy(xpath = "//a[contains(text(),'View the request')]")
 	WebElement viewToRequestButton;
 
@@ -74,7 +88,7 @@ public class SelfAssessmentPage extends BasePage {
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-0']")
 	WebElement companyImpactSelect;
 
-	@FindBy(xpath = "//span[contains(text(),'Governance')]")
+	@FindBy(xpath = "//p[text()='Governance']")
 	WebElement governance;
 
 	@FindBy(xpath = "(//input[@id='searchSelectID-main'])[5]")
@@ -83,7 +97,7 @@ public class SelfAssessmentPage extends BasePage {
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-0']")
 	WebElement socialSustainabilityOption;
 
-	@FindBy(xpath = "//p[contains(text(),'Can you confirm that your company has a management person responsible for environment sustainability?')]")
+	@FindBy(xpath = "//div[contains(text(),'Can you confirm that your company has a management person responsible for environment sustainability?')]")
 	WebElement enviormentSustainabilityText;
 
 	@FindBy(xpath = "(//input[@id='searchSelectID-main'])[6]")
@@ -92,7 +106,7 @@ public class SelfAssessmentPage extends BasePage {
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-0']")
 	WebElement enviormentSustainabilityOption;
 
-	@FindBy(xpath = "//p[contains(text(),'Can you confirm that your company has a management person responsible for monitoring sustainability risks (e.g. a Human Rights Officer)?')]")
+	@FindBy(xpath = "//div[contains(text(), 'Can you confirm that your company has a management person responsible for monitoring sustainability risks')]")
 	WebElement monitoringSustainabilityText;
 
 	@FindBy(xpath = "(//input[@id='searchSelectID-main'])[7]")
@@ -101,7 +115,7 @@ public class SelfAssessmentPage extends BasePage {
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-0']")
 	WebElement monitoringSustainabilityOption;
 
-	@FindBy(xpath = "//p[contains(text(),'Can you confirm that your company has a Code of Co')]")
+	@FindBy(xpath = "//div[contains(text(), 'Can you confirm that your company has a Code of Conduct')]")
 	WebElement codeOfCoText;
 
 	@FindBy(xpath = "(//input[@id='searchSelectID-main'])[8]")
@@ -109,8 +123,8 @@ public class SelfAssessmentPage extends BasePage {
 
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-0']")
 	WebElement codeOfCoOption;
-	
-	@FindBy(xpath = "//p[contains(text(),'Can you confirm that your company has a Code of Co')]")
+
+	@FindBy(xpath = "//div[contains(text(), 'Can you confirm that your company has a grievance mechanism or documented complaints procedures')]")
 	WebElement codeOfCoText1;
 
 	@FindBy(xpath = "(//input[@id='searchSelectID-main'])[9]")
@@ -119,7 +133,7 @@ public class SelfAssessmentPage extends BasePage {
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-0']")
 	WebElement codeOfCoOption1;
 
-	@FindBy(xpath = "//p[contains(text(),'What kind of complaints can be submitted? Tick all that apply')]")
+	@FindBy(xpath = "//div[contains(text(), 'What kind of complaints can be submitted?')]")
 	WebElement complaintsText;
 
 	@FindBy(xpath = "(//input[@id='searchSelectID-main'])[10]")
@@ -143,7 +157,7 @@ public class SelfAssessmentPage extends BasePage {
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-0']")
 	WebElement buisnessEthicsOption;
 
-	@FindBy(xpath = "//p[contains(text(),'Does your company have a formal policy covering business ethics?')]")
+	@FindBy(xpath = "//div[text()='Does your company have a formal policy covering business ethics?']")
 	WebElement buisnessEthicsPolicyText;
 
 	@FindBy(xpath = "(//input[@id='searchSelectID-main'])[12]")
@@ -191,7 +205,7 @@ public class SelfAssessmentPage extends BasePage {
 	@FindBy(xpath = "//span[contains(text(),'Responsible supply chain management')]")
 	WebElement supplyChainManageText1;
 
-	@FindBy(xpath = "//p[contains(text(),'Please tick the areas that are covered by the sustainability requirements towards suppliers')]")
+	@FindBy(xpath = "//*[text()='Please select the areas that are covered by the sustainability requirements towards suppliers']")
 	WebElement tickTheAreaText;
 
 	@FindBy(xpath = "(//input[@id='searchSelectID-main'])[14]")
@@ -257,7 +271,7 @@ public class SelfAssessmentPage extends BasePage {
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-0']")
 	WebElement envPerformanceOption;
 
-	@FindBy(xpath = "//p[contains(text(),'Does your site have an environmental management sy')]")
+	@FindBy(xpath = "//div[contains(text(),'Does your site have an environmental management system')]")
 	WebElement envManagementSysText;
 
 	@FindBy(xpath = "(//input[@id='searchSelectID-main'])[18]")
@@ -266,7 +280,7 @@ public class SelfAssessmentPage extends BasePage {
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-0']")
 	WebElement envManagementSysOption;
 
-	@FindBy(xpath = "//p[contains(text(),'Does your company have a formal policy covering wo')]")
+	@FindBy(xpath = "//div[text()='Does your company have a formal policy covering working condition and human rights?']")
 	WebElement policyCoveringText;
 
 	@FindBy(xpath = "(//input[@id='searchSelectID-main'])[19]")
@@ -314,7 +328,7 @@ public class SelfAssessmentPage extends BasePage {
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-0']")
 	WebElement HealthSafetyPolicyOption;
 
-	@FindBy(xpath = "//p[contains(text(),'Please tick all that is covered in your occupational health and safety policy')]")
+	@FindBy(xpath = "//div[text()='Please select all that is covered in your occupational health and safety policy']")
 	WebElement HealthSafetyPolicyTickText;
 
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-0']")
@@ -338,7 +352,7 @@ public class SelfAssessmentPage extends BasePage {
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-6']")
 	WebElement HealthSafetyPolicyTick6;
 
-	@FindBy(xpath = "//p[contains(text(),'Does your company have a formal environmental poli')]")
+	@FindBy(xpath = "//div[contains(text(),'Does your company have a formal environmental policy')]")
 	WebElement formalEnvPolicyText;
 
 	@FindBy(xpath = "(//input[@id='searchSelectID-main'])[23]")
@@ -347,7 +361,7 @@ public class SelfAssessmentPage extends BasePage {
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-0']")
 	WebElement formalEnvPolicyOption;
 
-	@FindBy(xpath = "//p[contains(text(),'Which of the following areas are covered by this policy? Please tick all that apply.')]")
+	@FindBy(xpath = "//div[text()='Which of the following areas are covered by this policy? Please select all that apply.']")
 	WebElement formalEnvPolicyTickText;
 
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-0']")
@@ -398,7 +412,7 @@ public class SelfAssessmentPage extends BasePage {
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-15']")
 	WebElement formalEnvPolicyTick15;
 
-	@FindBy(xpath = "//span[contains(text(),'Responsible supply chain management')]")
+	@FindBy(xpath = "//span[text()='Responsible supply chain management']")
 	WebElement respSupplyChainManagText;
 
 	@FindBy(xpath = "//span[contains(text(),'Child labor')]")
@@ -455,7 +469,7 @@ public class SelfAssessmentPage extends BasePage {
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-0']")
 	WebElement fairWagesOption;
 
-	@FindBy(xpath = "//p[contains(text(),'Do you organise training for all your employees on your policy covering land rights?')]")
+	@FindBy(xpath = "//div[contains(text(),'Do you organise training for all your employees on your policy covering land rights?')]")
 	WebElement emptrainingText;
 
 	@FindBy(xpath = "(//input[@id='searchSelectID-main'])[32]")
@@ -470,7 +484,7 @@ public class SelfAssessmentPage extends BasePage {
 	@FindBy(xpath = "//p[contains(text(),'Conflicts and security')]")
 	WebElement conflictSecurityText;
 
-	@FindBy(xpath = "//p[contains(text(),'Can you confirm that your company does not hire')]")
+	@FindBy(xpath = "//div[contains(text(),'Can you confirm that your company does not hire')]")
 	WebElement companyHireText;
 
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-0']")
@@ -491,7 +505,7 @@ public class SelfAssessmentPage extends BasePage {
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-0']")
 	WebElement systWideOption;
 
-	@FindBy(xpath = "//p[contains(text(),'Do you get legal advice on compliance, contract ne')]")
+	@FindBy(xpath = "//div[contains(text(),'Do you get legal advice on compliance, contract ne')]")
 	WebElement legalAdviceCompText;
 
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-0']")
@@ -574,9 +588,9 @@ public class SelfAssessmentPage extends BasePage {
 		threadSleep(PageConstants.WAIT_TWO);
 		scrollIntoView(companyHireText);
 		threadSleep(PageConstants.WAIT_ONE);
-		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(4));
+		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement element3 = wait3
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[@id='searchSelectID-main'])[33]")));
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[@id='searchSelectID-main'])[34]")));
 		element3.click();
 		threadSleep(PageConstants.WAIT_ONE);
 		companyHireOption.click();
@@ -593,7 +607,7 @@ public class SelfAssessmentPage extends BasePage {
 		threadSleep(PageConstants.WAIT_ONE);
 		scrollIntoView(legalAdviceCompText);
 		threadSleep(PageConstants.WAIT_ONE);
-		WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(4));
+		WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement element4 = wait4
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[@id='searchSelectID-main'])[36]")));
 		element4.click();
@@ -891,9 +905,11 @@ public class SelfAssessmentPage extends BasePage {
 		openNewTabAndNavigate(PageConstants.PAGE_YOPMAIL_URL);
 		loginButton.sendKeys(email);
 		arrowButton.click();
-		threadSleep(PageConstants.WAIT_FOUR);
+		threadSleep(PageConstants.WAIT_TWO);
 		driver.switchTo().frame(mailFrame);
+		threadSleep(PageConstants.WAIT_TWO);
 		viewToRequestButton.click();
+
 	}
 
 	public void openNewTabAndNavigate(String url) throws InterruptedException {
@@ -926,6 +942,44 @@ public class SelfAssessmentPage extends BasePage {
 		companyImpactSelect.click();
 		threadSleep(PageConstants.WAIT_TWO);
 
+	}
+	
+	public void yopmailLoginforOTP(String email) throws InterruptedException {
+		String otp = getOtpFromEmail(email);
+		System.out.println(otp);
+        ArrayList<String> windowHandles = new ArrayList<>(driver.getWindowHandles());
+        System.out.println("Window handle size: " + windowHandles.size());
+        driver.switchTo().window(windowHandles.get(2));
+        WebElement otpInput = driver.findElement(By.id("otp"));
+        otpInput.sendKeys(otp);
+        submitOTPButton.click();        
+    }
+
+
+	public String getOtpFromEmail(String email) throws InterruptedException {
+		String emailBody = getEmailBodyFromInbox(email);
+		System.out.println(emailBody);
+
+		// Regular expression to extract the OTP (numeric string of 6 digits)
+		Pattern otpPattern = Pattern.compile("\\b\\d{6}\\b");
+		Matcher matcher = otpPattern.matcher(emailBody);
+
+		if (matcher.find()) {
+			return matcher.group(); // Return OTP if found
+		}
+
+		return null; // Return null if no OTP found
+	}
+
+	public String getEmailBodyFromInbox(String email) throws InterruptedException {
+		openNewTabAndNavigate(PageConstants.PAGE_YOPMAIL_URL);
+		System.out.println(email);
+		arrowButton.click();
+		threadSleep(PageConstants.WAIT_TWO);
+		driver.switchTo().frame(mailFrame);
+		String emailBody = otpElement.getText(); // Get the email body text
+		System.out.println(emailBody);
+		return emailBody; // Return the email body content as a string
 	}
 
 }

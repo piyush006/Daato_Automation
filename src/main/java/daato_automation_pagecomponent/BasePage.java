@@ -17,44 +17,49 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class BasePage {
 
 	WebDriver driver;
+
 	public BasePage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver;
 	}
 
 	public void waitForElementToAppear(By findBy) {
-	
+
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
 	}
-	
+
 	public void waitForWebElementToAppear(WebElement findBy) {
-		
+
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(findBy));
 	}
-	
+
 	public void waitForElementToDisappear(WebElement ele) throws InterruptedException {
-		
+
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.invisibilityOf(ele));
 	}
-	
+
 	public void threadSleep(long second) throws InterruptedException {
-		
+
 		Thread.sleep(second);
 	}
 	
+	public void printMessage(String message) {
+
+		System.out.println(message);
+	}
+
 	public void scrollIntoView(WebElement element) {
-		JavascriptExecutor jsExecutor = (JavascriptExecutor)driver;
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 		jsExecutor.executeScript(
 				"arguments[0].scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'});", element);
-		System.out.println("Scroll into view with smooth behavior");
 	}
-	
+
 	public void waitElementToBeClick(WebElement findBy) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
 		wait.until(ExpectedConditions.elementToBeClickable(findBy)).click();
 	}
-	
+
 }

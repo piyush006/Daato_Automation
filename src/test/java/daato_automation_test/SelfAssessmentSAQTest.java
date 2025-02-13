@@ -56,9 +56,8 @@ public class SelfAssessmentSAQTest extends BaseTest {
 
 			String status = driver
 					.findElement(By.xpath(
-							"(//p[@class='sc-fqkvVR cTnBHY MuiTypography-root MuiTypography-body1'])['" + i + "']"))
+							"(//p[@class='sc-jlZhew hojsNY MuiTypography-root MuiTypography-body1'])['" + i + "']"))
 					.getText();
-
 			Actual_Result.add(status);
 
 		}

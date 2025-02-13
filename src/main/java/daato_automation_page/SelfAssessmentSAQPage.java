@@ -2,6 +2,7 @@
 package daato_automation_page;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
@@ -34,7 +35,7 @@ public class SelfAssessmentSAQPage extends BasePage {
 	@FindBy(xpath = "(//p[contains(text(),'Self-assessment')])[1]")
 	WebElement selfAssessment;
 
-	@FindBy(xpath = "//button[normalize-space()='Actions']")
+	@FindBy(xpath = "//button[normalize-space(text())='Actions']")
 	WebElement action;
 
 	@FindBy(xpath = "//li[normalize-space()='Request Self-assessment']")
@@ -43,6 +44,15 @@ public class SelfAssessmentSAQPage extends BasePage {
 	@FindBy(xpath = "//button[normalize-space()='Send']")
 	WebElement send;
 
+	@FindBy(xpath = "//button[text()='Close']")
+	WebElement popupCloseButton;
+	
+	@FindBy(xpath = "//p[contains(text(),'Rows per page:')]")
+	WebElement rowsPerPageLabel;
+	
+	@FindBy(xpath = "//button[contains(text(),'Close')]")
+	WebElement closeButton;
+	
 	public void openNewTabAndNavigate(String url) throws InterruptedException {
 		driver.switchTo().newWindow(WindowType.TAB);
 		driver.get(url);
@@ -50,25 +60,32 @@ public class SelfAssessmentSAQPage extends BasePage {
 	}
 
 	public void selfAssessment(String company) throws InterruptedException {
+		//popupCloseButton.click();
 		searchIcon.click();
 		searchButton.sendKeys(company);
 		threadSleep(PageConstants.WAIT_TWO);
 		selectCompany(company);
 		threadSleep(PageConstants.WAIT_TWO);
+		//closeButton.click();
 		selfAssessment.click();
 
 	}
 
-	public void selectCompany(String company) {
-		driver.findElement(By.xpath("//div[contains(text(),'" + company + "')]")).click();
+	public void selectCompany(String company) throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", rowsPerPageLabel);
+		threadSleep(PageConstants.WAIT_TWO);
+		driver.findElement(By.xpath("//p[contains(text(),'" + company + "')]")).click();
 	}
 
 	public void sendSAQ(String company) throws InterruptedException {
+		//popupCloseButton.click();
 		searchIcon.click();
 		searchButton.sendKeys(company);
 		threadSleep(PageConstants.WAIT_TWO);
 		selectCompany(company);
 		threadSleep(PageConstants.WAIT_TWO);
+		//closeButton.click();
 		action.click();
 		threadSleep(PageConstants.WAIT_TWO);
 		requestSelfAssessment.click();

@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 import Excel.utility.Xls_Reader;
 import daato_automation_page.AbstractRiskCalculationPage;
 import daato_automation_page.LoginPage;
+import daato_automation_pagecomponent.PageConstants;
 import daato_automation_pagecomponent.PropertyFileUtils;
 import daato_automation_testcomponent.BaseTest;
 import daato_automation_testcomponent.TestConstants;
@@ -27,10 +28,12 @@ public class AbstractRiskCalculationTest extends BaseTest {
 	@Test
 
 	public void to_verify_abstrac_risk() throws InterruptedException, IOException {
-
+		/*
+		 * PropertyFileUtils prop = new PropertyFileUtils(); LoginPage login = new
+		 * LoginPage(driver); login.LoginApplication(prop.getuser(),
+		 * prop.getpassword());
+		 */
 		ArrayList<String> Expected_Result = new ArrayList<String>();
-		ArrayList<String> Expected_Product_Score = new ArrayList<String>();
-		ArrayList<String> Expected_Country_Score = new ArrayList<String>();
 		ArrayList<String> Actual_Result = new ArrayList<String>();
 		ArrayList<String> Actual_Result1 = new ArrayList<String>();
 		ArrayList<String> categories_wise_product_score = new ArrayList<String>();
@@ -57,8 +60,8 @@ public class AbstractRiskCalculationTest extends BaseTest {
 		abstractRiskCalculation.riskSettings();
 
 		abstractRiskCalculation.searchCompany();
-
 		Company = reader.getCellData("Recent_Added", "Company_Name", 2);
+
 		abstractRiskCalculation.riskLevel(Company);
 
 		java.util.List<WebElement> Actual_Risk1 = driver.findElements(By.xpath("//table/tbody/tr/td[3]"));
@@ -88,7 +91,7 @@ public class AbstractRiskCalculationTest extends BaseTest {
 		driver.findElement(By.xpath("//p[contains(text(),'Abstract assessment')]")).click();
 
 		String Final_Abstract_score = driver
-				.findElement(By.xpath("//div[@class='sc-ezreuY fFryNQ MuiStack-root']//div[1]//p[2]")).getText();
+				.findElement(By.xpath("//div[@class='sc-izQBue bPAzNg MuiStack-root']//div[1]//p[2]")).getText();
 
 		System.out.println(Final_Abstract_score);
 

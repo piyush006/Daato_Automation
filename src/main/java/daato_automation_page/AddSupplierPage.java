@@ -14,71 +14,80 @@ import daato_automation_pagecomponent.PageConstants;
  * @author 47Billion
  *
  */
-public class AddSupplierPage extends BasePage{
+public class AddSupplierPage extends BasePage {
 
-	WebDriver driver;	
+	WebDriver driver;
+
 	public AddSupplierPage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-		 
-	@FindBy(xpath="//header/div[1]/div[2]/div[1]/button[1]")
+
+	@FindBy(xpath = "//header/div[1]/div[2]/div[1]/button[1]")
 	WebElement module;
-	
-	@FindBy(xpath="//p[contains(text(),'Supply Chain Sustainability')]")
+
+	@FindBy(xpath = "//p[contains(text(),'Supply Chain Sustainability')]")
 	WebElement supplyChainSust;
-	
-	@FindBy(xpath="//span[contains(text(),'Repository')]")
+
+	@FindBy(xpath = "//span[contains(text(),'Repository')]")
 	WebElement repository;
-	
-	@FindBy(xpath="//button[normalize-space()='Add Supplier']")
+
+	@FindBy(xpath = "//button[normalize-space()='Add Supplier']")
 	WebElement addSupplier;
-	
-	@FindBy(xpath="//li[normalize-space()='Add']")
+
+	@FindBy(xpath = "//li[normalize-space()='Add']")
 	WebElement add;
-	
-	@FindBy(xpath="//input[@id='singleLineTextID-Company name (required)']")
+
+	@FindBy(xpath = "//input[@id='singleLineTextID-Company name (required)']")
 	WebElement companyName;
-	
-	@FindBy(xpath="//input[@id='singleLineTextID-Contact email']")
+
+	@FindBy(xpath = "//input[@id='singleLineTextID-Contact email']")
 	WebElement contactEmail;
-	
-	@FindBy(xpath="//input[@id='singleLineTextID-Contact name']")
+
+	@FindBy(xpath = "//input[@id='singleLineTextID-Contact name']")
 	WebElement contactName;
-	
-	@FindBy(xpath="//input[@id='searchSelectID-Countries of Operation']")
+
+	@FindBy(xpath = "//input[@id='searchSelectID-Countries of Operation']")
 	WebElement countriesOfOperation;
-	
-	@FindBy(xpath="//input[@id='searchSelectID-Products or services']")
+
+	@FindBy(xpath = "//input[@id='searchSelectID-Products or services']")
 	WebElement productsOrServices;
-	
-	@FindBy(xpath="//input[@id='numberInputID-Spend volume']")
+
+	@FindBy(xpath = "//input[@id='numberInputID-Spend volume']")
 	WebElement spendVolume;
-	
-	@FindBy(xpath="//button[normalize-space()='Create']")
+
+	@FindBy(xpath = "//button[normalize-space()='Create']")
 	WebElement createButton;
-	
-	public void navigateToSupplier() {
+
+	@FindBy(xpath = "//button[text()='Close']")
+	WebElement popupCloseButton;
+
+	public void navigateToSupplier() throws InterruptedException {
 		module.click();
 		supplyChainSust.click();
 		repository.click();
+		threadSleep(PageConstants.WAIT_THREE);
+		//popupCloseButton.click();
 		addSupplier.click();
 		add.click();
-	}	
-	
-	public void addSupplierForm(String companyN, String contactE, String contactN, int company1, int product1, String spendV) throws InterruptedException {
+	}
+
+	public void addSupplierForm(String companyN, String contactE, String contactN, int company1, int product1,
+			String spendV) throws InterruptedException {
 		companyName.sendKeys(companyN);
 		contactEmail.sendKeys(contactE);
 		contactName.sendKeys(contactN);
 		countriesOfOperation.click();
-		driver.findElement(By.xpath("//li[@id='searchSelectID-Countries of Operation-option-"+0+"']")).click();
-		driver.findElement(By.xpath("//li[@id='searchSelectID-Countries of Operation-option-"+company1+"']")).click();
+		driver.findElement(By.xpath("//li[@id='searchSelectID-Countries of Operation-option-" + 0 + "']")).click();
+		driver.findElement(By.xpath("//li[@id='searchSelectID-Countries of Operation-option-" + company1 + "']"))
+				.click();
 		productsOrServices.click();
-		driver.findElement(By.xpath("//li[@id='searchSelectID-Products or services-option-"+product1+"']")).click();
+		driver.findElement(By.xpath("//li[@id='searchSelectID-Products or services-option-" + 0 + "']")).click();
+		driver.findElement(By.xpath("//li[@id='searchSelectID-Products or services-option-" + product1 + "']")).click();		
 		spendVolume.sendKeys(spendV);
 		threadSleep(PageConstants.WAIT_THREE);
 		createButton.click();
 		threadSleep(PageConstants.WAIT_TWENTY);
-	}	
+	}
 }

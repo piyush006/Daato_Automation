@@ -5,7 +5,7 @@
     <classes>
       <class name="daato_automation_test.AcceptCOCTest">
         <methods>
-          <include name="accept_CoC"/>
+          <include name="accept_Btn"/>
           <include name="tearDown"/>
           <include name="chrome_setup"/>
         </methods>

@@ -9,36 +9,37 @@ import org.openqa.selenium.support.PageFactory;
 import daato_automation_pagecomponent.BasePage;
 import daato_automation_pagecomponent.PageConstants;
 
-
-public class LoginPage extends BasePage{
+public class LoginPage extends BasePage {
 
 	WebDriver driver;
+
 	public LoginPage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
-	@FindBy(id="username")
+
+	@FindBy(id = "username")
 	WebElement emailId;
-	
-	@FindBy(id="password")
+
+	@FindBy(id = "password")
 	WebElement password;
-	
-	@FindBy(xpath="(//button[@name='action'][normalize-space()='Continue'])[2]")
+
+	@FindBy(xpath = "//button[@id='kc-login']")
 	WebElement login;
-	
-	@FindBy(xpath="//button[contains(text(),'Continue')]")
+
+	@FindBy(xpath = "//button[contains(text(),'Continue')]")
 	WebElement customerLogin;
 
 	public void LoginApplication(String email, String pass) throws InterruptedException {
 		emailId.sendKeys(email);
+		login.click();
 		password.sendKeys(pass);
 		threadSleep(PageConstants.WAIT_TWO);
 		login.click();
 		threadSleep(PageConstants.WAIT_TWO);
 	}
-	
+
 	public void CustomerLoginApplication(String email, String pass) throws InterruptedException {
 		emailId.sendKeys(email);
 		password.sendKeys(pass);
@@ -46,8 +47,9 @@ public class LoginPage extends BasePage{
 		customerLogin.click();
 		threadSleep(PageConstants.WAIT_THREE);
 	}
-	
+
 	public void YopmailLoginApplication(String pass) throws InterruptedException {
+		
 		password.sendKeys(pass);
 		customerLogin.click();
 		threadSleep(PageConstants.WAIT_THREE);
