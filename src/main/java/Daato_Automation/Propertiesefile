@@ -1,0 +1,3 @@
+URLSettings:https://daato.daato.dev/modules/supplyChain/riskSettings
+URLSupplierrepo:https://daato.daato.dev/modules/supplyChain/suppliersRepository?
+URLIncident:https://daato.daato.dev/modules/supplyChain/incidents
