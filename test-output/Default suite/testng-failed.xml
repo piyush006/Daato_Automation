@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Daato_Automation.Abstract_Risk_Calculation">
+      <class name="daato_automation_test.AcceptCOCTest">
         <methods>
-          <include name="chrome_setup"/>
+          <include name="accept_Btn"/>
           <include name="tearDown"/>
-          <include name="to_verify_abstrac_risk"/>
+          <include name="chrome_setup"/>
         </methods>
-      </class> <!-- Daato_Automation.Abstract_Risk_Calculation -->
+      </class> <!-- daato_automation_test.AcceptCOCTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
