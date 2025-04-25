@@ -1,21 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-25T20:28:42 IST" name="Default suite" finished-at="2025-04-25T20:29:26 IST" duration-ms="43482">
+  <suite started-at="2025-04-25T23:43:30 IST" name="Default suite" finished-at="2025-04-25T23:44:31 IST" duration-ms="61508">
     <groups>
     </groups>
-    <test started-at="2025-04-25T20:28:42 IST" name="Default test" finished-at="2025-04-25T20:29:26 IST" duration-ms="43482">
+    <test started-at="2025-04-25T23:43:30 IST" name="Default test" finished-at="2025-04-25T23:44:31 IST" duration-ms="61508">
       <class name="daato_automation_test.SelfAssessmentSAQTest">
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.SelfAssessmentSAQTest@a1cdc6d]" started-at="2025-04-25T20:28:43 IST" name="chrome_setup" finished-at="2025-04-25T20:28:49 IST" duration-ms="6892" status="PASS">
+        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.SelfAssessmentSAQTest@a1cdc6d]" started-at="2025-04-25T23:43:30 IST" name="chrome_setup" finished-at="2025-04-25T23:43:39 IST" duration-ms="9518" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chrome_setup -->
-        <test-method signature="sendSAQ()[pri:0, instance:daato_automation_test.SelfAssessmentSAQTest@a1cdc6d]" started-at="2025-04-25T20:28:49 IST" name="sendSAQ" finished-at="2025-04-25T20:29:26 IST" duration-ms="36290" status="PASS">
+        <test-method signature="sendSAQ()[pri:0, instance:daato_automation_test.SelfAssessmentSAQTest@a1cdc6d]" started-at="2025-04-25T23:43:39 IST" name="sendSAQ" finished-at="2025-04-25T23:44:31 IST" duration-ms="51531" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <li class="sc-iGgWBj cuoIjU MuiButtonBase-root MuiMenuItem-root Mui-disabled MuiMenuItem-gutters Mui-disabled sc-fhzFiK kYDLE MuiMenuItem-root Mui-disabled MuiMenuItem-gutters" tabindex="-1" role="menuitem" aria-disabled="true">...</li> is not clickable at point (1359, 212). Other element would receive the click: <div class="sc-dAlyuH MuiBox-root" aria-label="Unavailable: Pending request or missing email.">...</div>
+  (Session info: chrome=135.0.7049.42)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [29623c465492aa4e2fba585e4bc1005a, clickElement {id=f.128347D2E0B1480FE536D083E8039632.d.84E7841F3DF45562FC45500392C1CEC5.e.100}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.42, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: C:\Users\47BILL~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58858}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58858/devtoo..., se:cdpVersion: 135.0.7049.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (29623c465492aa4e2fba585e4bc1005a)] -> xpath: //li[normalize-space()='Request Self-assessment']]
+Session ID: 29623c465492aa4e2fba585e4bc1005a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <li class="sc-iGgWBj cuoIjU MuiButtonBase-root MuiMenuItem-root Mui-disabled MuiMenuItem-gutters Mui-disabled sc-fhzFiK kYDLE MuiMenuItem-root Mui-disabled MuiMenuItem-gutters" tabindex="-1" role="menuitem" aria-disabled="true">...</li> is not clickable at point (1359, 212). Other element would receive the click: <div class="sc-dAlyuH MuiBox-root" aria-label="Unavailable: Pending request or missing email.">...</div>
+  (Session info: chrome=135.0.7049.42)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [29623c465492aa4e2fba585e4bc1005a, clickElement {id=f.128347D2E0B1480FE536D083E8039632.d.84E7841F3DF45562FC45500392C1CEC5.e.100}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.42, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: C:\Users\47BILL~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58858}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58858/devtoo..., se:cdpVersion: 135.0.7049.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (29623c465492aa4e2fba585e4bc1005a)] -> xpath: //li[normalize-space()='Request Self-assessment']]
+Session ID: 29623c465492aa4e2fba585e4bc1005a
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+at daato_automation_page.SelfAssessmentSAQPage.sendSAQ(SelfAssessmentSAQPage.java:91)
+at daato_automation_test.SelfAssessmentSAQTest.sendSAQ(SelfAssessmentSAQTest.java:89)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendSAQ -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.SelfAssessmentSAQTest@a1cdc6d]" started-at="2025-04-25T20:29:26 IST" name="tearDown" finished-at="2025-04-25T20:29:26 IST" duration-ms="260" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.SelfAssessmentSAQTest@a1cdc6d]" started-at="2025-04-25T23:44:31 IST" name="tearDown" finished-at="2025-04-25T23:44:31 IST" duration-ms="403" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

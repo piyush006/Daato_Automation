@@ -85,7 +85,7 @@ public class SelfAssessmentSAQTest extends BaseTest {
 		selfAssessmentSAQPage.openNewTabAndNavigate(TestConstants.TEST_SUPPLIER_REPO_URL);
 
 		Company = reader.getCellData("Recent_Added", "Company_Name", 2);
-
+        System.out.println(Company);
 		selfAssessmentSAQPage.sendSAQ(Company);
 
 	}
