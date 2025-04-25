@@ -27,6 +27,8 @@ public class BaseTest {
 	@BeforeMethod
 	public void chrome_setup() throws InterruptedException {
 		
+		 
+		
 		 // Define custom download path
 	    String downloadFilepath = System.getProperty("user.dir") + "/downloads";
 	    File downloadDir = new File(downloadFilepath);
@@ -48,6 +50,7 @@ public class BaseTest {
 	    ops.addArguments("--disable-gpu");
 	    ops.addArguments("--disable-dev-shm-usage");
 	    ops.addArguments("--no-sandbox");
+	    ops.addArguments("--headless=new");
 
 	    // Setup WebDriver
 	   WebDriverManager.chromedriver().setup();

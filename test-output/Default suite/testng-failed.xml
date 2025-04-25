@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="daato_automation_test.Checkrepositorydata">
+      <class name="daato_automation_test.Addincident">
         <methods>
-          <include name="checkacutaldata"/>
+          <include name="checkriskafteraddingincident"/>
           <include name="tearDown"/>
+          <include name="addincident"/>
           <include name="chrome_setup"/>
         </methods>
-      </class> <!-- daato_automation_test.Checkrepositorydata -->
+      </class> <!-- daato_automation_test.Addincident -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

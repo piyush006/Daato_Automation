@@ -41,7 +41,7 @@ public void fillsaq() throws IOException, InterruptedException {
 	System.out.println(Email);
 	PropertyFileUtils p = new PropertyFileUtils();
 	LoginPage login = new LoginPage(driver);
-	login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
+	login.LoginApplication(Email, PropertyFileUtils.getPassword());
 	threadSleep(PageConstants.WAIT_FOUR);
 	String token = getTokenFromBrowser();
 	System.out.println("Token:" + token);

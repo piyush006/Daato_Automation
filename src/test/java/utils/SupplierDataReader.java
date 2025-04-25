@@ -57,6 +57,7 @@ public class SupplierDataReader {
         File latestFile = Getlatestfilepath.getLatestFileFromDir(downloadPath, ".xlsx");
 
         latestExcelPath = latestFile.getAbsolutePath();
+        System.out.println(latestExcelPath);
 
         Xls_Reader reader = new Xls_Reader(latestExcelPath);
 

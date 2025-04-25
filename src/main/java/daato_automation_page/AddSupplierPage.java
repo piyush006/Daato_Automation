@@ -2,14 +2,18 @@
 package daato_automation_page;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import daato_automation_pagecomponent.BasePage;
 import daato_automation_pagecomponent.PageConstants;
-
+import java.time.Duration;
 /**
  * @author 47Billion
  *
@@ -53,7 +57,7 @@ public class AddSupplierPage extends BasePage {
 
 	@FindBy(xpath = "//input[@id='searchSelectID-Products or services']")
 	WebElement productsOrServices;
-
+	
 	@FindBy(xpath = "//input[@id='numberInputID-Spend volume']")
 	WebElement spendVolume;
 
@@ -80,11 +84,23 @@ public class AddSupplierPage extends BasePage {
 		contactName.sendKeys(contactN);
 		countriesOfOperation.click();
 		driver.findElement(By.xpath("//li[@id='searchSelectID-Countries of Operation-option-" + 0 + "']")).click();
-		driver.findElement(By.xpath("//li[@id='searchSelectID-Countries of Operation-option-" + company1 + "']"))
-				.click();
+		driver.findElement(By.xpath("//li[@id='searchSelectID-Countries of Operation-option-" + company1 + "']")).click();
+		System.out.println("piyush");
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", productsOrServices);
+		Thread.sleep(500); // Small wait to ensure scroll completed
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", productsOrServices);
+		System.out.println("piyush");
 		productsOrServices.click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@id='searchSelectID-Products or services-option-0']")));
+
 		driver.findElement(By.xpath("//li[@id='searchSelectID-Products or services-option-" + 0 + "']")).click();
-		driver.findElement(By.xpath("//li[@id='searchSelectID-Products or services-option-" + product1 + "']")).click();		
+		System.out.println("piyush");
+		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@id='searchSelectID-Products or services-option-" + product1 + "']")));
+		
+		driver.findElement(By.xpath("//li[@id='searchSelectID-Products or services-option-" + product1 + "']")).click();	
+		System.out.println("piyush");
 		spendVolume.sendKeys(spendV);
 		threadSleep(PageConstants.WAIT_THREE);
 		createButton.click();
