@@ -79,6 +79,7 @@ public class AddSupplierPage extends BasePage {
 
 	public void addSupplierForm(String companyN, String contactE, String contactN, int company1, int product1,
 			String spendV) throws InterruptedException {
+		System.out.println(companyN);
 		companyName.sendKeys(companyN);
 		contactEmail.sendKeys(contactE);
 		contactName.sendKeys(contactN);
@@ -101,9 +102,12 @@ public class AddSupplierPage extends BasePage {
 		
 		driver.findElement(By.xpath("//li[@id='searchSelectID-Products or services-option-" + product1 + "']")).click();	
 		System.out.println("piyush");
+		
 		spendVolume.sendKeys(spendV);
+		System.out.println(spendV);
 		threadSleep(PageConstants.WAIT_THREE);
 		createButton.click();
+		System.out.println("addedsupplier");
 		threadSleep(PageConstants.WAIT_FIVE);
 	}
 }
