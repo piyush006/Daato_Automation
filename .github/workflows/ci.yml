@@ -1,32 +1,42 @@
-name: Run Selenium + API Tests
+name: Java Selenium CI with Downloads
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
-  workflow_dispatch:
+    branches: [ master ]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: ⬇️ Checkout repository
+    - name: Checkout Repository
       uses: actions/checkout@v3
 
-    - name: ☕ Set up Java 17
+    - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: 🧪 Run tests with Maven
+    - name: Create Downloads Directory
+      run: mkdir -p downloads
+
+    - name: Cache Maven packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.m2
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-
+
+    - name: Build and Run Tests
       run: mvn clean test
 
-    - name: 📁 Upload TestNG Report (Surefire)
-      if: always()  # Always upload even if tests fail
+    - name: Upload TestNG Report
+      if: always()
       uses: actions/upload-artifact@v3
       with:
-        name: testng-report
-        path: target/surefire-reports
+        name: TestNG-Reports
+        path: test-output/
