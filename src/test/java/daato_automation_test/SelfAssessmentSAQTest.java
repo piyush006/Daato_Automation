@@ -42,9 +42,9 @@ public class SelfAssessmentSAQTest extends BaseTest {
 
 		}
 
-		PropertyFileUtils prop = new PropertyFileUtils();
+		PropertyFileUtils p = new PropertyFileUtils();
 		LoginPage login = new LoginPage(driver);
-		login.LoginApplication(prop.getuser(), prop.getpassword());
+		login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
 
 		SelfAssessmentSAQPage selfAssessmentSAQPage = new SelfAssessmentSAQPage(driver);
 		selfAssessmentSAQPage.openNewTabAndNavigate(TestConstants.TEST_SUPPLIER_REPO_URL);
@@ -75,9 +75,9 @@ public class SelfAssessmentSAQTest extends BaseTest {
 
 	public void sendSAQ() throws InterruptedException, IOException {
 
-		PropertyFileUtils prop = new PropertyFileUtils();
+		PropertyFileUtils p = new PropertyFileUtils();
 		LoginPage login = new LoginPage(driver);
-		login.LoginApplication(prop.getuser(), prop.getpassword());
+		login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
 
 		Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH);
 

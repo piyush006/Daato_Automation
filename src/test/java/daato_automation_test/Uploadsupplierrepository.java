@@ -42,10 +42,9 @@ excelpath =SupplierDataReader.latestExcelPath;
 System.out.println(excelpath);
 contactname =SupplierDataReader.randomContactName;
 companyname =SupplierDataReader.Companyname;
-
-PropertyFileUtils prop = new PropertyFileUtils();
+PropertyFileUtils p = new PropertyFileUtils();
 LoginPage login = new LoginPage(driver);
-login.LoginApplication(prop.getuser(), prop.getpassword());
+login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
 
 openNewTabAndNavigate(TestConstants.TEST_SUPPLIER_REPO_URL);
 
@@ -60,10 +59,9 @@ downloadfile.uploadrepositoryfile(excelpath);
 
 public  void checkcontactnameaftereditrepo() throws IOException, InterruptedException{
 	
-	
-	PropertyFileUtils prop1 = new PropertyFileUtils();
-	LoginPage login1 = new LoginPage(driver);
-	login1.LoginApplication(prop1.getuser(), prop1.getpassword());
+	PropertyFileUtils p = new PropertyFileUtils();
+	LoginPage login = new LoginPage(driver);
+	login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
 	threadSleep(PageConstants.WAIT_FOUR);
 	adminToken = getTokenFromBrowser();
 	
@@ -90,15 +88,6 @@ public  void checkcontactnameaftereditrepo() throws IOException, InterruptedExce
 	
 	
 }
-
-
-
-
-
-
-
-
-
 
 
 

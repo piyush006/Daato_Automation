@@ -28,9 +28,12 @@ public class AddSupplierTest extends BaseTest {
 	@Test
 	public void add_supplier() throws InterruptedException, IOException {
 
-		PropertyFileUtils prop = new PropertyFileUtils();
+		
+		PropertyFileUtils p = new PropertyFileUtils();
 		LoginPage login = new LoginPage(driver);
-		login.LoginApplication(prop.getuser(), prop.getpassword());
+		login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
+		//PropertyFileUtils prop = new PropertyFileUtils();
+		
 
 		AddSupplierPage addSupplierpage = new AddSupplierPage(driver);
 		addSupplierpage.navigateToSupplier();

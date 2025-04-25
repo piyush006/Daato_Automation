@@ -23,9 +23,9 @@ public class Markassafe extends BaseTest{
 	
 		public void getadmintoken() throws InterruptedException, IOException {
 			
-			PropertyFileUtils prop1 = new PropertyFileUtils();
-			LoginPage login1 = new LoginPage(driver);
-			login1.LoginApplication(prop1.getuser(), prop1.getpassword());
+		PropertyFileUtils p = new PropertyFileUtils();
+		LoginPage login = new LoginPage(driver);
+		login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
 			threadSleep(PageConstants.WAIT_FOUR);
 			adminToken = getTokenFromBrowser();
 	        System.out.println("Admin Token:" + adminToken);

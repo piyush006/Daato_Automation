@@ -43,9 +43,9 @@ public class RiskPrioritySelfAssessmentTest extends BaseTest {
 
 		}
 
-		PropertyFileUtils prop = new PropertyFileUtils();
+		PropertyFileUtils p = new PropertyFileUtils();
 		LoginPage login = new LoginPage(driver);
-		login.LoginApplication(prop.getuser(), prop.getpassword());
+		login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
 
 		openNewTabAndNavigate(TestConstants.TEST_SUPPLIER_REPO_URL);
 

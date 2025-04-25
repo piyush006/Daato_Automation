@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-25T11:34:28 IST" name="Default suite" finished-at="2025-04-25T11:34:50 IST" duration-ms="22632">
+  <suite started-at="2025-04-25T12:43:40 IST" name="Default suite" finished-at="2025-04-25T12:44:01 IST" duration-ms="21025">
     <groups>
     </groups>
-    <test started-at="2025-04-25T11:34:28 IST" name="Default test" finished-at="2025-04-25T11:34:50 IST" duration-ms="22632">
-      <class name="daato_automation_test.Downloadrepositoryfile">
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.Downloadrepositoryfile@623a8092]" started-at="2025-04-25T11:34:28 IST" name="chrome_setup" finished-at="2025-04-25T11:34:34 IST" duration-ms="6062" status="PASS">
+    <test started-at="2025-04-25T12:43:40 IST" name="Default test" finished-at="2025-04-25T12:44:01 IST" duration-ms="21025">
+      <class name="daato_automation_test.BulksupplierImport">
+        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.BulksupplierImport@623a8092]" started-at="2025-04-25T12:43:40 IST" name="chrome_setup" finished-at="2025-04-25T12:43:47 IST" duration-ms="6008" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chrome_setup -->
-        <test-method signature="downloadrepository()[pri:0, instance:daato_automation_test.Downloadrepositoryfile@623a8092]" started-at="2025-04-25T11:34:34 IST" name="downloadrepository" finished-at="2025-04-25T11:34:50 IST" duration-ms="16270" status="PASS">
+        <test-method signature="uploadbulksuppliers()[pri:0, instance:daato_automation_test.BulksupplierImport@623a8092]" started-at="2025-04-25T12:43:47 IST" name="uploadbulksuppliers" finished-at="2025-04-25T12:44:01 IST" duration-ms="14351" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- downloadrepository -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.Downloadrepositoryfile@623a8092]" started-at="2025-04-25T11:34:50 IST" name="tearDown" finished-at="2025-04-25T11:34:50 IST" duration-ms="253" status="PASS">
+        </test-method> <!-- uploadbulksuppliers -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.BulksupplierImport@623a8092]" started-at="2025-04-25T12:44:01 IST" name="tearDown" finished-at="2025-04-25T12:44:01 IST" duration-ms="623" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- daato_automation_test.Downloadrepositoryfile -->
+      </class> <!-- daato_automation_test.BulksupplierImport -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -24,9 +24,9 @@ public class Checkresendnotification extends BaseTest{
 	public void checkresendnotification() throws InterruptedException, IOException {
 	
 
-	PropertyFileUtils prop1 = new PropertyFileUtils();
-	LoginPage login1 = new LoginPage(driver);
-	login1.LoginApplication(prop1.getuser(), prop1.getpassword());
+		PropertyFileUtils p = new PropertyFileUtils();
+		LoginPage login = new LoginPage(driver);
+		login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
 	threadSleep(PageConstants.WAIT_FOUR);
 	
 	adminToken = getTokenFromBrowser();

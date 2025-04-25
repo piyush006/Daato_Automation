@@ -52,9 +52,9 @@ public class AbstractRiskCalculationTest extends BaseTest {
 
 		}
 
-		PropertyFileUtils prop = new PropertyFileUtils();
+		PropertyFileUtils p = new PropertyFileUtils();
 		LoginPage login = new LoginPage(driver);
-		login.LoginApplication(prop.getuser(), prop.getpassword());
+		login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
 
 		AbstractRiskCalculationPage abstractRiskCalculation = new AbstractRiskCalculationPage(driver);
 		abstractRiskCalculation.riskSettings();

@@ -139,16 +139,16 @@ public class SelfAssessmentTest extends BaseTest {
 		SelfAssessmentPage selfAssessmentPage = new SelfAssessmentPage(driver);
 		selfAssessmentPage.SwitchToURL(URL1);
 
-		PropertyFileUtils prop = new PropertyFileUtils();
+		PropertyFileUtils p = new PropertyFileUtils();
 		LoginPage login = new LoginPage(driver);
-		login.LoginApplication(Email, prop.getpassword());
+		login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
 
 		selfAssessmentPage.addGovernance();
 		System.out.println("addGovernance2");
 	}
 
 	//@Test(priority = 3)
-	@Test(enabled=false)
+/*	@Test(enabled=false)
 	public void Add_Buisness_Ethics() throws InterruptedException, IOException {
 
 		SelfAssessmentPage selfAssessmentPage = new SelfAssessmentPage(driver);
@@ -269,7 +269,7 @@ public class SelfAssessmentTest extends BaseTest {
 
 		selfAssessmentPage.submitSAQ();
 		System.out.println("submitSAQ10");
-	}
+	}*/
 	
 	
 

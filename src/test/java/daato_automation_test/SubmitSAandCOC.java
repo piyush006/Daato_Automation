@@ -39,9 +39,9 @@ public void fillsaq() throws IOException, InterruptedException {
 	Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH);
     Email =reader.getCellData("Customer_Login", "Email",2);
 	System.out.println(Email);
-	PropertyFileUtils prop = new PropertyFileUtils();
+	PropertyFileUtils p = new PropertyFileUtils();
 	LoginPage login = new LoginPage(driver);
-	login.LoginApplication(Email, prop.getpassword());
+	login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
 	threadSleep(PageConstants.WAIT_FOUR);
 	String token = getTokenFromBrowser();
 	System.out.println("Token:" + token);

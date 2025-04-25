@@ -31,9 +31,9 @@ public class Acceptsaqandcoc extends BaseTest{
 		 
 		 
 	
-		PropertyFileUtils prop1 = new PropertyFileUtils();
-		LoginPage login1 = new LoginPage(driver);
-		login1.LoginApplication(prop1.getuser(), prop1.getpassword());
+		PropertyFileUtils p = new PropertyFileUtils();
+		LoginPage login = new LoginPage(driver);
+		login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
 		threadSleep(PageConstants.WAIT_FIVE);
 		adminToken = getTokenFromBrowser();
         System.out.println("Admin Token:" + adminToken);
@@ -49,9 +49,9 @@ public class Acceptsaqandcoc extends BaseTest{
 		Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH);
 	    Email =reader.getCellData("Customer_Login", "Email",2);
 		System.out.println(Email);
-		PropertyFileUtils prop = new PropertyFileUtils();
+		PropertyFileUtils p = new PropertyFileUtils();
 		LoginPage login = new LoginPage(driver);
-		login.LoginApplication(Email, prop.getpassword());
+		login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
 		threadSleep(PageConstants.WAIT_FOUR);
 		String token = getTokenFromBrowser();
 		System.out.println("Token:" + token);

@@ -37,9 +37,9 @@ public class AcceptingSAQTest extends BaseTest {
 
 		threadSleep(TestConstants.WAIT_TWO);
 
-		PropertyFileUtils prop = new PropertyFileUtils();
+		PropertyFileUtils p = new PropertyFileUtils();
 		LoginPage login = new LoginPage(driver);
-		login.LoginApplication(prop.getuser(), prop.getpassword());
+		login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
 
 		openNewTabAndNavigate(TestConstants.TEST_SUPPLIER_REPO_URL);
 
@@ -51,9 +51,9 @@ public class AcceptingSAQTest extends BaseTest {
 	@Test(priority = 2)
 	public void accept_Btn() throws InterruptedException, IOException
 	{
-		PropertyFileUtils prop = new PropertyFileUtils();
+		PropertyFileUtils p = new PropertyFileUtils();
 		LoginPage login = new LoginPage(driver);
-		login.LoginApplication(prop.getuser(), prop.getpassword());
+		login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
 		
 		Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH);
 		String URL1 = reader.getCellData("Recent_Added", "Currenturl", 2);

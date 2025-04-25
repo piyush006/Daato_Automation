@@ -41,9 +41,9 @@ public class AcceptCOCTest extends BaseTest {
 		System.out.println(wid.size());
 		driver.switchTo().window(wid.get(2));
 
-		PropertyFileUtils prop = new PropertyFileUtils();
-		acceptCOCPage.yopmailCustomerLogin(Email, prop.getpassword());
-
+		PropertyFileUtils p = new PropertyFileUtils();
+		LoginPage login = new LoginPage(driver);
+		login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
 		acceptCOCPage.acceptCocRequest();
 		
 		
@@ -53,9 +53,9 @@ public class AcceptCOCTest extends BaseTest {
 	@Test(priority = 2)
 	public void accept_Btn() throws InterruptedException, IOException
 	{
-		PropertyFileUtils prop = new PropertyFileUtils();
+		PropertyFileUtils p = new PropertyFileUtils();
 		LoginPage login = new LoginPage(driver);
-		login.LoginApplication(prop.getuser(), prop.getpassword());
+		login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
 		
 		Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH);
 		String URL1 = reader.getCellData("Recent_Added", "CocCurrentUrl", 2);
