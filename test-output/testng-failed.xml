@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="daato_automation_test.Addincident">
+      <class name="daato_automation_test.SelfAssessmentSAQTest">
         <methods>
-          <include name="checkriskafteraddingincident"/>
           <include name="tearDown"/>
-          <include name="addincident"/>
+          <include name="sendSAQ"/>
           <include name="chrome_setup"/>
         </methods>
-      </class> <!-- daato_automation_test.Addincident -->
+      </class> <!-- daato_automation_test.SelfAssessmentSAQTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

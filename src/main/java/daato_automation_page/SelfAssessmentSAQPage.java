@@ -88,8 +88,12 @@ public class SelfAssessmentSAQPage extends BasePage {
 		//closeButton.click();
 		action.click();
 		threadSleep(PageConstants.WAIT_TWO);
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", requestSelfAssessment);
+		Thread.sleep(500); // Small wait to ensure scroll completed
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", requestSelfAssessment);
 		requestSelfAssessment.click();
 		threadSleep(PageConstants.WAIT_TWO);
+		System.out.println("clicked");
 		send.click();
 		threadSleep(PageConstants.WAIT_THREE);
 
