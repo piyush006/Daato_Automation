@@ -1,267 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="20" passed="20" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-13T15:28:19 IST" name="Suite" finished-at="2025-02-13T15:45:00 IST" duration-ms="1001089">
+  <suite started-at="2025-04-24T18:40:57 IST" name="Default suite" finished-at="2025-04-24T18:41:24 IST" duration-ms="26322">
     <groups>
     </groups>
-    <test started-at="2025-02-13T15:28:19 IST" name="Test" finished-at="2025-02-13T15:45:00 IST" duration-ms="1001089">
-      <class name="daato_automation_test.SendCOCTest">
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.SendCOCTest@7c37508a]" started-at="2025-02-13T15:43:14 IST" name="chrome_setup" finished-at="2025-02-13T15:43:20 IST" duration-ms="5970" status="PASS">
+    <test started-at="2025-04-24T18:40:57 IST" name="Default test" finished-at="2025-04-24T18:41:24 IST" duration-ms="26322">
+      <class name="daato_automation_test.Checkrepositorydata">
+        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.Checkrepositorydata@a1cdc6d]" started-at="2025-04-24T18:40:57 IST" name="chrome_setup" finished-at="2025-04-24T18:41:03 IST" duration-ms="5663" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chrome_setup -->
-        <test-method signature="send_coc()[pri:0, instance:daato_automation_test.SendCOCTest@7c37508a]" started-at="2025-02-13T15:43:20 IST" name="send_coc" finished-at="2025-02-13T15:43:49 IST" duration-ms="28940" status="PASS">
+        <test-method signature="GetexpectedResult()[pri:1, instance:daato_automation_test.Checkrepositorydata@a1cdc6d]" started-at="2025-04-24T18:41:03 IST" name="GetexpectedResult" finished-at="2025-04-24T18:41:18 IST" duration-ms="14786" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- send_coc -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.SendCOCTest@7c37508a]" started-at="2025-02-13T15:43:49 IST" name="tearDown" finished-at="2025-02-13T15:43:50 IST" duration-ms="373" status="PASS">
+        </test-method> <!-- GetexpectedResult -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.Checkrepositorydata@a1cdc6d]" started-at="2025-04-24T18:41:18 IST" name="tearDown" finished-at="2025-04-24T18:41:18 IST" duration-ms="253" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- daato_automation_test.SendCOCTest -->
-      <class name="daato_automation_test.RiskPrioritySelfAssessmentTest">
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.RiskPrioritySelfAssessmentTest@6be968ce]" started-at="2025-02-13T15:41:45 IST" name="chrome_setup" finished-at="2025-02-13T15:41:51 IST" duration-ms="6050" status="PASS">
+        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.Checkrepositorydata@a1cdc6d]" started-at="2025-04-24T18:41:18 IST" name="chrome_setup" finished-at="2025-04-24T18:41:22 IST" duration-ms="4365" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chrome_setup -->
-        <test-method signature="check_risk_priority_Self_assessment()[pri:0, instance:daato_automation_test.RiskPrioritySelfAssessmentTest@6be968ce]" started-at="2025-02-13T15:41:51 IST" name="check_risk_priority_Self_assessment" finished-at="2025-02-13T15:43:14 IST" duration-ms="83419" status="PASS">
+        <test-method signature="checkacutaldata()[pri:2, instance:daato_automation_test.Checkrepositorydata@a1cdc6d]" started-at="2025-04-24T18:41:22 IST" name="checkacutaldata" finished-at="2025-04-24T18:41:23 IST" duration-ms="963" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1079)
+at org.testng.Assert.assertEquals(Assert.java:1043)
+at org.testng.Assert.assertEquals(Assert.java:1089)
+at daato_automation_test.Checkrepositorydata.checkacutaldata(Checkrepositorydata.java:104)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check_risk_priority_Self_assessment -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.RiskPrioritySelfAssessmentTest@6be968ce]" started-at="2025-02-13T15:43:14 IST" name="tearDown" finished-at="2025-02-13T15:43:14 IST" duration-ms="314" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- daato_automation_test.RiskPrioritySelfAssessmentTest -->
-      <class name="daato_automation_test.AcceptingSAQTest">
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.AcceptingSAQTest@7188af83]" started-at="2025-02-13T15:40:39 IST" name="chrome_setup" finished-at="2025-02-13T15:40:45 IST" duration-ms="5875" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="accepting_SAQ()[pri:1, instance:daato_automation_test.AcceptingSAQTest@7188af83]" started-at="2025-02-13T15:40:45 IST" name="accepting_SAQ" finished-at="2025-02-13T15:41:21 IST" duration-ms="35793" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- accepting_SAQ -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.AcceptingSAQTest@7188af83]" started-at="2025-02-13T15:41:21 IST" name="tearDown" finished-at="2025-02-13T15:41:21 IST" duration-ms="311" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.AcceptingSAQTest@7188af83]" started-at="2025-02-13T15:41:21 IST" name="chrome_setup" finished-at="2025-02-13T15:41:27 IST" duration-ms="5863" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="accept_Btn()[pri:2, instance:daato_automation_test.AcceptingSAQTest@7188af83]" started-at="2025-02-13T15:41:27 IST" name="accept_Btn" finished-at="2025-02-13T15:41:44 IST" duration-ms="17665" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- accept_Btn -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.AcceptingSAQTest@7188af83]" started-at="2025-02-13T15:41:44 IST" name="tearDown" finished-at="2025-02-13T15:41:45 IST" duration-ms="247" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- daato_automation_test.AcceptingSAQTest -->
-      <class name="daato_automation_test.SelfAssessmentTest">
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:31:00 IST" name="chrome_setup" finished-at="2025-02-13T15:31:06 IST" duration-ms="5871" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="General_information()[pri:1, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:31:06 IST" name="General_information" finished-at="2025-02-13T15:31:56 IST" duration-ms="50005" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- General_information -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:31:56 IST" name="tearDown" finished-at="2025-02-13T15:31:56 IST" duration-ms="309" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:31:56 IST" name="chrome_setup" finished-at="2025-02-13T15:32:02 IST" duration-ms="6041" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="add_governance_and()[pri:2, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:32:02 IST" name="add_governance_and" finished-at="2025-02-13T15:32:52 IST" duration-ms="49582" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- add_governance_and -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:32:52 IST" name="tearDown" finished-at="2025-02-13T15:32:52 IST" duration-ms="313" status="PASS">
+        </test-method> <!-- checkacutaldata -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.Checkrepositorydata@a1cdc6d]" started-at="2025-04-24T18:41:23 IST" name="tearDown" finished-at="2025-04-24T18:41:24 IST" duration-ms="242" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:32:52 IST" name="chrome_setup" finished-at="2025-02-13T15:32:58 IST" duration-ms="5840" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="Add_Buisness_Ethics()[pri:3, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:32:58 IST" name="Add_Buisness_Ethics" finished-at="2025-02-13T15:33:54 IST" duration-ms="56691" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Add_Buisness_Ethics -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:33:54 IST" name="tearDown" finished-at="2025-02-13T15:33:55 IST" duration-ms="311" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:33:55 IST" name="chrome_setup" finished-at="2025-02-13T15:34:01 IST" duration-ms="5813" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="Add_responsible_supply_chain_management()[pri:4, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:34:01 IST" name="Add_responsible_supply_chain_management" finished-at="2025-02-13T15:35:17 IST" duration-ms="76298" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Add_responsible_supply_chain_management -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:35:17 IST" name="tearDown" finished-at="2025-02-13T15:35:17 IST" duration-ms="313" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:35:17 IST" name="chrome_setup" finished-at="2025-02-13T15:35:23 IST" duration-ms="5644" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="add_policies_and_certifications()[pri:5, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:35:23 IST" name="add_policies_and_certifications" finished-at="2025-02-13T15:36:23 IST" duration-ms="60496" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- add_policies_and_certifications -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:36:23 IST" name="tearDown" finished-at="2025-02-13T15:36:24 IST" duration-ms="311" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:36:24 IST" name="chrome_setup" finished-at="2025-02-13T15:36:30 IST" duration-ms="5945" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="add_policy_part_second()[pri:6, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:36:30 IST" name="add_policy_part_second" finished-at="2025-02-13T15:38:07 IST" duration-ms="97718" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- add_policy_part_second -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:38:07 IST" name="tearDown" finished-at="2025-02-13T15:38:08 IST" duration-ms="312" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:38:08 IST" name="chrome_setup" finished-at="2025-02-13T15:38:14 IST" duration-ms="5916" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="add_chld_frc_hs_fa_ee_fw_lr()[pri:7, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:38:14 IST" name="add_chld_frc_hs_fa_ee_fw_lr" finished-at="2025-02-13T15:38:55 IST" duration-ms="41379" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- add_chld_frc_hs_fa_ee_fw_lr -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:38:55 IST" name="tearDown" finished-at="2025-02-13T15:38:55 IST" duration-ms="372" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:38:55 IST" name="chrome_setup" finished-at="2025-02-13T15:39:01 IST" duration-ms="5949" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="add_cs_sw()[pri:8, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:39:01 IST" name="add_cs_sw" finished-at="2025-02-13T15:39:31 IST" duration-ms="29981" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- add_cs_sw -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:39:31 IST" name="tearDown" finished-at="2025-02-13T15:39:32 IST" duration-ms="310" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:39:32 IST" name="chrome_setup" finished-at="2025-02-13T15:39:37 IST" duration-ms="5825" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="add_environmental_performance()[pri:9, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:39:37 IST" name="add_environmental_performance" finished-at="2025-02-13T15:40:05 IST" duration-ms="27182" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- add_environmental_performance -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:40:05 IST" name="tearDown" finished-at="2025-02-13T15:40:05 IST" duration-ms="248" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:40:05 IST" name="chrome_setup" finished-at="2025-02-13T15:40:11 IST" duration-ms="5787" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="submit_SAQ()[pri:10, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:40:11 IST" name="submit_SAQ" finished-at="2025-02-13T15:40:39 IST" duration-ms="27982" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- submit_SAQ -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.SelfAssessmentTest@59402b8f]" started-at="2025-02-13T15:40:39 IST" name="tearDown" finished-at="2025-02-13T15:40:39 IST" duration-ms="308" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- daato_automation_test.SelfAssessmentTest -->
-      <class name="daato_automation_test.AddSupplierTest">
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.AddSupplierTest@4a83a74a]" started-at="2025-02-13T15:28:19 IST" name="chrome_setup" finished-at="2025-02-13T15:28:26 IST" duration-ms="7348" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="add_supplier()[pri:0, instance:daato_automation_test.AddSupplierTest@4a83a74a]" started-at="2025-02-13T15:28:26 IST" name="add_supplier" finished-at="2025-02-13T15:29:08 IST" duration-ms="41640" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- add_supplier -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.AddSupplierTest@4a83a74a]" started-at="2025-02-13T15:29:08 IST" name="tearDown" finished-at="2025-02-13T15:29:08 IST" duration-ms="513" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- daato_automation_test.AddSupplierTest -->
-      <class name="daato_automation_test.AbstractRiskCalculationTest">
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.AbstractRiskCalculationTest@70ed52de]" started-at="2025-02-13T15:29:08 IST" name="chrome_setup" finished-at="2025-02-13T15:29:14 IST" duration-ms="5900" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="to_verify_abstrac_risk()[pri:0, instance:daato_automation_test.AbstractRiskCalculationTest@70ed52de]" started-at="2025-02-13T15:29:14 IST" name="to_verify_abstrac_risk" finished-at="2025-02-13T15:29:55 IST" duration-ms="40237" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- to_verify_abstrac_risk -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.AbstractRiskCalculationTest@70ed52de]" started-at="2025-02-13T15:29:55 IST" name="tearDown" finished-at="2025-02-13T15:29:55 IST" duration-ms="340" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- daato_automation_test.AbstractRiskCalculationTest -->
-      <class name="daato_automation_test.AcceptCOCTest">
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.AcceptCOCTest@247310d0]" started-at="2025-02-13T15:43:50 IST" name="chrome_setup" finished-at="2025-02-13T15:43:56 IST" duration-ms="5849" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="accept_CoC()[pri:1, instance:daato_automation_test.AcceptCOCTest@247310d0]" started-at="2025-02-13T15:43:56 IST" name="accept_CoC" finished-at="2025-02-13T15:44:37 IST" duration-ms="41476" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- accept_CoC -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.AcceptCOCTest@247310d0]" started-at="2025-02-13T15:44:37 IST" name="tearDown" finished-at="2025-02-13T15:44:37 IST" duration-ms="311" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.AcceptCOCTest@247310d0]" started-at="2025-02-13T15:44:37 IST" name="chrome_setup" finished-at="2025-02-13T15:44:43 IST" duration-ms="5852" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="accept_Btn()[pri:2, instance:daato_automation_test.AcceptCOCTest@247310d0]" started-at="2025-02-13T15:44:43 IST" name="accept_Btn" finished-at="2025-02-13T15:45:00 IST" duration-ms="16474" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- accept_Btn -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.AcceptCOCTest@247310d0]" started-at="2025-02-13T15:45:00 IST" name="tearDown" finished-at="2025-02-13T15:45:00 IST" duration-ms="254" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- daato_automation_test.AcceptCOCTest -->
-      <class name="daato_automation_test.SelfAssessmentSAQTest">
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.SelfAssessmentSAQTest@496bc455]" started-at="2025-02-13T15:29:55 IST" name="chrome_setup" finished-at="2025-02-13T15:30:01 IST" duration-ms="6010" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="self_assessment_before_saq()[pri:1, instance:daato_automation_test.SelfAssessmentSAQTest@496bc455]" started-at="2025-02-13T15:30:01 IST" name="self_assessment_before_saq" finished-at="2025-02-13T15:30:24 IST" duration-ms="22944" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- self_assessment_before_saq -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.SelfAssessmentSAQTest@496bc455]" started-at="2025-02-13T15:30:24 IST" name="tearDown" finished-at="2025-02-13T15:30:24 IST" duration-ms="365" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.SelfAssessmentSAQTest@496bc455]" started-at="2025-02-13T15:30:24 IST" name="chrome_setup" finished-at="2025-02-13T15:30:31 IST" duration-ms="6289" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="sendSAQ()[pri:2, instance:daato_automation_test.SelfAssessmentSAQTest@496bc455]" started-at="2025-02-13T15:30:31 IST" name="sendSAQ" finished-at="2025-02-13T15:30:59 IST" duration-ms="28968" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sendSAQ -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.SelfAssessmentSAQTest@496bc455]" started-at="2025-02-13T15:30:59 IST" name="tearDown" finished-at="2025-02-13T15:31:00 IST" duration-ms="309" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- daato_automation_test.SelfAssessmentSAQTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- daato_automation_test.Checkrepositorydata -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

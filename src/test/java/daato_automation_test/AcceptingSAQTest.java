@@ -64,6 +64,7 @@ public class AcceptingSAQTest extends BaseTest {
 		threadSleep(PageConstants.WAIT_TEN);
 		WebElement acceptbtn = driver.findElement(By.xpath("//button[contains(text(),'Accept the answer')]"));
 		acceptbtn.click();
+		
 	}
 
 }

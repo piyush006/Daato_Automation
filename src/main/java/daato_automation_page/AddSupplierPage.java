@@ -67,7 +67,7 @@ public class AddSupplierPage extends BasePage {
 		module.click();
 		supplyChainSust.click();
 		repository.click();
-		threadSleep(PageConstants.WAIT_THREE);
+		threadSleep(PageConstants.WAIT_EIGHT);
 		//popupCloseButton.click();
 		addSupplier.click();
 		add.click();
@@ -88,6 +88,6 @@ public class AddSupplierPage extends BasePage {
 		spendVolume.sendKeys(spendV);
 		threadSleep(PageConstants.WAIT_THREE);
 		createButton.click();
-		threadSleep(PageConstants.WAIT_TWENTY);
+		threadSleep(PageConstants.WAIT_FIVE);
 	}
 }

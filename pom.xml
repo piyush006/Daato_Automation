@@ -31,7 +31,7 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>4.1.1</version>
 		</dependency>
-
+ 
 
 		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 		<dependency>
@@ -74,10 +74,21 @@
         <artifactId>logback-classic</artifactId>
         <version>1.2.6</version> <!-- or a later stable version -->
     </dependency>
+    <dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <version>5.3.0</version>
+    <scope>test</scope>
+</dependency>
 
+	<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.6.3</version> <!-- Latest as of now -->
+</dependency>	
 		
-		
-    </dependencies>
+
+  </dependencies>
     
    <build>
    <plugins>
@@ -106,14 +117,5 @@
      <maven.compiler.source>1.8</maven.compiler.source>
      <maven.compiler.target>1.8</maven.compiler.target>
  </properties>
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
 </project>

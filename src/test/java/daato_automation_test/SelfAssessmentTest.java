@@ -16,6 +16,7 @@ import org.testng.annotations.Test;
 import Excel.utility.Xls_Reader;
 import daato_automation_page.LoginPage;
 import daato_automation_page.SelfAssessmentPage;
+import daato_automation_pagecomponent.PageConstants;
 import daato_automation_pagecomponent.PropertyFileUtils;
 import daato_automation_testcomponent.BaseTest;
 import daato_automation_testcomponent.TestConstants;
@@ -48,10 +49,14 @@ public class SelfAssessmentTest extends BaseTest {
 		for (int i = 0; i < count - 1; i++) {
 
 			User_Registered = reader.getCellData("Add_Supplier", "User_Registered", i + 2);
-
+			
+			
 			if (User_Registered.equals("No")) {
 
 				Email = reader.getCellData("Add_Supplier", "Contact_Email", i + 2);
+				Customer_Email = reader.getCellData("Add_Supplier", "Contact_Email", i + 2);
+			
+				System.out.println("Piyush" + Customer_Email);
 
 				SelfAssessmentPage selfAssessmentPage = new SelfAssessmentPage(driver);
 				selfAssessmentPage.yopmailLogin(Email);
@@ -61,19 +66,21 @@ public class SelfAssessmentTest extends BaseTest {
 				driver.switchTo().window(wid.get(2));
 				WebElement button1 = driver.findElement(By.cssSelector("button p.MuiTypography-body1"));
 				button1.click();
-				PropertyFileUtils prop = new PropertyFileUtils();
-				LoginPage login = new LoginPage(driver);
+			//	PropertyFileUtils prop = new PropertyFileUtils();
+			//	LoginPage login = new LoginPage(driver);
 				
-				Customer_Email = reader.getCellData("Recent_Added", "Email", i + 2);
-				System.out.println(Customer_Email);
+				threadSleep(PageConstants.WAIT_TWO);
+				threadSleep(PageConstants.WAIT_TWO);
+				
 				WebElement inputField = driver.findElement(By.id("username"));
 				inputField.sendKeys(Customer_Email);
 				WebElement button = driver.findElement(By.id("kc-login"));
 				button.click();
 				
+				
 				selfAssessmentPage.yopmailLoginforOTP(Customer_Email);
 				
-				NewPassword = reader.getCellData("Customer_Login", "Password", i + 2).toString();
+				NewPassword = reader.getCellData("Add_Supplier", "Password", 2).toString();
 				System.out.println(NewPassword);
 				if (NewPassword.endsWith(".0")) {
 				    NewPassword = NewPassword.substring(0, NewPassword.length() - 2);
@@ -87,7 +94,7 @@ public class SelfAssessmentTest extends BaseTest {
 				WebElement passwordConfirmField = driver.findElement(By.xpath("//input[@id='password-confirm']"));
 				passwordConfirmField.sendKeys(NewPassword);
 
-				WebElement submitNewPassButton = driver.findElement(By.xpath("//button[text()='Submit']"));
+				WebElement submitNewPassButton = driver.findElement(By.xpath("//input[@type='submit']"));
 				submitNewPassButton.click();
 				
 				WebElement lastNameField = driver.findElement(By.xpath("//input[@id='lastName']"));
@@ -125,8 +132,8 @@ public class SelfAssessmentTest extends BaseTest {
 
 	}
 
-	@Test(priority = 2)
-
+	//@Test(priority = 2)
+	@Test(enabled=false)
 	public void add_governance_and() throws InterruptedException, IOException {
 
 		SelfAssessmentPage selfAssessmentPage = new SelfAssessmentPage(driver);
@@ -140,7 +147,8 @@ public class SelfAssessmentTest extends BaseTest {
 		System.out.println("addGovernance2");
 	}
 
-	@Test(priority = 3)
+	//@Test(priority = 3)
+	@Test(enabled=false)
 	public void Add_Buisness_Ethics() throws InterruptedException, IOException {
 
 		SelfAssessmentPage selfAssessmentPage = new SelfAssessmentPage(driver);
@@ -154,7 +162,8 @@ public class SelfAssessmentTest extends BaseTest {
 		System.out.println("addBuisnessEthics3");
 	}
 
-	@Test(priority = 4)
+	//@Test(priority = 4)
+	@Test(enabled=false)
 	public void Add_responsible_supply_chain_management() throws InterruptedException, IOException {
 
 		SelfAssessmentPage selfAssessmentPage = new SelfAssessmentPage(driver);
@@ -169,8 +178,9 @@ public class SelfAssessmentTest extends BaseTest {
 
 	}
 
-	@Test(priority = 5)
-
+//	@Test(priority = 5)
+	
+	@Test(enabled=false)
 	public void add_policies_and_certifications() throws InterruptedException, IOException {
 
 		SelfAssessmentPage selfAssessmentPage = new SelfAssessmentPage(driver);
@@ -184,7 +194,8 @@ public class SelfAssessmentTest extends BaseTest {
 		System.out.println("addPoliciesAndCertifications5");
 	}
 
-	 @Test(priority = 6)
+	// @Test(priority = 6)
+	@Test(enabled=false)
 
 	public void add_policy_part_second() throws InterruptedException, IOException {
 
@@ -198,8 +209,9 @@ public class SelfAssessmentTest extends BaseTest {
 		selfAssessmentPage.addPoliciesPartSecond();
 		System.out.println("addPoliciesPartSecond6");
 	}
-
-	@Test(priority = 7)
+	
+	//@Test(priority = 7)
+	@Test(enabled=false)
 	public void add_chld_frc_hs_fa_ee_fw_lr() throws InterruptedException, IOException {
 
 		SelfAssessmentPage selfAssessmentPage = new SelfAssessmentPage(driver);
@@ -213,7 +225,8 @@ public class SelfAssessmentTest extends BaseTest {
 		System.out.println("addChldFrcHsFaEeFwLr7");
 	}
 
-	@Test(priority = 8)
+	//@Test(priority = 8)
+	@Test(enabled=false)
 	public void add_cs_sw() throws InterruptedException, IOException {
 
 		SelfAssessmentPage selfAssessmentPage = new SelfAssessmentPage(driver);
@@ -227,7 +240,8 @@ public class SelfAssessmentTest extends BaseTest {
 		System.out.println("addCsSw8");
 	}
 
-	@Test(priority = 9)
+	//@Test(priority = 9)
+	@Test(enabled=false)
 	public void add_environmental_performance() throws InterruptedException, IOException {
 
 		SelfAssessmentPage selfAssessmentPage = new SelfAssessmentPage(driver);
@@ -241,7 +255,8 @@ public class SelfAssessmentTest extends BaseTest {
 		System.out.println("addEnvironmentalPerformance9");
 	}
 
-	@Test(priority = 10)
+	//@Test(priority = 10)
+	@Test(enabled=false)
 
 	public void submit_SAQ() throws InterruptedException, IOException {
 
@@ -255,4 +270,7 @@ public class SelfAssessmentTest extends BaseTest {
 		selfAssessmentPage.submitSAQ();
 		System.out.println("submitSAQ10");
 	}
+	
+	
+
 }

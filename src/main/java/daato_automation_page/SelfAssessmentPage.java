@@ -29,7 +29,7 @@ public class SelfAssessmentPage extends BasePage {
 	WebDriver driver;
 
 	public SelfAssessmentPage(WebDriver driver) {
-		super(driver);
+	super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -198,7 +198,7 @@ public class SelfAssessmentPage extends BasePage {
 
 	@FindBy(xpath = "(//input[@id='searchSelectID-main'])[13]")
 	WebElement supplyChainManageList;
-
+	
 	@FindBy(xpath = "//li[@id='searchSelectID-main-option-0']")
 	WebElement supplyChainManageOption;
 
@@ -483,6 +483,12 @@ public class SelfAssessmentPage extends BasePage {
 
 	@FindBy(xpath = "//p[contains(text(),'Conflicts and security')]")
 	WebElement conflictSecurityText;
+	
+	@FindBy(xpath = "//span[contains(text(),'Policies and certifications')]")
+	WebElement Policiesandcertifications;
+
+	@FindBy(xpath = "//p[contains(text(),'Policies and certifications')]")
+	WebElement Policiesandcertificationstext;
 
 	@FindBy(xpath = "//div[contains(text(),'Can you confirm that your company does not hire')]")
 	WebElement companyHireText;
@@ -554,6 +560,7 @@ public class SelfAssessmentPage extends BasePage {
 		threadSleep(PageConstants.WAIT_ONE);
 		submitButton1.click();
 		threadSleep(PageConstants.WAIT_EIGHT);
+		
 	}
 
 	public void addEnvironmentalPerformance() throws InterruptedException {
@@ -741,6 +748,10 @@ public class SelfAssessmentPage extends BasePage {
 	}
 
 	public void addPoliciesAndCertifications() throws InterruptedException {
+		
+		Policiesandcertifications.click();
+		scrollIntoView(Policiesandcertificationstext);
+		threadSleep(PageConstants.WAIT_TWO);
 		formalPolicyList.click();
 		threadSleep(PageConstants.WAIT_ONE);
 		formalPolicyOption.click();
@@ -752,7 +763,7 @@ public class SelfAssessmentPage extends BasePage {
 		envManagementSysList.click();
 		threadSleep(PageConstants.WAIT_ONE);
 		envManagementSysOption.click();
-		threadSleep(PageConstants.WAIT_ONE);
+		/*threadSleep(PageConstants.WAIT_ONE);
 		scrollIntoView(policyCoveringText);
 		threadSleep(PageConstants.WAIT_ONE);
 		policyCoveringList.click();
@@ -781,7 +792,7 @@ public class SelfAssessmentPage extends BasePage {
 		employeeDocOption7.click();
 		threadSleep(PageConstants.WAIT_THREE);
 		employeeDocOption8.click();
-		threadSleep(PageConstants.WAIT_TWO);
+		threadSleep(PageConstants.WAIT_TWO);*/
 	}
 
 	public void addResponsibleSupplyChainManagement() throws InterruptedException {
@@ -969,6 +980,8 @@ public class SelfAssessmentPage extends BasePage {
 		}
 
 		return null; // Return null if no OTP found
+		
+	
 	}
 
 	public String getEmailBodyFromInbox(String email) throws InterruptedException {

@@ -98,7 +98,7 @@ public class AbstractRiskCalculationTest extends BaseTest {
 		String Expected_Abstract_score = reader.getCellData("abstract_logic", "Final_Abstract_Risk_Assesment", 2);
 
 		java.util.List<WebElement> product_risk = driver.findElements(By.xpath("//table/tbody/tr/td[3]"));
-		java.util.List<WebElement> country_risk = driver.findElements(By.xpath("//table/tbody/tr/td[3]"));
+		java.util.List<WebElement> country_risk = driver.findElements(By.xpath("//table/tbody/tr/td[4]"));
 
 		for (WebElement product_risk1 : product_risk)
 

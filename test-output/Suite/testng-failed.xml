@@ -3,19 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="daato_automation_test.SelfAssessmentTest">
+      <class name="daato_automation_test.Checkresendnotification">
         <methods>
-          <include name="add_governance_and"/>
-          <include name="add_environmental_performance"/>
-          <include name="add_policies_and_certifications"/>
-          <include name="add_cs_sw"/>
-          <include name="add_policy_part_second"/>
+          <include name="checkresendnotification"/>
           <include name="tearDown"/>
-          <include name="add_chld_frc_hs_fa_ee_fw_lr"/>
-          <include name="Add_responsible_supply_chain_management"/>
           <include name="chrome_setup"/>
         </methods>
-      </class> <!-- daato_automation_test.SelfAssessmentTest -->
+      </class> <!-- daato_automation_test.Checkresendnotification -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

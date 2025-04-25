@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Excel.utility.Xls_Reader;
@@ -53,8 +54,12 @@ public class RiskPrioritySelfAssessmentTest extends BaseTest {
 		RiskPrioritySelfAssessmentPage riskPrioritySelfAssessmentPage = new RiskPrioritySelfAssessmentPage(driver);
 		riskPrioritySelfAssessmentPage.selfAssessment(Company);
 
-		java.util.List<WebElement> status = driver
-				.findElements(By.xpath("//div[@class='sc-jlZhew hmANKZ MuiBox-root']/p[2]"));
+		//java.util.List<WebElement> status = driver
+				//.findElements(By.xpath("//div[@class='sc-jlZhew hmANKZ MuiBox-root']/p[2]"));
+				
+				java.util.List<WebElement> status = driver
+						.findElements(By.xpath("//div[@class='sc-dAlyuH dnwsPK MuiBox-root']/p[2]"));
+			
 
 		/*for (WebElement status1 : status)
 
@@ -87,9 +92,11 @@ public class RiskPrioritySelfAssessmentTest extends BaseTest {
         System.out.println("Actual_Result Size: " + Actual_Result.size());
 
         // Use Actual_Result.size() instead of hardcoding 12
-        for (int j = 0; j < Actual_Result.size(); j++) {
+        for (int j = 0; j <Actual_Result.size(); j++) {
             System.out.println("Setting cell data for index: " + j);
             reader.setCellData("self_assessment_saq", "Actual_Status_After_SAQ", j + 2, Actual_Result.get(j));
         }
+        
+        Assert.assertEquals(Actual_Result, Expected_Result);
     }
 }

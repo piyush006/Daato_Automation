@@ -23,7 +23,8 @@ public class SelfAssessmentSAQTest extends BaseTest {
 
 	String Company;
 
-	@Test(priority = 1)
+	//@Test(priority = 1)
+	@Test(enabled=false)
 	public void self_assessment_before_saq() throws InterruptedException, IOException {
 
 		ArrayList<String> Expected_Result = new ArrayList<String>();

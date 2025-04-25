@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Daato_Automation_Functional
+Bundle-SymbolicName: Daato_Automation_Functional
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-23
+Automatic-Module-Name: Daato.Automation.Functional
+Export-Package: Excel.utility,
+ daato_automation_page,
+ daato_automation_pagecomponent,
+ daato_automation_test,
+ daato_automation_testcomponent
