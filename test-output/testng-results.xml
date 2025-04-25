@@ -1,80 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-24T18:40:57 IST" name="Default suite" finished-at="2025-04-24T18:41:24 IST" duration-ms="26322">
+  <suite started-at="2025-04-25T11:34:28 IST" name="Default suite" finished-at="2025-04-25T11:34:50 IST" duration-ms="22632">
     <groups>
     </groups>
-    <test started-at="2025-04-24T18:40:57 IST" name="Default test" finished-at="2025-04-24T18:41:24 IST" duration-ms="26322">
-      <class name="daato_automation_test.Checkrepositorydata">
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.Checkrepositorydata@a1cdc6d]" started-at="2025-04-24T18:40:57 IST" name="chrome_setup" finished-at="2025-04-24T18:41:03 IST" duration-ms="5663" status="PASS">
+    <test started-at="2025-04-25T11:34:28 IST" name="Default test" finished-at="2025-04-25T11:34:50 IST" duration-ms="22632">
+      <class name="daato_automation_test.Downloadrepositoryfile">
+        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.Downloadrepositoryfile@623a8092]" started-at="2025-04-25T11:34:28 IST" name="chrome_setup" finished-at="2025-04-25T11:34:34 IST" duration-ms="6062" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chrome_setup -->
-        <test-method signature="GetexpectedResult()[pri:1, instance:daato_automation_test.Checkrepositorydata@a1cdc6d]" started-at="2025-04-24T18:41:03 IST" name="GetexpectedResult" finished-at="2025-04-24T18:41:18 IST" duration-ms="14786" status="PASS">
+        <test-method signature="downloadrepository()[pri:0, instance:daato_automation_test.Downloadrepositoryfile@623a8092]" started-at="2025-04-25T11:34:34 IST" name="downloadrepository" finished-at="2025-04-25T11:34:50 IST" duration-ms="16270" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- GetexpectedResult -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.Checkrepositorydata@a1cdc6d]" started-at="2025-04-24T18:41:18 IST" name="tearDown" finished-at="2025-04-24T18:41:18 IST" duration-ms="253" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.Checkrepositorydata@a1cdc6d]" started-at="2025-04-24T18:41:18 IST" name="chrome_setup" finished-at="2025-04-24T18:41:22 IST" duration-ms="4365" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="checkacutaldata()[pri:2, instance:daato_automation_test.Checkrepositorydata@a1cdc6d]" started-at="2025-04-24T18:41:22 IST" name="checkacutaldata" finished-at="2025-04-24T18:41:23 IST" duration-ms="963" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [false] but found [true]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:1079)
-at org.testng.Assert.assertEquals(Assert.java:1043)
-at org.testng.Assert.assertEquals(Assert.java:1089)
-at daato_automation_test.Checkrepositorydata.checkacutaldata(Checkrepositorydata.java:104)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkacutaldata -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.Checkrepositorydata@a1cdc6d]" started-at="2025-04-24T18:41:23 IST" name="tearDown" finished-at="2025-04-24T18:41:24 IST" duration-ms="242" status="PASS">
+        </test-method> <!-- downloadrepository -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.Downloadrepositoryfile@623a8092]" started-at="2025-04-25T11:34:50 IST" name="tearDown" finished-at="2025-04-25T11:34:50 IST" duration-ms="253" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- daato_automation_test.Checkrepositorydata -->
+      </class> <!-- daato_automation_test.Downloadrepositoryfile -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

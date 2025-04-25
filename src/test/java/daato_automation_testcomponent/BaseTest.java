@@ -40,6 +40,10 @@ public class BaseTest {
 	  
 	    ChromeOptions ops = new ChromeOptions();
 	    ops.setExperimentalOption("prefs", prefs);
+	    if (System.getenv("CI") != null) {
+	        System.out.println("CI environment detected: Running Chrome in headless mode");
+	        ops.addArguments("--headless=new"); // modern headless mode
+	    }
 	    ops.addArguments("--remote-allow-origins=*");
 	    ops.addArguments("--disable-gpu");
 	    ops.addArguments("--disable-dev-shm-usage");

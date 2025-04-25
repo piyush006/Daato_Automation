@@ -20,6 +20,7 @@ utils\SCSbulkactions.class
 daato_automation_test\SelfAssessmentTest.class
 daato_automation_test\Checkresendnotification.class
 daato_automation_test\SelfAssessmentSAQTest.class
+utils\FileDownloader.class
 daato_automation_test\AcceptingSAQTest.class
 daato_automation_test\BulksupplierImport.class
 utils\Requestids.class
