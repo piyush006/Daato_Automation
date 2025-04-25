@@ -71,7 +71,7 @@ public class SelfAssessmentSAQTest extends BaseTest {
 
 	}
 
-	@Test(priority = 2)
+	@Test
 
 	public void sendSAQ() throws InterruptedException, IOException {
 

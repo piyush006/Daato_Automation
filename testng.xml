@@ -2,8 +2,8 @@
 <suite name="Suite" preserve-order="true" parallel="none">
   <test thread-count="1" name="Test">
     <classes>
-      <class name="daato_automation_test.AddSupplierTest" />
-      <class name="daato_automation_test.AbstractRiskCalculationTest"/>
+      <class name="daato_automation_test.SelfAssessmentSAQTest"/>
+      <class name="daato_automation_test.SelfAssessmentTest"/>
       
     </classes>
   </test>
