@@ -107,6 +107,8 @@ public class AddSupplierPage extends BasePage {
 		System.out.println(spendV);
 		threadSleep(PageConstants.WAIT_THREE);
 		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", createButton);
+		Thread.sleep(500);
 		wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Create']")));
 		createButton.click();
 		System.out.println("addedsupplier");
