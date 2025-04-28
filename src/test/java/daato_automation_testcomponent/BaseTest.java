@@ -44,7 +44,13 @@ public class BaseTest {
 	    ops.setExperimentalOption("prefs", prefs);
 	    if (System.getenv("CI") != null) {
 	        System.out.println("CI environment detected: Running Chrome in headless mode");
+
 	        ops.addArguments("--headless=new"); // modern headless mode
+	        ops.addArguments("--no-sandbox"); // Required for GitHub Actions
+	        ops.addArguments("--disable-dev-shm-usage"); // Solve limited memory problems
+	        ops.addArguments("--disable-gpu"); // Disable GPU, important for headless
+	        ops.addArguments("--window-size=1920,1080"); // Set a proper screen size
+	        ops.addArguments("--remote-allow-origins=*"); // Fix CORS issues if any
 	    }
 	    ops.addArguments("--remote-allow-origins=*");
 	    ops.addArguments("--disable-gpu");
