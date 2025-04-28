@@ -61,6 +61,7 @@ public class AbstractRiskCalculationTest extends BaseTest {
 
 		abstractRiskCalculation.searchCompany();
 		Company = reader.getCellData("Recent_Added", "Company_Name", 2);
+		System.out.println(Company);
 
 		abstractRiskCalculation.riskLevel(Company);
 
