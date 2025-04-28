@@ -4,9 +4,17 @@
     <classes>
     
      
-     <class name="daato_automation_test.TestDatasetup" />
-     <class name="daato_automation_test.AddSupplierTest" />
-     <class name="daato_automation_test.AbstractRiskCalculationTest"/>
+    <class name="daato_automation_test.TestDatasetup" />
+      <class name="daato_automation_test.AddSupplierTest" />
+      <class name="daato_automation_test.AbstractRiskCalculationTest"/>
+      <class name="daato_automation_test.SelfAssessmentSAQTest"/>
+      <class name="daato_automation_test.SelfAssessmentTest"/>
+      <class name="daato_automation_test.SendCOCTest"/>
+      <class name="daato_automation_test.SubmitSAandCOC"/>
+      <class name="daato_automation_test.Acceptsaqandcoc"/>
+      <class name="daato_automation_test.RiskPrioritySelfAssessmentTest"/>
+      <class name="daato_automation_test.Bulkassignentity" />
+      <class name="daato_automation_test.Markassafe" />
       
     </classes>
   </test>
