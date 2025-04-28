@@ -102,6 +102,7 @@ public class AddSupplierPage extends BasePage {
 		
 		driver.findElement(By.xpath("//li[@id='searchSelectID-Products or services-option-" + product1 + "']")).click();	
 		System.out.println("piyush");
+		System.out.println("I am new code");
 		
 		spendVolume.sendKeys(spendV);
 		System.out.println(spendV);
