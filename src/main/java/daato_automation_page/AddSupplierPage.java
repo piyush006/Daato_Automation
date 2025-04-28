@@ -106,16 +106,23 @@ public class AddSupplierPage extends BasePage {
 		
 		spendVolume.sendKeys(spendV);
 		System.out.println(spendV);
-		threadSleep(PageConstants.WAIT_THREE);
+		// Scroll into view first
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", createButton);
-		Thread.sleep(500); // Tiny wait
+		Thread.sleep(500); // Small wait for scroll to finish
 
-		WebDriverWait waitUntilEnabled = new WebDriverWait(driver, Duration.ofSeconds(10));
-		waitUntilEnabled.until(ExpectedConditions.elementToBeClickable(createButton));
-		System.out.println("added bby me");
+		WebDriverWait waitUntilClickable = new WebDriverWait(driver, Duration.ofSeconds(15));
+		// Custom wait: check that button is both enabled and clickable
+		waitUntilClickable.until(driver -> {
+		    try {
+		        return createButton.isEnabled() && createButton.isDisplayed() && createButton.isDisplayed();
+		    } catch (Exception e) {
+		        return false;
+		    }
+		});
 
-		createButton.click();
-		System.out.println("addedsupplier");
+		// Finally click
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", createButton);
+		System.out.println("✅ Supplier added!");
 		threadSleep(PageConstants.WAIT_FIVE);
 	}
 }
