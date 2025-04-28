@@ -6,6 +6,7 @@
      
      <class name="daato_automation_test.TestDatasetup" />
      <class name="daato_automation_test.AddSupplierTest" />
+     <class name="daato_automation_test.AbstractRiskCalculationTest"/>
       
     </classes>
   </test>
