@@ -1,8 +1,11 @@
 package daato_automation_test;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
 
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.Test;
 
 import Excel.utility.Xls_Reader;
@@ -24,7 +27,7 @@ public class Acceptsaqandcoc extends BaseTest{
 	
 	public String adminToken;
 		
-	@Test(priority=1)
+	@Test(priority=7)
 	public void getadmintoken() throws InterruptedException, IOException {
 		
 		
@@ -42,11 +45,15 @@ public class Acceptsaqandcoc extends BaseTest{
 	}
 	
 	
-	@Test(priority=2)
+	@Test(priority=8)
 		
 		public void acceptsaqandcoc() throws InterruptedException, IOException {
 		
-		Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH);
+		FileInputStream fis = new FileInputStream(TestConstants.TEST_DATA_FILE_PATH);
+	    Workbook workbook = new XSSFWorkbook(fis);
+
+	    // Step 2: Pass both path and workbook to Xls_Reader
+	    Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH, workbook);
 	    Email =reader.getCellData("Customer_Login", "Email",2);
 		System.out.println(Email);
 		PropertyFileUtils p = new PropertyFileUtils();

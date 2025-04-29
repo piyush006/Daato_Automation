@@ -2,30 +2,41 @@
 package daato_automation_testcomponent;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
-import daato_automation_pagecomponent.PageConstants;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+import daato_automation_pagecomponent.PageConstants;
 /**
  * @author 47Billion
  *
  */
 public class BaseTest {
 	public static WebDriver driver;
-
+	
 	@BeforeMethod
-	public void chrome_setup() throws InterruptedException {
+	public void chrome_setup() throws InterruptedException, IOException {
 		
 		 
 		
@@ -56,7 +67,7 @@ public class BaseTest {
 	    ops.addArguments("--disable-gpu");
 	    ops.addArguments("--disable-dev-shm-usage");
 	    ops.addArguments("--no-sandbox");
-	    ops.addArguments("--headless=new");
+	   ops.addArguments("--headless=new");
 
 	    // Setup WebDriver
 	   WebDriverManager.chromedriver().setup();
@@ -79,8 +90,33 @@ public class BaseTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.manage().window().maximize();
 		driver.get(TestConstants.TEST_DAATO_URL);*/
+	    
+	  
 
 	}
+	@BeforeClass
+    public void setupRuntimeFile() throws IOException {
+        String projectDir = System.getProperty("user.dir");
+
+        Path sourcePath = Paths.get(projectDir, "test-data", "Add_Supplier_Afghanistan.xlsx");
+        Path targetDir = Paths.get(projectDir, "target", "runtime");
+        Path targetPath = targetDir.resolve("Add_Supplier_Afghanistan.xlsx");
+
+        // Step 1: Make sure target directory exists
+        if (Files.notExists(targetDir)) {
+            Files.createDirectories(targetDir);
+        }
+
+        // Step 2: If target file doesn't exist, copy fresh
+        if (Files.notExists(targetPath)) {
+            System.out.println("Target file not found. Copying fresh...");
+            Files.copy(sourcePath, targetPath, StandardCopyOption.REPLACE_EXISTING);
+        } else {
+            System.out.println("Target file already exists. Proceeding to use existing file for read/write.");
+        }
+
+        System.out.println("Target file ready at: " + targetPath.toAbsolutePath());
+    }
 
 	public void threadSleep(long second) throws InterruptedException {
 
@@ -100,8 +136,9 @@ public class BaseTest {
 	
 
 	@AfterMethod
-	public void tearDown() {
+	public void tearDown() throws IOException {
 
+		
 		driver.quit();
 	}
 

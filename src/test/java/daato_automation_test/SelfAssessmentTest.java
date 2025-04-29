@@ -1,10 +1,13 @@
 /* Hello, Welcome to Divya Coding */
 package daato_automation_test;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -38,11 +41,15 @@ public class SelfAssessmentTest extends BaseTest {
 	String URL;
 	String URL1;
 
-	@Test(priority = 1)
+	@Test(priority = 4)
 
 	public void General_information() throws InterruptedException, IOException {
 
-		Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH);
+		FileInputStream fis = new FileInputStream(TestConstants.TEST_DATA_FILE_PATH);
+	    Workbook workbook = new XSSFWorkbook(fis);
+
+	    // Step 2: Pass both path and workbook to Xls_Reader
+	    Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH, workbook);
 
 		int count = reader.getRowCount("Add_Supplier");
 

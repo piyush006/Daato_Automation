@@ -1,9 +1,12 @@
 /* Hello, Welcome to Divya Coding */
 package daato_automation_test;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WindowType;
 import org.testng.annotations.Test;
@@ -30,7 +33,11 @@ public class SelfAssessmentSAQTest extends BaseTest {
 		ArrayList<String> Expected_Result = new ArrayList<String>();
 		ArrayList<String> Actual_Result = new ArrayList<String>();
 
-		Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH);
+		FileInputStream fis = new FileInputStream(TestConstants.TEST_DATA_FILE_PATH);
+	    Workbook workbook = new XSSFWorkbook(fis);
+
+	    // Step 2: Pass both path and workbook to Xls_Reader
+	    Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH, workbook);
 
 		int count = reader.getRowCount("self_assessment_saq");
 
@@ -71,7 +78,7 @@ public class SelfAssessmentSAQTest extends BaseTest {
 
 	}
 
-	@Test
+	@Test(priority=3)
 
 	public void sendSAQ() throws InterruptedException, IOException {
 
@@ -79,7 +86,11 @@ public class SelfAssessmentSAQTest extends BaseTest {
 		LoginPage login = new LoginPage(driver);
 		login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
 
-		Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH);
+		FileInputStream fis = new FileInputStream(TestConstants.TEST_DATA_FILE_PATH);
+	    Workbook workbook = new XSSFWorkbook(fis);
+
+	    // Step 2: Pass both path and workbook to Xls_Reader
+	    Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH, workbook);
 
 		SelfAssessmentSAQPage selfAssessmentSAQPage = new SelfAssessmentSAQPage(driver);
 		selfAssessmentSAQPage.openNewTabAndNavigate(TestConstants.TEST_SUPPLIER_REPO_URL);

@@ -5,8 +5,9 @@
     <classes>
       <class name="daato_automation_test.AddSupplierTest">
         <methods>
-          <include name="tearDown"/>
+          <include name="setupRuntimeFile"/>
           <include name="add_supplier"/>
+          <include name="tearDown"/>
           <include name="chrome_setup"/>
         </methods>
       </class> <!-- daato_automation_test.AddSupplierTest -->

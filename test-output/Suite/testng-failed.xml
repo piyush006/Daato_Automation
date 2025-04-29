@@ -3,13 +3,14 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="daato_automation_test.Checkresendnotification">
+      <class name="daato_automation_test.AddSupplierTest">
         <methods>
-          <include name="checkresendnotification"/>
+          <include name="setupRuntimeFile"/>
           <include name="tearDown"/>
+          <include name="add_supplier"/>
           <include name="chrome_setup"/>
         </methods>
-      </class> <!-- daato_automation_test.Checkresendnotification -->
+      </class> <!-- daato_automation_test.AddSupplierTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

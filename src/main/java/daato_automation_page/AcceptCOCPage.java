@@ -2,8 +2,12 @@
 package daato_automation_page;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -113,7 +117,7 @@ public class AcceptCOCPage extends BasePage {
 		threadSleep(PageConstants.WAIT_TWO);
 	}
 
-	public void acceptCocRequest() throws InterruptedException {
+	public void acceptCocRequest() throws InterruptedException, IOException {
 		System.out.println(driver.getCurrentUrl());
 		// proposedCoc.click();
 		threadSleep(PageConstants.WAIT_TWO);
@@ -130,7 +134,11 @@ public class AcceptCOCPage extends BasePage {
 
 		}
 		threadSleep(PageConstants.WAIT_ONE);
-		Xls_Reader reader = new Xls_Reader(PageConstants.PAGE_DATA_FILE_PATH);
+		FileInputStream fis = new FileInputStream(PageConstants.PAGE_DATA_FILE_PATH);
+	    Workbook workbook = new XSSFWorkbook(fis);
+
+	    // Step 2: Pass both path and workbook to Xls_Reader
+	    Xls_Reader reader = new Xls_Reader(PageConstants.PAGE_DATA_FILE_PATH, workbook);
 		String url = driver.getCurrentUrl();
 		printMessage(url);
 		reader.setCellData("Recent_Added", "CocCurrentUrl", 2, url);

@@ -20,7 +20,7 @@ public class Checkresendnotification extends BaseTest{
 		String supplierId;
         String COCId;
 	
-	@Test
+	@Test(priority=21)
 	public void checkresendnotification() throws InterruptedException, IOException {
 	
 

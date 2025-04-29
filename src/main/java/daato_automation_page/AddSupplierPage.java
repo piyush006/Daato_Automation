@@ -81,7 +81,9 @@ public class AddSupplierPage extends BasePage {
 			String spendV) throws InterruptedException {
 		System.out.println(companyN);
 		companyName.sendKeys(companyN);
+		threadSleep(PageConstants.WAIT_TWO);
 		contactEmail.sendKeys(contactE);
+		threadSleep(PageConstants.WAIT_ONE);
 		contactName.sendKeys(contactN);
 		countriesOfOperation.click();
 		driver.findElement(By.xpath("//li[@id='searchSelectID-Countries of Operation-option-" + 0 + "']")).click();

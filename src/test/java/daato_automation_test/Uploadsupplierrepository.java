@@ -30,7 +30,7 @@ public class Uploadsupplierrepository extends BaseTest{
 	
 	
 	
-@Test(priority=1)	
+@Test(priority=16)	
 	
 public  void editanduploadrepo() throws IOException, InterruptedException {
 	
@@ -55,7 +55,7 @@ downloadfile.uploadrepositoryfile(excelpath);
 
 }
 
-@Test(priority=2)
+@Test(priority=17)
 
 public  void checkcontactnameaftereditrepo() throws IOException, InterruptedException{
 	

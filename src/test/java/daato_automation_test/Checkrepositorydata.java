@@ -48,7 +48,7 @@ boolean ExpectedMarkassafe;
 boolean ActualMarkassafe = true;
 
 	
-	@Test(priority=1)
+	@Test(priority=14)
 	
 	public void GetexpectedResult() throws IOException, InterruptedException {
 		
@@ -83,7 +83,7 @@ boolean ActualMarkassafe = true;
 }
 	
 	
-   @Test(priority=2)
+   @Test(priority=15)
    
     public void checkacutaldata() throws IOException {
         SupplierData data = SupplierDataReader.getSupplierData("Piyush");

@@ -1,6 +1,7 @@
 package utils;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Random;
@@ -12,6 +13,8 @@ import daato_automation_pagecomponent.PageConstants;
 import daato_automation_testcomponent.Getlatestfilepath;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.ss.usermodel.Workbook;
 
 public class SupplierDataReader {
 	
@@ -26,7 +29,9 @@ public class SupplierDataReader {
     	//String downloadPath = System.getProperty("download.dir", System.getProperty("user.dir") + "/downloads");
         File latestFile = Getlatestfilepath.getLatestFileFromDir(downloadPath, ".xlsx");
 
-        Xls_Reader reader = new Xls_Reader(latestFile.getAbsolutePath());
+        FileInputStream fis = new FileInputStream(latestFile);
+        Workbook workbook = new XSSFWorkbook(fis);
+        Xls_Reader reader = new Xls_Reader(latestFile.getAbsolutePath(), workbook);
         int count = reader.getRowCount("suppliers");
 
         for (int i = 0; i < count - 1; i++) {
@@ -38,7 +43,6 @@ public class SupplierDataReader {
                 System.out.println(data.contactEmail);
                 data.productsOrServices = reader.getCellData("suppliers", "Products Or Services (recommended)\ni.e. PS_0013", i + 2);
                 data.contactName = reader.getCellData("suppliers", "Contact Name (optional)", i + 2);
-                data.isActive = reader.getCellData("suppliers", 28, i + 2);
                 data.ownBusiness = reader.getCellData("suppliers", "Own Business Entity (optional)\nplease type the exact entity name used in the organizational structure in Daato. You can refer to masterentity sheet", i + 2);
                 data.relationshipManager = reader.getCellData("suppliers", "Relationship manager’s email (optional)\ni.e. 123@gmail.com", i + 2);
                 data.markedAsSafe = reader.getCellData("suppliers", "Marked as Safe (optional)\ni.e. FALSE", i + 2);
@@ -50,7 +54,7 @@ public class SupplierDataReader {
     }
     
     
-    public void editexcel() {
+    public void editexcel() throws IOException {
     	
     	//String downloadPath = System.getProperty("download.dir", System.getProperty("user.dir") + "/downloads");
     	String downloadPath = System.getProperty("user.dir") + "/downloads";
@@ -59,7 +63,10 @@ public class SupplierDataReader {
         latestExcelPath = latestFile.getAbsolutePath();
         System.out.println(latestExcelPath);
 
-        Xls_Reader reader = new Xls_Reader(latestExcelPath);
+        FileInputStream fis = new FileInputStream(latestExcelPath);
+        Workbook workbook = new XSSFWorkbook(fis);
+
+        Xls_Reader reader = new Xls_Reader(latestExcelPath, workbook);
 
         // Generate random 5-character string
         randomContactName = generateRandomString(5);

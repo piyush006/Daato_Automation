@@ -1,9 +1,12 @@
 /* Hello, Welcome to Divya Coding */
 package daato_automation_test;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
@@ -39,7 +42,11 @@ public class AbstractRiskCalculationTest extends BaseTest {
 		ArrayList<String> categories_wise_product_score = new ArrayList<String>();
 		ArrayList<String> categories_wise_country_score = new ArrayList<String>();
 
-		Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH);
+		FileInputStream fis = new FileInputStream(TestConstants.TEST_DATA_FILE_PATH);
+	    Workbook workbook = new XSSFWorkbook(fis);
+
+	    // Step 2: Pass both path and workbook to Xls_Reader
+	    Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH, workbook);
 
 		int count = reader.getRowCount("abstract_logic");
 
@@ -61,7 +68,7 @@ public class AbstractRiskCalculationTest extends BaseTest {
 
 		abstractRiskCalculation.searchCompany();
 		Company = reader.getCellData("Recent_Added", "Company_Name", 2);
-		System.out.println(Company);
+		System.out.println("piyush"+Company);
 
 		abstractRiskCalculation.riskLevel(Company);
 

@@ -1,9 +1,12 @@
 /* Hello, Welcome to Divya Coding */
 package daato_automation_test;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
@@ -29,7 +32,11 @@ public class AcceptCOCTest extends BaseTest {
 
 	public void accept_CoC() throws InterruptedException, IOException {
 
-		Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH);
+		FileInputStream fis = new FileInputStream(TestConstants.TEST_DATA_FILE_PATH);
+	    Workbook workbook = new XSSFWorkbook(fis);
+
+	    // Step 2: Pass both path and workbook to Xls_Reader
+	    Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH, workbook);
 		
 		Email = reader.getCellData("Recent_Added", "Email", 2);
 		System.out.println(Email);
@@ -57,7 +64,11 @@ public class AcceptCOCTest extends BaseTest {
 		LoginPage login = new LoginPage(driver);
 		login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
 		
-		Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH);
+		FileInputStream fis = new FileInputStream(TestConstants.TEST_DATA_FILE_PATH);
+	    Workbook workbook = new XSSFWorkbook(fis);
+
+	    // Step 2: Pass both path and workbook to Xls_Reader
+	    Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH, workbook);
 		String URL1 = reader.getCellData("Recent_Added", "CocCurrentUrl", 2);
 		String Company_Name = reader.getCellData("Recent_Added", "Company_Name", 2);
 		System.out.println(Company_Name);

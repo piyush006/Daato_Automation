@@ -1,10 +1,13 @@
 package daato_automation_test;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
@@ -36,7 +39,11 @@ String title;
 @Test
 public void fillsaq() throws IOException, InterruptedException {
 	
-	Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH);
+	FileInputStream fis = new FileInputStream(TestConstants.TEST_DATA_FILE_PATH);
+    Workbook workbook = new XSSFWorkbook(fis);
+
+    // Step 2: Pass both path and workbook to Xls_Reader
+    Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH, workbook);
     Email =reader.getCellData("Customer_Login", "Email",2);
 	System.out.println(Email);
 	PropertyFileUtils p = new PropertyFileUtils();

@@ -15,7 +15,7 @@ import java.nio.file.*;
 public class TestDatasetup {
 	
 	
-	@BeforeSuite
+	/*@BeforeSuite
 	public void copyTestDataFileOnce() throws IOException {
 	    String projectDir = System.getProperty("user.dir");
 
@@ -35,5 +35,5 @@ public class TestDatasetup {
 	    System.out.println("✅ Test data copied ONCE to: " + targetPath.toString());
 	}
 	
-	
+	*/
 }

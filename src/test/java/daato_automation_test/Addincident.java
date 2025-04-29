@@ -1,7 +1,10 @@
 package daato_automation_test;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -30,12 +33,15 @@ String adminToken;
 	
 	String ActualriskPriorityLevel;
 	
-	@Test(priority=1)
+	@Test(priority=18)
 	
 	public void Getsupplierid() throws IOException, InterruptedException {
 		
-		
-		Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH);
+		FileInputStream fis = new FileInputStream(TestConstants.TEST_DATA_FILE_PATH);
+	    Workbook workbook = new XSSFWorkbook(fis);
+
+	    // Step 2: Pass both path and workbook to Xls_Reader
+	    Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH, workbook);
 	    Email =reader.getCellData("Customer_Login", "Email",2);
 		System.out.println(Email);
 		PropertyFileUtils p = new PropertyFileUtils();
@@ -55,7 +61,7 @@ String adminToken;
 		}
 	
 	
-	@Test(priority=2)
+	@Test(priority=19)
   public void addincident() throws IOException, InterruptedException {
 	
 	
@@ -76,7 +82,7 @@ String adminToken;
 }
 	
 	
-	@Test(priority=3)
+	@Test(priority=20)
 	
 	
 	  public void checkriskafteraddingincident() throws IOException, InterruptedException {
