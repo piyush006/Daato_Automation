@@ -18,7 +18,7 @@ public class Markassafe extends BaseTest{
 	public String adminToken;
 	
 	
-	@Test(priority=1)
+	@Test(priority=12)
 	
 	
 		public void getadmintoken() throws InterruptedException, IOException {

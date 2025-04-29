@@ -17,7 +17,7 @@ public class Bulkassignentity extends BaseTest{
 	public String adminToken;
 	
 	
-	@Test(priority=1)
+	@Test(priority=10)
 	
 	
 		public void bulkassignentity() throws InterruptedException, IOException {
@@ -40,7 +40,7 @@ public class Bulkassignentity extends BaseTest{
 	}
 	
 	
-	@Test(priority=2)
+	@Test(priority=11)
 	
 	public void bulkassignrelationshipmanager() throws InterruptedException, IOException {
 		

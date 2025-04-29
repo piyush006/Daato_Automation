@@ -28,7 +28,7 @@ import daato_automation_testcomponent.TestConstants;
 public class AbstractRiskCalculationTest extends BaseTest {
 	String Company;
 
-	@Test
+	@Test(priority=2)
 
 	public void to_verify_abstrac_risk() throws InterruptedException, IOException {
 		/*

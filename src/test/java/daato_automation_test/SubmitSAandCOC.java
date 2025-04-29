@@ -36,7 +36,7 @@ public class SubmitSAandCOC extends BaseTest{
 String Email;
 String title;
 	
-@Test
+@Test(priority=6)
 public void fillsaq() throws IOException, InterruptedException {
 	
 	FileInputStream fis = new FileInputStream(TestConstants.TEST_DATA_FILE_PATH);

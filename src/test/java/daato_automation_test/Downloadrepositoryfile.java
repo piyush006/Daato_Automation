@@ -27,7 +27,7 @@ public class Downloadrepositoryfile extends BaseTest{
 	String adminToken;
 	String url;
 	
-	@Test()
+	@Test(priority=13)
 	
 	public void downloadrepository() throws IOException, InterruptedException, URISyntaxException {
 	

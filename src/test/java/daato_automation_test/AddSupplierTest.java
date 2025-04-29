@@ -28,7 +28,7 @@ public class AddSupplierTest extends BaseTest {
 	String Spend_volume;
 	String User_Invited;
 
-	@Test
+	@Test(priority=1)
 	public void add_supplier() throws InterruptedException, IOException {
 
 		

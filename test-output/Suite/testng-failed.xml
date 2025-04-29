@@ -3,14 +3,14 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="daato_automation_test.AddSupplierTest">
+      <class name="daato_automation_test.SubmitSAandCOC">
         <methods>
           <include name="setupRuntimeFile"/>
+          <include name="fillsaq"/>
           <include name="tearDown"/>
-          <include name="add_supplier"/>
           <include name="chrome_setup"/>
         </methods>
-      </class> <!-- daato_automation_test.AddSupplierTest -->
+      </class> <!-- daato_automation_test.SubmitSAandCOC -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

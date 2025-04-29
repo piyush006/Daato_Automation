@@ -28,7 +28,7 @@ public class RiskPrioritySelfAssessmentTest extends BaseTest {
 
 	String Company;
 
-	@Test
+	@Test(priority=9)
 
 	public void check_risk_priority_Self_assessment() throws InterruptedException, IOException {
 

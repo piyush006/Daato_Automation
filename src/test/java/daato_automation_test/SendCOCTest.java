@@ -25,7 +25,7 @@ public class SendCOCTest extends BaseTest {
 
 	String Company;
 
-	@Test
+	@Test(priority=5)
 
 	public void send_coc() throws InterruptedException, IOException {
 

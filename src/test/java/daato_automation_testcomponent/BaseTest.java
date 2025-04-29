@@ -67,7 +67,7 @@ public class BaseTest {
 	    ops.addArguments("--disable-gpu");
 	    ops.addArguments("--disable-dev-shm-usage");
 	    ops.addArguments("--no-sandbox");
-	   ops.addArguments("--headless=new");
+	 //  ops.addArguments("--headless=new");
 
 	    // Setup WebDriver
 	   WebDriverManager.chromedriver().setup();
