@@ -1,5 +1,6 @@
 daato_automation_testcomponent\Getlatestfilepath.class
 daato_automation_test\AddSupplierTest.class
+daato_automation_test\TestDatasetup.class
 daato_automation_testcomponent\TestConstants.class
 daato_automation_test\Markassafe.class
 daato_automation_test\Addincident.class
