@@ -1,6 +1,10 @@
 name: Java Selenium CI with Downloads
 
 on:
+  # Allow manual/API trigger
+  workflow_dispatch:
+
+  # Optional: still runs on push/pull_request if needed
   push:
     branches: [ master ]
   pull_request:
@@ -32,7 +36,7 @@ jobs:
           ${{ runner.os }}-maven-
 
     - name: Run TestNG tests
-      run: mvn test -DsuiteXmlFile=testng.xml
+      run: mvn test -DsuiteXmlFile=testngDoublemateriality.xml
 
     - name: Upload TestNG Report
       if: always()
