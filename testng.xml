@@ -2,7 +2,8 @@
 <suite name="Suite" preserve-order="true" parallel="none">
   <test thread-count="1" name="Test">
     <classes>
-  <class name="daato_automation_test.AddSupplierTest" />
+  
+      <class name="daato_automation_test.AddSupplierTest" />
       <class name="daato_automation_test.AbstractRiskCalculationTest"/>
       <class name="daato_automation_test.SelfAssessmentSAQTest"/>
       <class name="daato_automation_test.SelfAssessmentTest"/>
@@ -16,7 +17,8 @@
       <class name="daato_automation_test.Checkrepositorydata" />
       <class name="daato_automation_test.Uploadsupplierrepository" />
       <class name="daato_automation_test.Addincident" />
-      <class name="daato_automation_test.Checkresendnotification" />  
+      <class name="daato_automation_test.Checkresendnotification" />
+      <class name="daato_automation_test.BulksupplierImport" />
      
       
     

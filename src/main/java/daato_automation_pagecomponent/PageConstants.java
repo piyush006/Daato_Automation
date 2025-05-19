@@ -10,6 +10,8 @@ public class PageConstants {
 	public static final String PAGE_SUPPLIER_REPO_URL = "https://qa.daato.app/modules/supplyChain/suppliersRepository?";
 	public static final String PAGE_YOPMAIL_URL = "https://yopmail.com/en/";
 	public static final String PAGE_COMMENT_NAME = "Piyush";
+	
+
 	//public static final String PAGE_DATA_FILE_PATH = "C:\\Users\\47Billion\\Desktop\\Add_Supplier_Afghanistan.xlsx";
 	
 	
@@ -23,5 +25,6 @@ public class PageConstants {
 	public static final int WAIT_EIGHT = 5000;
 	public static final int WAIT_TEN = 10000;
 	public static final int WAIT_TWENTY = 20000;
+	public static String surverypage ="https://qa.daato.app/modules/esrs/doubleMateriality/";
 
 }

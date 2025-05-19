@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="daato_automation_test.AddSupplierTest">
+      <class name="ESRS_Report.Checkaggregateresult">
         <methods>
-          <include name="setupRuntimeFile"/>
-          <include name="add_supplier"/>
-          <include name="tearDown"/>
-          <include name="chrome_setup"/>
+          <include name="checkaggregatedv5E154"/>
+          <include name="checkaggregatedresultv5E152"/>
+          <include name="getadmintoken"/>
         </methods>
-      </class> <!-- daato_automation_test.AddSupplierTest -->
+      </class> <!-- ESRS_Report.Checkaggregateresult -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

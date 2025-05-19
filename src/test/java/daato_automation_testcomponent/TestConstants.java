@@ -19,4 +19,5 @@ public class TestConstants {
 	public static final int WAIT_THREE = 3000;
 	public static final int WAIT_TWENTY = 20000;
 	public static final int WAIT_THIRTY = 30000;
+	public static final int WAIT_ONE = 1000;
 }

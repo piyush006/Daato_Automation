@@ -63,11 +63,14 @@ public class BaseTest {
 	        ops.addArguments("--window-size=1920,1080"); // Set a proper screen size
 	        ops.addArguments("--remote-allow-origins=*"); // Fix CORS issues if any
 	    }
+	    
+	  //  ops.addArguments("--headless=new");
 	    ops.addArguments("--remote-allow-origins=*");
+	    ops.addArguments("--window-size=1920,1080");
 	    ops.addArguments("--disable-gpu");
 	    ops.addArguments("--disable-dev-shm-usage");
 	    ops.addArguments("--no-sandbox");
-	 //  ops.addArguments("--headless=new");
+	  
 
 	    // Setup WebDriver
 	   WebDriverManager.chromedriver().setup();

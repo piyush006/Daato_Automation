@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.testng.annotations.Test;
 
+import daato_automation_testcomponent.TestConstants;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -262,7 +263,7 @@ public class ApiHelper {
 	                            .response();
 	                } else {
 	                    // File upload for uploadSigned
-	                    File file = new File("C:\\Users\\47Billion\\Desktop\\Daato_Automation\\Add_Supplier_Afghanistan.xlsx"); // replace with actual path
+	                    File file = new File(TestConstants.TEST_DATA_FILE_PATH); // replace with actual path
 	                    System.out.println("Uploading file: " + file.getAbsolutePath());
 
 	                    response = RestAssured

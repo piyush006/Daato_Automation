@@ -3,14 +3,28 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="daato_automation_test.SubmitSAandCOC">
+      <class name="DoubleMateriality.Finalreportscore">
         <methods>
           <include name="setupRuntimeFile"/>
-          <include name="fillsaq"/>
+          <include name="checkfinalreportscore"/>
           <include name="tearDown"/>
           <include name="chrome_setup"/>
         </methods>
-      </class> <!-- daato_automation_test.SubmitSAandCOC -->
+      </class> <!-- DoubleMateriality.Finalreportscore -->
+      <class name="DoubleMateriality.DownloadDMxlsx">
+        <methods>
+          <include name="getadmintoken"/>
+          <include name="checklatestfiledata"/>
+        </methods>
+      </class> <!-- DoubleMateriality.DownloadDMxlsx -->
+      <class name="DoubleMateriality.Checkmanualscore">
+        <methods>
+          <include name="setupRuntimeFile"/>
+          <include name="tearDown"/>
+          <include name="chrome_setup"/>
+          <include name="checkmaualscore"/>
+        </methods>
+      </class> <!-- DoubleMateriality.Checkmanualscore -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

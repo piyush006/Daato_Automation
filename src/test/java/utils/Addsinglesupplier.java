@@ -62,7 +62,7 @@ public class Addsinglesupplier {
             + "\"suppliers\":[\"" + supplierid + "\"],"
             + "\"title\":\"Please accept the Code of Conduct\","
             + "\"message\":\"Internal QA is asking you to agree to the Code of Conduct. This is to provide contractual assurances aligned with the requirements of the German Supply Chain Due Diligence Act. For more information, you can refer to the guidance.\","
-            + "\"dueDate\":\"2025-05-07T10:22:03.768Z\""
+            + "\"dueDate\":\"2025-12-30T10:22:03.768Z\""
             + "}";
 
         Response response = RestAssured

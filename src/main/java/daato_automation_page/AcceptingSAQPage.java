@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
 import daato_automation_pagecomponent.BasePage;
 import daato_automation_pagecomponent.PageConstants;
 
@@ -64,5 +65,7 @@ public class AcceptingSAQPage extends BasePage{
 		System.out.println("clicked on company");
 		//driver.findElement(By.xpath("//p[contains(text(),'" + company + "')]")).click();
 		threadSleep(PageConstants.WAIT_TEN);
+		
+	
 	}
 }

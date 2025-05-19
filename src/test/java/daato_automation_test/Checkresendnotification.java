@@ -24,7 +24,6 @@ public class Checkresendnotification extends BaseTest{
 	public void checkresendnotification() throws InterruptedException, IOException {
 	
 
-		PropertyFileUtils p = new PropertyFileUtils();
 		LoginPage login = new LoginPage(driver);
 		login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPassword());
 	threadSleep(PageConstants.WAIT_FOUR);
@@ -41,6 +40,9 @@ public class Checkresendnotification extends BaseTest{
 	System.out.println(supplierId);
 	
 	threadSleep(PageConstants.WAIT_TWO);
+	
+	
+	
 	 Addsinglesupplier.sendcoc(supplierId, adminToken);
 	 
 	 System.out.println("Request send");
