@@ -1,10 +1,7 @@
 name: Java Selenium CI with Downloads
 
 on:
-  # Allow manual/API trigger
   workflow_dispatch:
-
-  # Optional: still runs on push/pull_request if needed
   push:
     branches: [ master ]
   pull_request:
@@ -44,3 +41,24 @@ jobs:
       with:
         name: TestNG-Reports
         path: test-output/
+
+    - name: Convert TestNG Results to JSON
+      if: always()
+      run: |
+        sudo apt update
+        sudo apt install python3-pip -y
+        pip3 install xmltodict
+        python3 <<EOF
+import xmltodict, json
+with open("test-output/testng-results.xml") as xml_file:
+    data = xmltodict.parse(xml_file.read())
+with open("test-output/testng-results.json", "w") as json_file:
+    json.dump(data, json_file, indent=2)
+EOF
+
+    - name: Upload JSON Test Results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: testng-results
+        path: test-output/testng-results.json
