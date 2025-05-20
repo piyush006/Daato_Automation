@@ -113,13 +113,13 @@
   <groupId>org.apache.maven.plugins</groupId>
   <artifactId>maven-surefire-plugin</artifactId>
   <version>3.0.0-M9</version>
-  <configuration>
-    <suiteXmlFiles>
-      <suiteXmlFile>testng.xml</suiteXmlFile> <!-- Notice: <suiteXmlFile> not <suiteXmlFiles> inside -->
-    </suiteXmlFiles>
-    <parallel>none</parallel> <!-- enforce no parallel -->
-    <testFailureIgnore>false</testFailureIgnore>
-  </configuration>
+<configuration>
+  <suiteXmlFiles>
+    <suiteXmlFile>${suiteXmlFile}</suiteXmlFile> <!-- Accepts input from command line -->
+  </suiteXmlFiles>
+  <parallel>none</parallel>
+  <testFailureIgnore>false</testFailureIgnore>
+</configuration>
 </plugin>
     </plugins>
     </build>
