@@ -153,6 +153,8 @@ public class Answercollaborationrequest extends BasePage{
 		threadSleep(PageConstants.WAIT_ONE);
 		
 		confirmandsubmit.click();
+		
+		threadSleep(PageConstants.WAIT_THREE);
 }
 	
 

@@ -35,25 +35,27 @@ jobs:
     - name: Run TestNG tests
       run: mvn test -DsuiteXmlFile=testngDoublemateriality.xml
 
-    - name: Upload TestNG Report
+    - name: Convert TestNG Results to JSON
+      if: always()
+      run: |
+        pip install xmltodict
+        python3 <<EOF
+import xmltodict, json
+with open("test-output/testng-results.xml") as xml_file:
+    data = xmltodict.parse(xml_file.read())
+with open("test-output/testng-results.json", "w") as json_file:
+    json.dump(data, json_file)
+EOF
+
+    - name: Upload TestNG Report (HTML + XML)
       if: always()
       uses: actions/upload-artifact@v4
       with:
         name: TestNG-Reports
         path: test-output/
 
-    - name: Convert TestNG Results to JSON
-      run: |
-        pip install xmltodict
-        python3 <<EOF
-        import xmltodict, json
-        with open("test-output/testng-results.xml") as xml_file:
-            data = xmltodict.parse(xml_file.read())
-        with open("test-output/testng-results.json", "w") as json_file:
-            json.dump(data, json_file)
-        EOF
-
     - name: Upload JSON Test Results
+      if: always()
       uses: actions/upload-artifact@v4
       with:
         name: testng-results
