@@ -12,51 +12,51 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-    - name: Set up JDK 17
-      uses: actions/setup-java@v3
-      with:
-        distribution: 'temurin'
-        java-version: '17'
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
 
-    - name: Create Downloads Directory
-      run: mkdir -p downloads
+      - name: Create Downloads Directory
+        run: mkdir -p downloads
 
-    - name: Cache Maven packages
-      uses: actions/cache@v3
-      with:
-        path: ~/.m2
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-        restore-keys: |
-          ${{ runner.os }}-maven-
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
 
-    - name: Run TestNG tests
-      run: mvn test -DsuiteXmlFile=testngDoublemateriality.xml
+      - name: Run TestNG tests
+        run: mvn test -DsuiteXmlFile=testngDoublemateriality.xml
 
-    - name: Convert TestNG Results to JSON
-      if: always()
-      run: |
-        pip install xmltodict
-        python3 <<EOF
-import xmltodict, json
-with open("test-output/testng-results.xml") as xml_file:
-    data = xmltodict.parse(xml_file.read())
-with open("test-output/testng-results.json", "w") as json_file:
-    json.dump(data, json_file)
-EOF
+      - name: Convert TestNG Results to JSON
+        if: always()
+        run: |
+          pip install xmltodict
+          python3 <<EOF
+          import xmltodict, json
+          with open("test-output/testng-results.xml") as xml_file:
+              data = xmltodict.parse(xml_file.read())
+          with open("test-output/testng-results.json", "w") as json_file:
+              json.dump(data, json_file, indent=2)
+          EOF
 
-    - name: Upload TestNG Report (HTML + XML)
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: TestNG-Reports
-        path: test-output/
+      - name: Upload TestNG Report (HTML + XML)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TestNG-Reports
+          path: test-output/
 
-    - name: Upload JSON Test Results
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: testng-results
-        path: test-output/testng-results.json
+      - name: Upload JSON Test Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: testng-results
+          path: test-output/testng-results.json
