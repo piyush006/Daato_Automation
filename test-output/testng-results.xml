@@ -2,28 +2,28 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-26T16:47:23 IST" name="Default suite" finished-at="2025-05-26T16:47:59 IST" duration-ms="35485">
+  <suite started-at="2025-05-27T20:09:09 IST" name="Default suite" finished-at="2025-05-27T20:10:42 IST" duration-ms="93291">
     <groups>
     </groups>
-    <test started-at="2025-05-26T16:47:23 IST" name="Default test" finished-at="2025-05-26T16:47:59 IST" duration-ms="35485">
-      <class name="DoubleMateriality.Answercollabrequest">
-        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:DoubleMateriality.Answercollabrequest@1356d4d4]" started-at="2025-05-26T16:47:23 IST" name="setupRuntimeFile" finished-at="2025-05-26T16:47:23 IST" duration-ms="11" status="PASS">
+    <test started-at="2025-05-27T20:09:09 IST" name="Default test" finished-at="2025-05-27T20:10:42 IST" duration-ms="93291">
+      <class name="daato_automation_test.SubmitSAandCOC">
+        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:daato_automation_test.SubmitSAandCOC@41c2284a]" started-at="2025-05-27T20:09:09 IST" name="setupRuntimeFile" finished-at="2025-05-27T20:09:09 IST" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupRuntimeFile -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:DoubleMateriality.Answercollabrequest@1356d4d4]" started-at="2025-05-26T16:47:23 IST" name="chrome_setup" finished-at="2025-05-26T16:47:29 IST" duration-ms="6080" status="PASS">
+        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.SubmitSAandCOC@41c2284a]" started-at="2025-05-27T20:09:09 IST" name="chrome_setup" finished-at="2025-05-27T20:09:13 IST" duration-ms="4316" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chrome_setup -->
-        <test-method signature="answercollabrequest()[pri:0, instance:DoubleMateriality.Answercollabrequest@1356d4d4]" started-at="2025-05-26T16:47:29 IST" name="answercollabrequest" finished-at="2025-05-26T16:47:58 IST" duration-ms="29076" status="PASS">
+        <test-method signature="fillsaq()[pri:6, instance:daato_automation_test.SubmitSAandCOC@41c2284a]" started-at="2025-05-27T20:09:13 IST" name="fillsaq" finished-at="2025-05-27T20:10:42 IST" duration-ms="88575" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- answercollabrequest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:DoubleMateriality.Answercollabrequest@1356d4d4]" started-at="2025-05-26T16:47:58 IST" name="tearDown" finished-at="2025-05-26T16:47:59 IST" duration-ms="276" status="PASS">
+        </test-method> <!-- fillsaq -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.SubmitSAandCOC@41c2284a]" started-at="2025-05-27T20:10:42 IST" name="tearDown" finished-at="2025-05-27T20:10:42 IST" duration-ms="322" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- DoubleMateriality.Answercollabrequest -->
+      </class> <!-- daato_automation_test.SubmitSAandCOC -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

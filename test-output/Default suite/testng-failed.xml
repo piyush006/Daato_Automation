@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ESRS_Report.Checkaggregateresult">
+      <class name="daato_automation_test.SubmitSAandCOC">
         <methods>
-          <include name="checkaggregatedv5E154"/>
-          <include name="checkaggregatedresultv5E152"/>
-          <include name="getadmintoken"/>
+          <include name="setupRuntimeFile"/>
+          <include name="fillsaq"/>
+          <include name="tearDown"/>
+          <include name="chrome_setup"/>
         </methods>
-      </class> <!-- ESRS_Report.Checkaggregateresult -->
+      </class> <!-- daato_automation_test.SubmitSAandCOC -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
