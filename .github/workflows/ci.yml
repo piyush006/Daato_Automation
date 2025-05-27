@@ -32,8 +32,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      - name: Run TestNG tests
-        run: mvn test -DsuiteXmlFile=testngDoublemateriality.xml
+				- name: Run TestNG tests
+				  run: |
+				    case "${{ github.event.inputs.module }}" in
+				      SCS) mvn test -DsuiteXmlFile=testngscs.xml ;;
+				      DM) mvn test -DsuiteXmlFile=testngDoublemateriality.xml ;;
+				      ERSITE) mvn test -DsuiteXmlFile=testngERSITE.xml ;;
+				      *) echo "Invalid module name"; exit 1 ;;
+				    esac
 
       - name: Convert TestNG Results to JSON
         if: always()
