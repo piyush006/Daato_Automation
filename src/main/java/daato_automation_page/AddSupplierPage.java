@@ -125,6 +125,6 @@ public class AddSupplierPage extends BasePage {
 		// Finally click
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", createButton);
 		System.out.println("✅ Supplier added!");
-		threadSleep(PageConstants.WAIT_FIVE);
+		threadSleep(PageConstants.WAIT_SIX);
 	}
 }
