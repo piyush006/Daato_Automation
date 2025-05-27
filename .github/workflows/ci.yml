@@ -2,6 +2,11 @@ name: Java Selenium CI with Downloads
 
 on:
   workflow_dispatch:
+    inputs:
+      module:
+        description: 'Module to run'
+        required: true
+        default: 'DM'
   push:
     branches: [ master ]
   pull_request:
@@ -32,26 +37,26 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-				- name: Run TestNG tests
-				  run: |
-				    case "${{ github.event.inputs.module }}" in
-				      SCS) mvn test -DsuiteXmlFile=testngscs.xml ;;
-				      DM) mvn test -DsuiteXmlFile=testngDoublemateriality.xml ;;
-				      ERSITE) mvn test -DsuiteXmlFile=testngERSITE.xml ;;
-				      *) echo "Invalid module name"; exit 1 ;;
-				    esac
+      - name: Run TestNG tests
+        run: |
+          case "${{ github.event.inputs.module }}" in
+            SCS) mvn test -DsuiteXmlFile=testngscs.xml ;;
+            DM) mvn test -DsuiteXmlFile=testngDoublemateriality.xml ;;
+            ERSITE) mvn test -DsuiteXmlFile=testngERSITE.xml ;;
+            *) echo "Invalid module name"; exit 1 ;;
+          esac
 
       - name: Convert TestNG Results to JSON
         if: always()
         run: |
           pip install xmltodict
           python3 <<EOF
-          import xmltodict, json
-          with open("test-output/testng-results.xml") as xml_file:
-              data = xmltodict.parse(xml_file.read())
-          with open("test-output/testng-results.json", "w") as json_file:
-              json.dump(data, json_file, indent=2)
-          EOF
+import xmltodict, json
+with open("test-output/testng-results.xml") as xml_file:
+    data = xmltodict.parse(xml_file.read())
+with open("test-output/testng-results.json", "w") as json_file:
+    json.dump(data, json_file, indent=2)
+EOF
 
       - name: Upload TestNG Report (HTML + XML)
         if: always()
