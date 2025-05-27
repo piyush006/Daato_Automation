@@ -3,6 +3,19 @@
   <test thread-count="1" name="Test">
     <classes>
      <class name="DoubleMateriality.Createstakeholder"/>
+     <class name="DoubleMateriality.CreateDMreport"/>
+     <class name="DoubleMateriality.Startsurvery"/>
+     <class name="DoubleMateriality.Registerstakeholder"/>
+     <class name="DoubleMateriality.Fillandsubmitsurveryrequest"/>
+     <class name="DoubleMateriality.Acceptandfinshsurveryrequest"/>
+      <class name="DoubleMateriality.Checksurveryresult"/>
+      <class name="DoubleMateriality.UploadandcheckIROscore"/>
+      <class name="DoubleMateriality.ManualIROassessment"/>
+      <class name="DoubleMateriality.Answercollabrequest"/>
+   
+      <class name="DoubleMateriality.Checkmanualscore"/>
+      <class name="DoubleMateriality.Finalreportscore"/>
+      <class name="DoubleMateriality.DownloadDMxlsx"/>
       
       
       

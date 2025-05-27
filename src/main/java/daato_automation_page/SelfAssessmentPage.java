@@ -940,7 +940,7 @@ public class SelfAssessmentPage extends BasePage {
 		searchCompanySize.click();
 		selectCompanySize.click();
 		revenueCompany.sendKeys(revenue);
-		locationCompany.sendKeys(location);
+	/*	locationCompany.sendKeys(location);
 		autocompleteAddress.click();
 		threadSleep(PageConstants.WAIT_TWO);
 		purchasingRealtionshipList.click();
@@ -951,7 +951,7 @@ public class SelfAssessmentPage extends BasePage {
 		threadSleep(PageConstants.WAIT_TWO);
 		companyImpactList.click();
 		companyImpactSelect.click();
-		threadSleep(PageConstants.WAIT_TWO);
+		threadSleep(PageConstants.WAIT_TWO);*/
 
 	}
 	
