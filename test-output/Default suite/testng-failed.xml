@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="daato_automation_test.SubmitSAandCOC">
+      <class name="daato_automation_test.SelfAssessmentTest">
         <methods>
           <include name="setupRuntimeFile"/>
-          <include name="fillsaq"/>
+          <include name="General_information"/>
           <include name="tearDown"/>
           <include name="chrome_setup"/>
         </methods>
-      </class> <!-- daato_automation_test.SubmitSAandCOC -->
+      </class> <!-- daato_automation_test.SelfAssessmentTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

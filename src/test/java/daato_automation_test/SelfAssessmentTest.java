@@ -1,15 +1,19 @@
 /* Hello, Welcome to Divya Coding */
 package daato_automation_test;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -94,18 +98,28 @@ public class SelfAssessmentTest extends BaseTest {
 				}
 
 				System.out.println("after format)" +NewPassword);
+				threadSleep(PageConstants.WAIT_THREE);
+				
 			
 				WebElement passwordField = driver.findElement(By.xpath("//input[@id='password-new']"));
-				passwordField.sendKeys(NewPassword);
+				passwordField.sendKeys("12");
+				
+				threadSleep(PageConstants.WAIT_ONE);
 
 				WebElement passwordConfirmField = driver.findElement(By.xpath("//input[@id='password-confirm']"));
-				passwordConfirmField.sendKeys(NewPassword);
+				passwordConfirmField.sendKeys("12");
+				
+				threadSleep(PageConstants.WAIT_ONE);
 
 				WebElement submitNewPassButton = driver.findElement(By.xpath("//input[@type='submit']"));
 				submitNewPassButton.click();
 				
+				threadSleep(PageConstants.WAIT_ONE);
+				
 				WebElement lastNameField = driver.findElement(By.xpath("//input[@id='lastName']"));
 				lastNameField.sendKeys("Test");
+				
+				threadSleep(PageConstants.WAIT_ONE);
 				
 				// Using value attribute in XPath
 				WebElement submitUpdateButton = driver.findElement(By.xpath("//input[@value='Submit']"));

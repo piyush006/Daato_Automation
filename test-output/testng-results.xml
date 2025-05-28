@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-27T20:09:09 IST" name="Default suite" finished-at="2025-05-27T20:10:42 IST" duration-ms="93291">
+  <suite started-at="2025-05-28T12:41:38 IST" name="Default suite" finished-at="2025-05-28T12:42:46 IST" duration-ms="68505">
     <groups>
     </groups>
-    <test started-at="2025-05-27T20:09:09 IST" name="Default test" finished-at="2025-05-27T20:10:42 IST" duration-ms="93291">
-      <class name="daato_automation_test.SubmitSAandCOC">
-        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:daato_automation_test.SubmitSAandCOC@41c2284a]" started-at="2025-05-27T20:09:09 IST" name="setupRuntimeFile" finished-at="2025-05-27T20:09:09 IST" duration-ms="14" status="PASS">
+    <test started-at="2025-05-28T12:41:38 IST" name="Default test" finished-at="2025-05-28T12:42:46 IST" duration-ms="68505">
+      <class name="daato_automation_test.SelfAssessmentTest">
+        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:daato_automation_test.SelfAssessmentTest@53aad5d5]" started-at="2025-05-28T12:41:38 IST" name="setupRuntimeFile" finished-at="2025-05-28T12:41:38 IST" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupRuntimeFile -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.SubmitSAandCOC@41c2284a]" started-at="2025-05-27T20:09:09 IST" name="chrome_setup" finished-at="2025-05-27T20:09:13 IST" duration-ms="4316" status="PASS">
+        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.SelfAssessmentTest@53aad5d5]" started-at="2025-05-28T12:41:38 IST" name="chrome_setup" finished-at="2025-05-28T12:41:44 IST" duration-ms="6233" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chrome_setup -->
-        <test-method signature="fillsaq()[pri:6, instance:daato_automation_test.SubmitSAandCOC@41c2284a]" started-at="2025-05-27T20:09:13 IST" name="fillsaq" finished-at="2025-05-27T20:10:42 IST" duration-ms="88575" status="PASS">
+        <test-method signature="General_information()[pri:4, instance:daato_automation_test.SelfAssessmentTest@53aad5d5]" started-at="2025-05-28T12:41:44 IST" name="General_information" finished-at="2025-05-28T12:42:45 IST" duration-ms="61552" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fillsaq -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.SubmitSAandCOC@41c2284a]" started-at="2025-05-27T20:10:42 IST" name="tearDown" finished-at="2025-05-27T20:10:42 IST" duration-ms="322" status="PASS">
+        </test-method> <!-- General_information -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.SelfAssessmentTest@53aad5d5]" started-at="2025-05-28T12:42:45 IST" name="tearDown" finished-at="2025-05-28T12:42:46 IST" duration-ms="658" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- daato_automation_test.SubmitSAandCOC -->
+      </class> <!-- daato_automation_test.SelfAssessmentTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
