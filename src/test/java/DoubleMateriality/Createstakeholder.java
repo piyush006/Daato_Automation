@@ -17,6 +17,7 @@ public class Createstakeholder {
 	String groupid;
 	String stakeid;
 	String stakeholderName;
+	String fasle;
 	
 	@BeforeClass
 	public void getadmintoken() {
@@ -51,7 +52,7 @@ public class Createstakeholder {
 		
 	
 	
-	Createstack.createStakeholder(admintoken, groupid);
+	Createstack.createStakeholder(admintoken, fasle);
 		
 		
 		
