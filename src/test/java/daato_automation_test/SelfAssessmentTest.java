@@ -55,19 +55,12 @@ public class SelfAssessmentTest extends BaseTest {
 	    // Step 2: Pass both path and workbook to Xls_Reader
 	    Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH, workbook);
 
-		int count = reader.getRowCount("Add_Supplier");
-
-		for (int i = 0; i < count - 1; i++) {
-
-			User_Registered = reader.getCellData("Add_Supplier", "User_Registered", i + 2);
+	
+	  
+				Email = reader.getCellData("Recent_Added", "Email", 2);
+				
 			
-			
-			if (User_Registered.equals("No")) {
-
-				Email = reader.getCellData("Add_Supplier", "Contact_Email", i + 2);
-				Customer_Email = reader.getCellData("Add_Supplier", "Contact_Email", i + 2);
-			
-				System.out.println("Piyush" + Customer_Email);
+				System.out.println(Email);
 
 				SelfAssessmentPage selfAssessmentPage = new SelfAssessmentPage(driver);
 				selfAssessmentPage.yopmailLogin(Email);
@@ -84,12 +77,12 @@ public class SelfAssessmentTest extends BaseTest {
 				threadSleep(PageConstants.WAIT_TWO);
 				
 				WebElement inputField = driver.findElement(By.id("username"));
-				inputField.sendKeys(Customer_Email);
+				inputField.sendKeys(Email);
 				WebElement button = driver.findElement(By.id("kc-login"));
 				button.click();
 				
 				
-				selfAssessmentPage.yopmailLoginforOTP(Customer_Email);
+				selfAssessmentPage.yopmailLoginforOTP(Email);
 				
 				NewPassword = reader.getCellData("Add_Supplier", "Password", 2).toString();
 				System.out.println(NewPassword);
@@ -126,14 +119,10 @@ public class SelfAssessmentTest extends BaseTest {
 				submitUpdateButton.click();
 				
 				//login.YopmailLoginApplication(prop.getpassword());
-				reader.setCellData("Add_Supplier", "User_Registered", i + 2, "Yes");
+				
 				threadSleep(TestConstants.WAIT_THREE);
-				System.out.println("break");
-				break;
-
-			}
-
-		}
+				
+				
 
 		/*
 		 * driver.findElement(By.xpath("//button[contains(text(),'Requests')]")).click()
@@ -147,8 +136,8 @@ public class SelfAssessmentTest extends BaseTest {
 		URL1 = reader.getCellData("Recent_Added", "Currenturl", 2);
 		System.out.println("url");
 		System.out.println(URL);
-		SelfAssessmentPage selfAssessmentPage = new SelfAssessmentPage(driver);
-		selfAssessmentPage.generalInformation(revenue, location);
+		SelfAssessmentPage selfAssessmentPage2 = new SelfAssessmentPage(driver);
+		selfAssessmentPage2.generalInformation(revenue, location);
 		System.out.println("general1");
 
 	}

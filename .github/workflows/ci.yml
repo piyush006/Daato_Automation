@@ -42,7 +42,7 @@ jobs:
           case "${{ github.event.inputs.module }}" in
             SCS) mvn test -DsuiteXmlFile=testngscs.xml ;;
             DM) mvn test -DsuiteXmlFile=testngDoublemateriality.xml ;;
-            ERSITE) mvn test -DsuiteXmlFile=testngESRSLITE.xml ;;
+            ESRSLITE) mvn test -DsuiteXmlFile=testngESRSLITE.xml ;;
             *) echo "Invalid module name"; exit 1 ;;
           esac
 

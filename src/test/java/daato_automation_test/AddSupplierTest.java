@@ -3,6 +3,7 @@ package daato_automation_test;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Random;
 
 import org.testng.annotations.Test;
 
@@ -23,13 +24,38 @@ public class AddSupplierTest extends BaseTest {
 	String Company_Name;
 	String Contact_Email;
 	String Contact_name;
-	String Countries_of_operation;
-	String Product_or_services;
+	String Countries_of_operation="99";
+	String Product_or_services="100";
 	String Spend_volume;
 	String User_Invited;
 
 	@Test(priority=1)
 	public void add_supplier() throws InterruptedException, IOException {
+		
+		
+		Random random = new Random();
+
+        // Generate company name: regressXXX (3-digit suffix)
+        int suffix = random.nextInt(900) + 100; // ensures 100-999
+        Company_Name = "regress" + suffix;
+
+        // Generate contact email
+        Contact_Email = Company_Name + "@yopmail.com";
+
+        // Generate contact name: 8-letter random string
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        StringBuilder nameBuilder = new StringBuilder();
+        for (int i = 0; i < 8; i++) {
+            nameBuilder.append(characters.charAt(random.nextInt(characters.length())));
+        }
+        Contact_name = nameBuilder.toString();	
+		
+		
+        Spend_volume = String.valueOf(10000 + random.nextInt(90000));
+		
+		
+		
+		
 
 		
 		PropertyFileUtils p = new PropertyFileUtils();
@@ -46,7 +72,7 @@ public class AddSupplierTest extends BaseTest {
 
 		    // Step 2: Pass both path and workbook to Xls_Reader
 		    Xls_Reader reader = new Xls_Reader(TestConstants.TEST_DATA_FILE_PATH, workbook);
-		int count = reader.getRowCount("Add_Supplier");
+	/*	int count = reader.getRowCount("Add_Supplier");
 
 		for (int i = 0; i < count - 1; i++) {
 	        String User_Invited = reader.getCellData("Add_Supplier", "User_Invited", i + 2);
@@ -82,6 +108,30 @@ public class AddSupplierTest extends BaseTest {
 
 		 reader.closeWorkbook();
 		    fis.close();
-		
+		*/
+		    double C = Double.parseDouble(Countries_of_operation);
+            double P = Double.parseDouble(Product_or_services);
+            int Company1 = (int) C;
+            int Product1 = (int) P;
+		    
+		    
+		    addSupplierpage.addSupplierForm(Company_Name, Contact_Email, Contact_name, Company1, Product1, Spend_volume);
+          //  reader.setCellData("Add_Supplier", "User_Invited", i + 2, "Yes");
+
+            // ✅ Save Recent Added Supplier
+            reader.setCellData("Recent_Added", "Company_Name", 2, Company_Name);
+            reader.setCellData("Recent_Added", "Email", 2, Contact_Email);
+            reader.setCellData("Customer_Login", "Company_Name", 2, Company_Name);
+            reader.setCellData("Customer_Login", "Email", 2, Contact_Email);	    
+            reader.closeWorkbook();
+		    fis.close();
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
 	}
 }
