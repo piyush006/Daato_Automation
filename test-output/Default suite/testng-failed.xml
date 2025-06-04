@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ESRS_Report.Answerdatarequest">
+      <class name="ESRS_Report.Checkaggregateresult">
         <methods>
-          <include name="Completedatacollection"/>
+          <include name="checkaggregatedv5E154"/>
+          <include name="checkaggregatedresultv5E152"/>
           <include name="getadmintoken"/>
         </methods>
-      </class> <!-- ESRS_Report.Answerdatarequest -->
+      </class> <!-- ESRS_Report.Checkaggregateresult -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

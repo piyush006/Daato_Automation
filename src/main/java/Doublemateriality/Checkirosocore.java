@@ -210,7 +210,9 @@ reporid=ProperyUtilReader2.getReportId();
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='sc-jlZhew jCmBDe MuiTypography-root MuiTypography-body1']")));
 			completestep1.click();
-			threadSleep(PageConstants.WAIT_ONE);
+			threadSleep(PageConstants.WAIT_TWO);
+			WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(10));
+			wait4.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Complete step']")));
 			submit.click();
 			threadSleep(PageConstants.WAIT_ONE);
 		}
