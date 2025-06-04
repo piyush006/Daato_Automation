@@ -3,14 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="daato_automation_test.SelfAssessmentTest">
+      <class name="ESRS_Report.Answerdatarequest">
         <methods>
-          <include name="setupRuntimeFile"/>
-          <include name="General_information"/>
-          <include name="tearDown"/>
-          <include name="chrome_setup"/>
+          <include name="Completedatacollection"/>
+          <include name="getadmintoken"/>
         </methods>
-      </class> <!-- daato_automation_test.SelfAssessmentTest -->
+      </class> <!-- ESRS_Report.Answerdatarequest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

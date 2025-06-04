@@ -112,4 +112,115 @@ public class Answerdatacollectionrequest {
         //    System.out.println("--------------------------------------------------");
         }
     }
-}
+    
+    public static void updateStatuschild(String token, String workflowId, String entityId) {
+        String url = "https://qa.daato.app/api/data-collection-workflows/"
+                   + workflowId + "/entities/" + entityId;
+
+        Response response = RestAssured
+            .given()
+            .header("Authorization", "Bearer " + token)
+            .header("Content-Type", "application/json")
+            .body("{\"status\":\"completed\"}")
+            .when()
+            .put(url)
+            .then()
+            .statusCode(200)
+            .extract()
+            .response();
+
+        // Print the response body
+        System.out.println("Response Body: " + response.asString());
+    }
+    
+    public static void updateStatusparent(String token, String workflowId, String entityId) {
+        String url = "https://qa.daato.app/api/data-collection-workflows/"
+                   + workflowId + "/entities/" + entityId;
+
+        RestAssured
+            .given()
+            .header("Authorization", "Bearer " + token)
+            .header("Content-Type", "application/json")
+            .body("{\"status\":\"completed\"}")
+            .when()
+            .put(url)
+            .then()
+            .statusCode(200); // silently assert success
+    }
+    
+    public static void completeDataCollection(String token, String workflowId) {
+        String url = "https://qa.daato.app/api/data-collection-workflows/" + workflowId;
+
+        Response response = RestAssured
+            .given()
+            .header("Authorization", "Bearer " + token)
+            .header("Content-Type", "application/json")
+            .body("{\"status\":\"completed\"}")
+            .when()
+            .put(url)
+            .then()
+            .statusCode(200)
+            .extract()
+            .response();
+
+        // Print the response body
+        System.out.println("Response Body: " + response.asString());
+    }
+    
+    
+    
+    public static void markDataPointCompleted(String token, String fullUrl) {
+        Response response = RestAssured
+            .given()
+            .header("Authorization", "Bearer " + token)
+            .header("Content-Type", "application/json")
+            .body("{\"completed\": true}")
+            .when()
+            .put(fullUrl)
+            .then()
+            .statusCode(200)
+            .extract()
+            .response();
+
+        // Print the response
+        System.out.println("URL: " + fullUrl);
+        System.out.println("Response Body: " + response.asString());
+    }
+    
+    
+    
+    
+
+    }  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+

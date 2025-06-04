@@ -2,28 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-30T19:26:21 IST" name="Default suite" finished-at="2025-05-30T19:27:03 IST" duration-ms="42869">
+  <suite started-at="2025-06-04T12:57:08 IST" name="Default suite" finished-at="2025-06-04T12:57:27 IST" duration-ms="19846">
     <groups>
     </groups>
-    <test started-at="2025-05-30T19:26:21 IST" name="Default test" finished-at="2025-05-30T19:27:03 IST" duration-ms="42869">
-      <class name="daato_automation_test.RiskPrioritySelfAssessmentTest">
-        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:daato_automation_test.RiskPrioritySelfAssessmentTest@41c2284a]" started-at="2025-05-30T19:26:21 IST" name="setupRuntimeFile" finished-at="2025-05-30T19:26:21 IST" duration-ms="15" status="PASS">
+    <test started-at="2025-06-04T12:57:08 IST" name="Default test" finished-at="2025-06-04T12:57:27 IST" duration-ms="19846">
+      <class name="ESRS_Report.Answerdatarequest">
+        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:ESRS_Report.Answerdatarequest@71c3b41]" started-at="2025-06-04T12:57:08 IST" name="getadmintoken" finished-at="2025-06-04T12:57:11 IST" duration-ms="3695" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setupRuntimeFile -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.RiskPrioritySelfAssessmentTest@41c2284a]" started-at="2025-05-30T19:26:21 IST" name="chrome_setup" finished-at="2025-05-30T19:26:29 IST" duration-ms="7965" status="PASS">
+        </test-method> <!-- getadmintoken -->
+        <test-method signature="completeindividualdatapoints()[pri:6, instance:ESRS_Report.Answerdatarequest@71c3b41]" started-at="2025-06-04T12:57:11 IST" name="completeindividualdatapoints" finished-at="2025-06-04T12:57:27 IST" duration-ms="16110" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="check_risk_priority_Self_assessment()[pri:9, instance:daato_automation_test.RiskPrioritySelfAssessmentTest@41c2284a]" started-at="2025-05-30T19:26:29 IST" name="check_risk_priority_Self_assessment" finished-at="2025-05-30T19:27:03 IST" duration-ms="34523" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- check_risk_priority_Self_assessment -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.RiskPrioritySelfAssessmentTest@41c2284a]" started-at="2025-05-30T19:27:03 IST" name="tearDown" finished-at="2025-05-30T19:27:03 IST" duration-ms="321" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- daato_automation_test.RiskPrioritySelfAssessmentTest -->
+        </test-method> <!-- completeindividualdatapoints -->
+      </class> <!-- ESRS_Report.Answerdatarequest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
