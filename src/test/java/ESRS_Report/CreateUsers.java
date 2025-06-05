@@ -7,8 +7,7 @@ import org.testng.annotations.Test;
 
 import ESRS_UTILS.Creatuser;
 import ESRS_UTILS.PropertyUtilReaderESRS;
-import ESRS_UTILS.PropertyUtilReaderESRS1;
-import ESRS_UTILS.PropertyUtilWriterESRS1;
+
 import ESRS_UTILS.ProperyUtilWriterESRS;
 import daato_automation_pagecomponent.PageConstants;
 import daato_automation_testcomponent.TestConstants;
@@ -70,8 +69,7 @@ parententityid=Creatuser.createparentEntity(admintoken, parentid);
 	System.out.println(parententityid);
 	
 	 ProperyUtilWriterESRS.writeProperty("parententityid", parententityid);
-	 PropertyUtilWriterESRS1.writeProperty("parententityid", parententityid);
-	 
+	
 	
 }
 
@@ -112,7 +110,7 @@ public void createchildentity() throws InterruptedException {
 	System.out.println(childentityid);
 	
 	 ProperyUtilWriterESRS.writeProperty("childentityid", childentityid);
-	 PropertyUtilWriterESRS1.writeProperty("childentityid", childentityid);
+	
 	 
 	 
 	

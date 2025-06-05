@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import DMUTILS.PropertyUtilReader;
 import DMUTILS.PropertyUtilWriter;
 import ESRS_UTILS.CreateESRSreport;
-import ESRS_UTILS.PropertyUtilWriterESRS1;
+
 import ESRS_UTILS.ProperyUtilWriterESRS;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -35,7 +35,7 @@ public class CreateReport {
 	    public void createsrsreport() {
 	        reportid = CreateESRSreport.createReportAndExtractId(admintoken);
 	        ProperyUtilWriterESRS.writeProperty("reportid", reportid);
-	        PropertyUtilWriterESRS1.writeProperty("reportid", reportid);
+	       
 	    }
 	
 
