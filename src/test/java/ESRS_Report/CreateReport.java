@@ -55,7 +55,7 @@ public class CreateReport {
 	            String responseBody = response.getBody().asString();
 
 	            System.out.println("Attempt " + (i + 1) + ": Status Code = " + statusCode);
-	            System.out.println("Response Body: " + responseBody);
+	          //  System.out.println("Response Body: " + responseBody);
 
 	            // Continue checking until config sync completes
 	            if (!responseBody.contains("config is syncing") && statusCode == 200) {

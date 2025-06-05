@@ -56,7 +56,7 @@ public class Bulkactionstep2 {
 	                .put("/api/esrs/disclosure-reporting/" + reportId + "/datapoint-definitions");
 
 	        System.out.println("Response Status Code: " + response.getStatusCode());
-	        System.out.println("Response Body: " + response.getBody().asString());
+	      //  System.out.println("Response Body: " + response.getBody().asString());
 
 	        if (response.getStatusCode() == 200) {
 	            List<Map<String, Object>> dataPoints = response.jsonPath().getList("$");
