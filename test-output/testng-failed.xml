@@ -5,8 +5,7 @@
     <classes>
       <class name="ESRS_Report.Checkaggregateresult">
         <methods>
-          <include name="checkaggregatedv5E154"/>
-          <include name="checkaggregatedresultv5E152"/>
+          <include name="completeindividualdatapoints"/>
           <include name="getadmintoken"/>
         </methods>
       </class> <!-- ESRS_Report.Checkaggregateresult -->

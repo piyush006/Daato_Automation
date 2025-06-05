@@ -1,109 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
+<testng-results ignored="0" total="27" passed="27" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-04T14:31:51 IST" name="Default suite" finished-at="2025-06-04T14:32:01 IST" duration-ms="10082">
+  <suite started-at="2025-06-05T16:08:48 IST" name="Suite" finished-at="2025-06-05T16:13:23 IST" duration-ms="274810">
     <groups>
     </groups>
-    <test started-at="2025-06-04T14:31:51 IST" name="Default test" finished-at="2025-06-04T14:32:01 IST" duration-ms="10082">
-      <class name="ESRS_Report.Checkaggregateresult">
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:ESRS_Report.Checkaggregateresult@343570b7]" started-at="2025-06-04T14:31:51 IST" name="getadmintoken" finished-at="2025-06-04T14:31:54 IST" duration-ms="2797" status="PASS">
+    <test started-at="2025-06-05T16:08:48 IST" name="Test" finished-at="2025-06-05T16:13:23 IST" duration-ms="274810">
+      <class name="ESRS_Report.CreateReport">
+        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:ESRS_Report.CreateReport@2177849e]" started-at="2025-06-05T16:09:02 IST" name="getadmintoken" finished-at="2025-06-05T16:09:02 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getadmintoken -->
-        <test-method signature="checkaggregatedresultv5E152()[pri:1, instance:ESRS_Report.Checkaggregateresult@343570b7]" started-at="2025-06-04T14:31:54 IST" name="checkaggregatedresultv5E152" finished-at="2025-06-04T14:31:57 IST" duration-ms="2430" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "java.lang.Integer.intValue()" because the return value of "io.restassured.internal.common.path.ObjectConverter.convertObjectTo(Object, java.lang.Class)" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "io.restassured.internal.common.path.ObjectConverter.convertObjectTo(Object, java.lang.Class)" is null
-at io.restassured.path.json.JsonPath.getInt(JsonPath.java:245)
-at ESRS_UTILS.CheckaggregatedResult.getAggregatedDataStatus(CheckaggregatedResult.java:52)
-at ESRS_Report.Checkaggregateresult.checkaggregatedresultv5E152(Checkaggregateresult.java:41)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method signature="createsrsreport()[pri:1, instance:ESRS_Report.CreateReport@2177849e]" started-at="2025-06-05T16:09:02 IST" name="createsrsreport" finished-at="2025-06-05T16:09:06 IST" duration-ms="4000" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createsrsreport -->
+        <test-method signature="waitForReportReady()[pri:2, instance:ESRS_Report.CreateReport@2177849e]" started-at="2025-06-05T16:09:06 IST" name="waitForReportReady" finished-at="2025-06-05T16:09:08 IST" duration-ms="2658" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- waitForReportReady -->
+      </class> <!-- ESRS_Report.CreateReport -->
+      <class name="ESRS_Report.Bulkactions">
+        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:ESRS_Report.Bulkactions@40cb8df7]" started-at="2025-06-05T16:09:08 IST" name="getadmintoken" finished-at="2025-06-05T16:09:08 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getadmintoken -->
+        <test-method signature="markE16voluntaryoff()[pri:1, instance:ESRS_Report.Bulkactions@40cb8df7]" started-at="2025-06-05T16:09:08 IST" name="markE16voluntaryoff" finished-at="2025-06-05T16:10:03 IST" duration-ms="54993" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- markE16voluntaryoff -->
+        <test-method signature="markE17nonmaterial()[pri:2, instance:ESRS_Report.Bulkactions@40cb8df7]" started-at="2025-06-05T16:10:03 IST" name="markE17nonmaterial" finished-at="2025-06-05T16:10:04 IST" duration-ms="833" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- markE17nonmaterial -->
+        <test-method signature="completestep1()[pri:3, instance:ESRS_Report.Bulkactions@40cb8df7]" started-at="2025-06-05T16:10:04 IST" name="completestep1" finished-at="2025-06-05T16:10:04 IST" duration-ms="301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- completestep1 -->
+        <test-method signature="assigndatapointtoentity()[pri:4, instance:ESRS_Report.Bulkactions@40cb8df7]" started-at="2025-06-05T16:10:04 IST" name="assigndatapointtoentity" finished-at="2025-06-05T16:10:24 IST" duration-ms="19481" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assigndatapointtoentity -->
+        <test-method signature="startdatacollection()[pri:5, instance:ESRS_Report.Bulkactions@40cb8df7]" started-at="2025-06-05T16:10:24 IST" name="startdatacollection" finished-at="2025-06-05T16:10:25 IST" duration-ms="1405" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startdatacollection -->
+        <test-method signature="getdatacollectionid()[pri:6, instance:ESRS_Report.Bulkactions@40cb8df7]" started-at="2025-06-05T16:10:25 IST" name="getdatacollectionid" finished-at="2025-06-05T16:10:27 IST" duration-ms="1851" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getdatacollectionid -->
+        <test-method signature="getesrsentitydatacollectionid()[pri:7, instance:ESRS_Report.Bulkactions@40cb8df7]" started-at="2025-06-05T16:10:27 IST" name="getesrsentitydatacollectionid" finished-at="2025-06-05T16:10:28 IST" duration-ms="478" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getesrsentitydatacollectionid -->
+        <test-method signature="getesrsentitydatacollectionidparent()[pri:8, instance:ESRS_Report.Bulkactions@40cb8df7]" started-at="2025-06-05T16:10:28 IST" name="getesrsentitydatacollectionidparent" finished-at="2025-06-05T16:10:28 IST" duration-ms="469" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getesrsentitydatacollectionidparent -->
+        <test-method signature="completestep2()[pri:9, instance:ESRS_Report.Bulkactions@40cb8df7]" started-at="2025-06-05T16:10:28 IST" name="completestep2" finished-at="2025-06-05T16:10:28 IST" duration-ms="386" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- completestep2 -->
+      </class> <!-- ESRS_Report.Bulkactions -->
+      <class name="ESRS_Report.Checkaggregateresult">
+        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:ESRS_Report.Checkaggregateresult@6b8ca3c8]" started-at="2025-06-05T16:12:21 IST" name="getadmintoken" finished-at="2025-06-05T16:12:21 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getadmintoken -->
+        <test-method signature="checkaggregatedresultv5E152()[pri:1, instance:ESRS_Report.Checkaggregateresult@6b8ca3c8]" started-at="2025-06-05T16:12:21 IST" name="checkaggregatedresultv5E152" finished-at="2025-06-05T16:12:23 IST" duration-ms="2040" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkaggregatedresultv5E152 -->
-        <test-method signature="checkaggregatedv5E154()[pri:2, instance:ESRS_Report.Checkaggregateresult@343570b7]" started-at="2025-06-04T14:31:57 IST" name="checkaggregatedv5E154" finished-at="2025-06-04T14:31:59 IST" duration-ms="2347" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "java.lang.Integer.intValue()" because the return value of "io.restassured.internal.common.path.ObjectConverter.convertObjectTo(Object, java.lang.Class)" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "io.restassured.internal.common.path.ObjectConverter.convertObjectTo(Object, java.lang.Class)" is null
-at io.restassured.path.json.JsonPath.getInt(JsonPath.java:245)
-at ESRS_UTILS.CheckaggregatedResult.getAggregatedDataStatuspercentage(CheckaggregatedResult.java:113)
-at ESRS_Report.Checkaggregateresult.checkaggregatedv5E154(Checkaggregateresult.java:56)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method signature="checkaggregatedv5E154()[pri:2, instance:ESRS_Report.Checkaggregateresult@6b8ca3c8]" started-at="2025-06-05T16:12:23 IST" name="checkaggregatedv5E154" finished-at="2025-06-05T16:12:25 IST" duration-ms="2028" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkaggregatedv5E154 -->
-        <test-method signature="getdisclousurerequirementid()[pri:3, instance:ESRS_Report.Checkaggregateresult@343570b7]" started-at="2025-06-04T14:31:59 IST" name="getdisclousurerequirementid" finished-at="2025-06-04T14:32:01 IST" duration-ms="2073" status="PASS">
+        <test-method signature="getdisclousurerequirementid()[pri:3, instance:ESRS_Report.Checkaggregateresult@6b8ca3c8]" started-at="2025-06-05T16:12:25 IST" name="getdisclousurerequirementid" finished-at="2025-06-05T16:12:26 IST" duration-ms="1573" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getdisclousurerequirementid -->
-        <test-method signature="completestep3()[pri:4, instance:ESRS_Report.Checkaggregateresult@343570b7]" started-at="2025-06-04T14:32:01 IST" name="completestep3" finished-at="2025-06-04T14:32:01 IST" duration-ms="391" status="PASS">
+        <test-method signature="completeindividualdatapoints()[pri:4, instance:ESRS_Report.Checkaggregateresult@6b8ca3c8]" started-at="2025-06-05T16:12:26 IST" name="completeindividualdatapoints" finished-at="2025-06-05T16:13:23 IST" duration-ms="56519" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- completeindividualdatapoints -->
+        <test-method signature="completestep3()[pri:5, instance:ESRS_Report.Checkaggregateresult@6b8ca3c8]" started-at="2025-06-05T16:13:23 IST" name="completestep3" finished-at="2025-06-05T16:13:23 IST" duration-ms="263" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- completestep3 -->
       </class> <!-- ESRS_Report.Checkaggregateresult -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="ESRS_Report.Answerdatarequest">
+        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:ESRS_Report.Answerdatarequest@49dc7102]" started-at="2025-06-05T16:11:52 IST" name="getadmintoken" finished-at="2025-06-05T16:11:53 IST" duration-ms="888" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getadmintoken -->
+        <test-method signature="startchilddatacollection()[pri:1, instance:ESRS_Report.Answerdatarequest@49dc7102]" started-at="2025-06-05T16:11:53 IST" name="startchilddatacollection" finished-at="2025-06-05T16:12:06 IST" duration-ms="13525" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startchilddatacollection -->
+        <test-method signature="completedatacollectionchild()[pri:2, instance:ESRS_Report.Answerdatarequest@49dc7102]" started-at="2025-06-05T16:12:06 IST" name="completedatacollectionchild" finished-at="2025-06-05T16:12:07 IST" duration-ms="469" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- completedatacollectionchild -->
+        <test-method signature="startparentdatacollection()[pri:3, instance:ESRS_Report.Answerdatarequest@49dc7102]" started-at="2025-06-05T16:12:07 IST" name="startparentdatacollection" finished-at="2025-06-05T16:12:20 IST" duration-ms="12822" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startparentdatacollection -->
+        <test-method signature="completedatacollectionparent()[pri:4, instance:ESRS_Report.Answerdatarequest@49dc7102]" started-at="2025-06-05T16:12:20 IST" name="completedatacollectionparent" finished-at="2025-06-05T16:12:20 IST" duration-ms="291" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- completedatacollectionparent -->
+        <test-method signature="Completedatacollection()[pri:5, instance:ESRS_Report.Answerdatarequest@49dc7102]" started-at="2025-06-05T16:12:20 IST" name="Completedatacollection" finished-at="2025-06-05T16:12:21 IST" duration-ms="557" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Completedatacollection -->
+      </class> <!-- ESRS_Report.Answerdatarequest -->
+      <class name="ESRS_Report.Registerentity">
+        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:ESRS_Report.Registerentity@7671cb68]" started-at="2025-06-05T16:10:28 IST" name="setupRuntimeFile" finished-at="2025-06-05T16:10:28 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupRuntimeFile -->
+        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:ESRS_Report.Registerentity@7671cb68]" started-at="2025-06-05T16:10:28 IST" name="getadmintoken" finished-at="2025-06-05T16:10:28 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getadmintoken -->
+        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:ESRS_Report.Registerentity@7671cb68]" started-at="2025-06-05T16:10:28 IST" name="chrome_setup" finished-at="2025-06-05T16:10:34 IST" duration-ms="6056" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chrome_setup -->
+        <test-method signature="registerentity()[pri:1, instance:ESRS_Report.Registerentity@7671cb68]" started-at="2025-06-05T16:10:34 IST" name="registerentity" finished-at="2025-06-05T16:11:11 IST" duration-ms="36276" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerentity -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ESRS_Report.Registerentity@7671cb68]" started-at="2025-06-05T16:11:11 IST" name="tearDown" finished-at="2025-06-05T16:11:11 IST" duration-ms="759" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:ESRS_Report.Registerentity@7671cb68]" started-at="2025-06-05T16:11:11 IST" name="chrome_setup" finished-at="2025-06-05T16:11:17 IST" duration-ms="5124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chrome_setup -->
+        <test-method signature="registerparentenity()[pri:2, instance:ESRS_Report.Registerentity@7671cb68]" started-at="2025-06-05T16:11:17 IST" name="registerparentenity" finished-at="2025-06-05T16:11:52 IST" duration-ms="35004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerparentenity -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ESRS_Report.Registerentity@7671cb68]" started-at="2025-06-05T16:11:52 IST" name="tearDown" finished-at="2025-06-05T16:11:52 IST" duration-ms="327" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ESRS_Report.Registerentity -->
+      <class name="ESRS_Report.CreateUsers">
+        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:ESRS_Report.CreateUsers@2beee7ff]" started-at="2025-06-05T16:08:48 IST" name="getadmintoken" finished-at="2025-06-05T16:08:51 IST" duration-ms="3196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getadmintoken -->
+        <test-method signature="createparent()[pri:1, instance:ESRS_Report.CreateUsers@2beee7ff]" started-at="2025-06-05T16:08:51 IST" name="createparent" finished-at="2025-06-05T16:08:53 IST" duration-ms="1917" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createparent -->
+        <test-method signature="createparententity()[pri:2, instance:ESRS_Report.CreateUsers@2beee7ff]" started-at="2025-06-05T16:08:53 IST" name="createparententity" finished-at="2025-06-05T16:08:54 IST" duration-ms="459" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createparententity -->
+        <test-method signature="createchild()[pri:3, instance:ESRS_Report.CreateUsers@2beee7ff]" started-at="2025-06-05T16:08:54 IST" name="createchild" finished-at="2025-06-05T16:08:58 IST" duration-ms="4241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createchild -->
+        <test-method signature="createchildentity()[pri:4, instance:ESRS_Report.CreateUsers@2beee7ff]" started-at="2025-06-05T16:08:58 IST" name="createchildentity" finished-at="2025-06-05T16:09:02 IST" duration-ms="3508" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createchildentity -->
+      </class> <!-- ESRS_Report.CreateUsers -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

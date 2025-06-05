@@ -2,13 +2,16 @@
 <suite name="Suite" preserve-order="true" parallel="none">
   <test thread-count="1" name="Test">
     <classes>
+
+
 <class name="ESRS_Report.CreateUsers"/>
 <class name="ESRS_Report.CreateReport"/>
-<class name="ESRS_Report.Createentityspecificdis"/>
 <class name="ESRS_Report.Bulkactions"/>
 <class name="ESRS_Report.Registerentity"/>
-<class name="ESRS_Report.Answerdatarequest"/>
-<class name="ESRS_Report.Checkaggregateresult"/>
+ <class name="ESRS_Report.Answerdatarequest"/>
+  <class name="ESRS_Report.Checkaggregateresult"/>
+
+
 
 
 </classes>

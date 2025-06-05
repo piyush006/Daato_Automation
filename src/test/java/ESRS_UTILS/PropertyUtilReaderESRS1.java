@@ -4,11 +4,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class PropertyUtilReaderESRS {
-	
-	
-	
-	private static final String FILE_PATH = "ESRSlite.properties";
+public class PropertyUtilReaderESRS1 {
+
+	private static final String FILE_PATH = "ESRSLITE2.properties";
 
     public static String reportid() {
         return getValue("reportid");
@@ -73,13 +71,13 @@ public static String disclosureRequirementReportId() {
     }	
 	
 	
-		
 	
 	
 	
 	
 	
-
+	
+	
 	
 	
 	

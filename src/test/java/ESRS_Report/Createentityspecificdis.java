@@ -59,12 +59,12 @@ public class Createentityspecificdis {
 	
 	
 	@Test(priority=3)
-	public void markasnonmaterialentityspecifc() {
+	public void markasnonmaterialentityspecifc() throws InterruptedException {
 		
 		
 		CreateESRSreport.updateEsrsEntity(admintoken, reportid, entityspecificdisclousureid);
 		
-		
+		 Thread.sleep(5000);
 		
 		
 	}

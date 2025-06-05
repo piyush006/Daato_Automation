@@ -11,10 +11,7 @@ import static org.testng.Assert.assertFalse;
 
 public class Bulkactions {
 	
-	
-	
-	
-	String parententityid;
+String parententityid;
 	
 	String childentityid;
 	
@@ -39,16 +36,20 @@ public class Bulkactions {
 	dataCollectionId=PropertyUtilReaderESRS.dataCollectionId();
 	esrsentitydatacollectionid=PropertyUtilReaderESRS.esrsentitydatacollectionid();
 	
-		}
+}
 		
+@Test(priority = 1)
 	
 	
-	
-	@Test(priority=1)
-	public void markE16voluntaryoff() {
+	public void markE16voluntaryoff() throws InterruptedException {
 		
 		
 		
+		
+		
+		
+		System.out.println(admintoken);
+		System.out.println(reportid);
 		
 		boolean included = Bulkactionstep2.updateDataPointDefinitions(admintoken, reportid);
         System.out.println("Returned included value: " + included);
@@ -63,8 +64,11 @@ public class Bulkactions {
 	
 	
 	
+
 	
-	@Test(priority=2)
+	
+
+ @Test(priority=2)
 	
 	public void markE17nonmaterial() {
 		
@@ -96,9 +100,9 @@ public void completestep1() {
 	}
 
 
-	@Test(priority=4)
+	@Test(priority = 4)
 	
-public void assigndatapointtoentity() {
+public void assigndatapointtoentity() throws InterruptedException {
 	
 	
 	
@@ -107,22 +111,14 @@ Bulkactionstep2.aggregatedatapoints(admintoken, reportid, parententityid, childe
 	
 	
 	
-}	
+}
 	
+	
+
+
+
 
 	@Test(priority=5)
-public void completestep2() {
-	
-	
-	
-	Bulkactionstep2.completestep2(admintoken, reportid);
-	
-	
-	
-}
-
-
-	@Test(priority=6)
 
 public void startdatacollection() {
 	
@@ -136,7 +132,7 @@ public void startdatacollection() {
 }
 
 
-	@Test(priority=7)
+	@Test(priority=6)
 
 public void getdatacollectionid() {
 	
@@ -152,7 +148,7 @@ public void getdatacollectionid() {
 }
 
 
-	@Test(priority=8)
+	@Test(priority=7)
 
 public void getesrsentitydatacollectionid() {
 	
@@ -172,7 +168,7 @@ public void getesrsentitydatacollectionid() {
 }
 
 
-	@Test(priority=9)
+	@Test(priority=8)
 public void getesrsentitydatacollectionidparent() {
 	
     
@@ -184,6 +180,17 @@ public void getesrsentitydatacollectionidparent() {
 
 
 }
-
+	
+	@Test(priority=9)
+public void completestep2() {
+	
+	
+	
+	Bulkactionstep2.completestep2(admintoken, reportid);
+	
+	
+	
+}
+	
 
 }

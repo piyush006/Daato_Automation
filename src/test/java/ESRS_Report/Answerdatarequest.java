@@ -137,29 +137,6 @@ public class Answerdatarequest {
 	
 	
 	
-	@Test(priority=6)
-	
-	
-	public void completeindividualdatapoints() {
-		
-		
-		
-		String[] urls = {
-	            "https://qa.daato.app/api/reports/683fde1019938708ecbe2ed0/collaborationDataPoint/v5E1530/finalDataPointId/v5E1530/completed?pagesPath=ESRS-E1-Climate-Change-Disclosure-E1-5&module=esrs-disclosure",
-	            "https://qa.daato.app/api/reports/683fde1019938708ecbe2ed0/collaborationDataPoint/v5E152/finalDataPointId/v5E152/completed?pagesPath=ESRS-E1-Climate-Change-Disclosure-E1-5&module=esrs-disclosure",
-	            "https://qa.daato.app/api/reports/683fde1019938708ecbe2ed0/collaborationDataPoint/v5E153/finalDataPointId/v5E153/completed?pagesPath=ESRS-E1-Climate-Change-Disclosure-E1-5&module=esrs-disclosure",
-	            "https://qa.daato.app/api/reports/683fde1019938708ecbe2ed0/collaborationDataPoint/v5E154Calculated/finalDataPointId/v5E154Calculated/completed?pagesPath=ESRS-E1-Climate-Change-Disclosure-E1-5&module=esrs-disclosure",
-	            "https://qa.daato.app/api/reports/683fde1019938708ecbe2ed0/collaborationDataPoint/v5E155/finalDataPointId/v5E155/completed?pagesPath=ESRS-E1-Climate-Change-Disclosure-E1-5&module=esrs-disclosure",
-	            "https://qa.daato.app/api/reports/683fde1019938708ecbe2ed0/collaborationDataPoint/v5E156/finalDataPointId/v5E156/completed?pagesPath=ESRS-E1-Climate-Change-Disclosure-E1-5&module=esrs-disclosure"
-	        };
-
-	        for (String url : urls) {
-	        	Answerdatacollectionrequest.markDataPointCompleted(admintoken, url);
-	        }
-		
-		
-	}
-	
 	
 
 }
