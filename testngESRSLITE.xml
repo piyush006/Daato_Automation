@@ -10,6 +10,10 @@
 <class name="ESRS_Report.Registerentity"/>
  <class name="ESRS_Report.Answerdatarequest"/>
   <class name="ESRS_Report.Checkaggregateresult"/>
+    <class name="ESRS_Report.Completefinalstep"/>
+  
+  
+  
 
 
 

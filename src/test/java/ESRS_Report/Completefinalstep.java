@@ -30,6 +30,8 @@ reportid=PropertyUtilReaderESRS.reportid();
 	@Test
 	public void completefinalstep() {
 		
+		System.out.println(reportid);
+		
 		
 		Completefinal.updateMultipleDisclosures(admintoken, reportid);	
 		
@@ -37,13 +39,7 @@ reportid=PropertyUtilReaderESRS.reportid();
 		
 		
 		
-		
-		
-		
-		
-		
-		
-	}
+			}
 	
 	
 	
