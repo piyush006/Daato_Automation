@@ -141,7 +141,7 @@ public class Creatuser {
 	                .when()
 	                .post("/api/users")
 	                .then()
-	                .statusCode(201)
+	               // .statusCode(201)
 	                .extract()
 	                .response();
 

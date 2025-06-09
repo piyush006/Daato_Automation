@@ -13,6 +13,8 @@ public class Completefinal {
 	  public static void updateMultipleDisclosures(String token, String reportId) {
 	        String baseUrl = "https://qa.daato.app/api/esrs/disclosure-reporting/status/";
 	        String endpoint = baseUrl + reportId;
+	        
+	        System.out.println(reportId);
 
 	        // List of entityIds to loop through
 	        String[] entityIds = {

@@ -28,7 +28,9 @@ reportid=PropertyUtilReaderESRS.reportid();
 	
 	
 	@Test
-	public void completefinalstep() {
+	public void completefinalstep() throws InterruptedException {
+		
+		Thread.sleep(3000);
 		
 		System.out.println(reportid);
 		
@@ -36,10 +38,7 @@ reportid=PropertyUtilReaderESRS.reportid();
 		Completefinal.updateMultipleDisclosures(admintoken, reportid);	
 		
 		
-		
-		
-		
-			}
+		}
 	
 	
 	
