@@ -3,12 +3,12 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="ESRS_Report.Answerdatarequest">
+      <class name="ESRS_Report.Bulkactions">
         <methods>
-          <include name="startchilddatacollection"/>
           <include name="getadmintoken"/>
+          <include name="markE16voluntaryoff"/>
         </methods>
-      </class> <!-- ESRS_Report.Answerdatarequest -->
+      </class> <!-- ESRS_Report.Bulkactions -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
