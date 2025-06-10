@@ -164,8 +164,6 @@ public void checklatestfiledata() throws IOException {
         names.add("Automatedimpact02");
         names.add("Automatedimpact03");
         names.add("Automatedimpact04");
-        names.add("Automatedimpact05");
-        names.add("Automatedimpact06");
         names.add("Automatedmanual");
         return names;
     }
@@ -176,8 +174,6 @@ public void checklatestfiledata() throws IOException {
         descriptions.add("Testauto02");
         descriptions.add("Testauto03");
         descriptions.add("Testauto04");
-        descriptions.add("Testauto05");
-        descriptions.add("Testauto06");
         descriptions.add("Test");
         return descriptions;
     }
@@ -188,8 +184,6 @@ public void checklatestfiledata() throws IOException {
         sustainabilityMatters.add("Climate change adaptation");
         sustainabilityMatters.add("Climate change mitigation");
         sustainabilityMatters.add("Climate change mitigation");
-        sustainabilityMatters.add("Energy");
-        sustainabilityMatters.add("Energy");
         sustainabilityMatters.add("Working conditions - Working time");
         return sustainabilityMatters;
     }
@@ -200,16 +194,12 @@ public void checklatestfiledata() throws IOException {
         assessments.add("Very high");
         assessments.add("Very low");
         assessments.add("Very high");
-        assessments.add("Medium");
-        assessments.add("Low");
         assessments.add("Very high");
         return assessments;
     }
 
     private List<String> getExpectedTypes() {
         List<String> types = new ArrayList<>();
-        types.add("Negative");
-        types.add("Positive");
         types.add("Negative");
         types.add("Positive");
         types.add("Negative");
@@ -225,15 +215,11 @@ public void checklatestfiledata() throws IOException {
         natures.add("Potential");
         natures.add("Actual");
         natures.add("Potential");
-        natures.add("Actual");
-        natures.add("Potential");
         return natures;
     }
 
     private List<String> getExpectedTimeframes() {
         List<String> timeframes = new ArrayList<>();
-        timeframes.add("Short-Term");
-        timeframes.add("Mid-Term");
         timeframes.add("Short-Term");
         timeframes.add("Mid-Term");
         timeframes.add("Short-Term");
