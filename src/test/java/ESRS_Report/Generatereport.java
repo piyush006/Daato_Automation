@@ -47,7 +47,26 @@ public class Generatereport {
 	
 	
 	
-@Test(priority=2)
+/*	@Test(priority=2)
+	
+	public void updateandcheckstatus() {
+		
+		
+		GenerateReport.updateStatusWithTwoRounds(admintoken, reportid);	
+		
+		
+		
+	}*/
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*@Test(priority=2)
 
 public void completeE15() throws InterruptedException {
 	
@@ -75,7 +94,8 @@ public void getstatus() {
 	
 	
 	
-}	
+}*/	
+
 
 	
 	

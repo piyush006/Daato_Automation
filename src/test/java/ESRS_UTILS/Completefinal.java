@@ -25,6 +25,7 @@ public class Completefinal {
 	            "ESRS-E1-Climate-Change-Disclosure-E1-2",
 	            "ESRS-E1-Climate-Change-Disclosure-E1-3",
 	            "ESRS-E1-Climate-Change-Disclosure-E1-4",
+	            "ESRS-E1-Climate-Change-Disclosure-E1-5",
 	            "ESRS-E1-Climate-Change-Disclosure-E1-6",
 	            "ESRS-E1-Climate-Change-Disclosure-E1-8",
 	            "ESRS-E1-Climate-Change-Disclosure-E1-9",
