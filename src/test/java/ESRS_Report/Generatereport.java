@@ -33,7 +33,7 @@ public class Generatereport {
 	
 	
 	
-	@Test(priority=1)
+@Test(priority=1)
 	
 	
 	public void updatefinaldr() {
@@ -49,19 +49,33 @@ public class Generatereport {
 	
 @Test(priority=2)
 
-public void completeE15() {
+public void completeE15() throws InterruptedException {
+	
+
+	
 	
 	
 	GenerateReport.updateStatus(admintoken, reportid);
 	
 	
-	
-	
-	
-	
-	
 }
 	
+
+
+@Test(priority=3)
+
+public void getstatus() {
+	
+	
+	
+	
+	String status =GenerateReport.getStatus(admintoken, reportid);
+	System.out.println(status);
+	
+	
+	
+	
+}	
 
 	
 	

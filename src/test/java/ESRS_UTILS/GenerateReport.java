@@ -79,7 +79,37 @@ public class GenerateReport {
     }
 	
 	
-	
+	public static String getStatus(String token, String reportid) {
+		String disclosureId = "ESRS-E1-Climate-Change-Disclosure-E1-5";
+
+        // Construct full URL with dynamic reportId
+        String url = "https://qa.daato.app/api/esrs/disclosure-reporting/" 
+                     + reportid + "/disclosures/" + disclosureId;
+        // Call API and extract response
+        Response response = RestAssured
+                .given()
+                .header("Authorization", "Bearer " + token)
+                .header("Content-Type", "application/json")
+                .when()
+                .get(url)
+                .then()
+                .statusCode(200)
+                .extract()
+                .response();
+
+        // Extract "status" from top level of response
+        String status = response.jsonPath().getString("status");
+
+        // Print or return the status
+        System.out.println("Disclosure Status: " + status);
+        return status;
+    }
+
+   
+       
+    
+}
+
 	
 	
 	
@@ -90,4 +120,4 @@ public class GenerateReport {
 	
 	
 
-}
+

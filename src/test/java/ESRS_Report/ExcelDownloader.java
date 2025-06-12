@@ -25,10 +25,10 @@ public class ExcelDownloader {
 	
 	String Parentenityname;
 	String childentityname;
-	String value1 ="12.0";
-	String value2 ="12.0";
-	String value3 ="12.0";
-	String value4 ="12.0";
+	String value1 ="60.0";
+	String value2 ="60.0";
+	String value3 ="60.0";
+	String value4 ="60.0";
 	String admintoken;
 	String reportid;
 	

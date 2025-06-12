@@ -8,9 +8,9 @@ public class Answerdatacollectionrequest {
 	
     // URLs and payloads
     private static final String[][] URL_PAYLOADC = {
-        { "v5E1530", "{\"value\":[{\"id\":0,\"reporting\":[12],\"comparative\":[12],\"_id\":[\"piyush\"]}]}" },
+        { "v5E1530", "{\"value\":[{\"id\":0,\"reporting\":[60],\"comparative\":[60],\"_id\":[\"piyush\"]}]}" },
         { "v5E152", "{\"value\":[{\"id\":0,\"reporting\":[50],\"comparative\":[50],\"_id\":[\"c3c94d6a-d98e-4be8-9497-b03070020284\"]}]}" },
-        { "v5E153", "{\"value\":[{\"id\":0,\"reporting\":[60],\"comparative\":[60],\"_id\":[\"b0fe2425-7b6e-49aa-bb72-90be4a812de9\"]}]}" },
+        { "v5E153", "{\"value\":[{\"id\":0,\"reporting\":[12],\"comparative\":[12],\"_id\":[\"b0fe2425-7b6e-49aa-bb72-90be4a812de9\"]}]}" },
         { "v5E155", "{\"value\":[{\"id\":0,\"reporting\":[70],\"comparative\":[70],\"_id\":[\"de4b08a5-dba3-4c5e-b111-bd95eee267ce\"]}]}" },
         { "v5E156", "{\"value\":[{\"id\":0,\"reporting\":[80],\"comparative\":[80],\"_id\":[\"bb4e45a7-8cfa-428c-9178-d87b04235861\"]}]}" },
         { "v5E157", "{\"value\":[{\"id\":0,\"reporting\":[90],\"comparative\":[90],\"_id\":[\"a73cc306-5dad-4b55-8b5d-e11d76c1fe88\"]}]}" },
@@ -31,7 +31,8 @@ public class Answerdatacollectionrequest {
         { "v5E1527", "{\"value\":[490]}" },
         { "v5E1528", "{\"value\":[\"Automated Test Result\"]}" },
         { "v5E1529", "{\"value\":[\"Automated comment\"]}" },
-        { "v5E159Calculated", "{\"value\":[{\"id\":0,\"reporting\":[50],\"comparative\":[60],\"_id\":[\"e9aa9a71-00bd-4ea6-a58c-ac279e68f9bb\"]}]}" }
+        { "v5E159Calculated", "{\"value\":[{\"id\":0,\"reporting\":[50],\"comparative\":[60],\"_id\":[\"e9aa9a71-00bd-4ea6-a58c-ac279e68f9bb\"]}]}" },
+        { "v5E154Calculated","{\"value\":[{\"id\":0,\"reporting\":[20],\"comparative\":[20],\"_id\":[\"0efac697-fb1f-460b-88d9-6fed04632f28\"]}]}"},
     };
 
     public static void sendAllRequestschild(String token, String reportId) {
@@ -62,9 +63,9 @@ public class Answerdatacollectionrequest {
     
     // URLs and payloads
     private static final String[][] URL_PAYLOADSP = {
-        { "v5E1530", "{\"value\":[{\"id\":0,\"reporting\":[12],\"comparative\":[12],\"_id\":[\"piyush\"]}]}" },
+        { "v5E1530", "{\"value\":[{\"id\":0,\"reporting\":[60],\"comparative\":[60],\"_id\":[\"piyush\"]}]}" },
         { "v5E152", "{\"value\":[{\"id\":0,\"reporting\":[50],\"comparative\":[50],\"_id\":[\"c3c94d6a-d98e-4be8-9497-b03070020284\"]}]}" },
-        { "v5E153", "{\"value\":[{\"id\":0,\"reporting\":[60],\"comparative\":[60],\"_id\":[\"b0fe2425-7b6e-49aa-bb72-90be4a812de9\"]}]}" },
+        { "v5E153", "{\"value\":[{\"id\":0,\"reporting\":[12],\"comparative\":[12],\"_id\":[\"b0fe2425-7b6e-49aa-bb72-90be4a812de9\"]}]}" },
         { "v5E155", "{\"value\":[{\"id\":0,\"reporting\":[70],\"comparative\":[70],\"_id\":[\"de4b08a5-dba3-4c5e-b111-bd95eee267ce\"]}]}" },
         { "v5E156", "{\"value\":[{\"id\":0,\"reporting\":[80],\"comparative\":[80],\"_id\":[\"bb4e45a7-8cfa-428c-9178-d87b04235861\"]}]}" },
         { "v5E157", "{\"value\":[{\"id\":0,\"reporting\":[90],\"comparative\":[90],\"_id\":[\"a73cc306-5dad-4b55-8b5d-e11d76c1fe88\"]}]}" },
@@ -85,7 +86,8 @@ public class Answerdatacollectionrequest {
         { "v5E1527", "{\"value\":[490]}" },
         { "v5E1528", "{\"value\":[\"Automated Test Result\"]}" },
         { "v5E1529", "{\"value\":[\"Automated comment\"]}" },
-        { "v5E159Calculated", "{\"value\":[{\"id\":0,\"reporting\":[50],\"comparative\":[60],\"_id\":[\"e9aa9a71-00bd-4ea6-a58c-ac279e68f9bb\"]}]}" }
+        { "v5E159Calculated", "{\"value\":[{\"id\":0,\"reporting\":[50],\"comparative\":[60],\"_id\":[\"e9aa9a71-00bd-4ea6-a58c-ac279e68f9bb\"]}]}" },
+        { "v5E154Calculated","{\"value\":[{\"id\":0,\"reporting\":[20],\"comparative\":[20],\"_id\":[\"0efac697-fb1f-460b-88d9-6fed04632f28\"]}]}"},
     };
 	
     public static void sendAllRequestsparent(String token, String reportId) {

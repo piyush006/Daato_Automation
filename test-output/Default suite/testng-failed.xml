@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ESRS_Report.ExcelDownloader">
+      <class name="ESRS_Report.Generatereport">
         <methods>
+          <include name="getstatus"/>
           <include name="getadmintoken"/>
-          <include name="Verifyexceldata"/>
         </methods>
-      </class> <!-- ESRS_Report.ExcelDownloader -->
+      </class> <!-- ESRS_Report.Generatereport -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

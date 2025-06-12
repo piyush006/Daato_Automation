@@ -14,10 +14,10 @@ public class CheckaggregatedResult {
 	static int expectedparentcomparativevalue=50;
 	static int expectedchildreportingvalue=50;
 	static int expectedchildcomparativevalue=50;
-	static int expectedparentreportingvalue1=500;
-	static int expectedparentcomparativevalue1=500;
-	static int expectedchildreportingvalue1=500;
-	static int expectedchildcomparativevalue1=500;
+	static int expectedparentreportingvalue1=20;
+	static int expectedparentcomparativevalue1=20;
+	static int expectedchildreportingvalue1=20;
+	static int expectedchildcomparativevalue1=20;
 	
 	
 	

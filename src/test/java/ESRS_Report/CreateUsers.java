@@ -81,7 +81,7 @@ public void createchild() throws InterruptedException {
 	
 	System.out.println("child");
 	
-	Thread.sleep(2000);
+	Thread.sleep(1000);
 	Map<String, String> userDetails = Creatuser.createchilduser(admintoken);
 	childid = userDetails.get("user_id");
 	childemail = userDetails.get("email");
@@ -102,7 +102,7 @@ public void createchild() throws InterruptedException {
 @Test(priority=4)
 public void createchildentity() throws InterruptedException {
 	
-	Thread.sleep(3000);
+	Thread.sleep(1000);
 	
 	
 	childentityid=Creatuser.createChildEntity(admintoken, childid, parententityid);
