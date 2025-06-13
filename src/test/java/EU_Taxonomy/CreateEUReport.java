@@ -47,7 +47,7 @@ String	datacollectionid;
         
         
         PropertyutilwriterEU.writeProperty("reportid", reportid);
-        PropertyutilwriterEU.writeProperty("datacollectionId", datacollectionid);
+        PropertyutilwriterEU.writeProperty("datacollectionid", datacollectionid);
         
         
         

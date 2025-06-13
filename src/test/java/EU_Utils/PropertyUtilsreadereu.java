@@ -14,11 +14,38 @@ public class PropertyUtilsreadereu {
         return getValue("reportid");
     }
     public static String datacollectionid() {
-        return getValue("datacollectionidntid");
+        return getValue("datacollectionid");
+    }
+    
+    public static String Mins32() {
+        return getValue("Mins32");
+    }
+    public static String Mins91() {
+        return getValue("Mins91");
     }
 
-
-
+    public static String Activityid32() {
+        return getValue("Activityid32");
+    }
+    
+    public static String Activityid92() {
+        return getValue("Activityid92");
+    }
+    
+    public static String Alingmentid92() {
+        return getValue("Alingmentid92");
+    }
+    
+    public static String Alingmentid32() {
+        return getValue("Alingmentid32");
+    }
+    
+    
+    
+    
+    
+    
+   
     
    
     
