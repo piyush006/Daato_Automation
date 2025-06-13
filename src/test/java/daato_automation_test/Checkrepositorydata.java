@@ -96,6 +96,10 @@ boolean ActualMarkassafe = true;
         	
         System.out.println(ActualEmail);
         System.out.println(ActualContactName);
+        System.out.println(ExpectedMarkassafe);
+        System.out.println(ActualMarkassafe);
+        
+        
         
       Assert.assertEquals(ActualEmail, ExpectedEmail);
       Assert.assertEquals(ActualContactName, ExpectedContactName);

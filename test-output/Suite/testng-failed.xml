@@ -3,18 +3,14 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="ESRS_Report.ExcelDownloader">
+      <class name="daato_automation_test.Checkrepositorydata">
         <methods>
-          <include name="getadmintoken"/>
-          <include name="Verifyexceldata"/>
+          <include name="setupRuntimeFile"/>
+          <include name="checkacutaldata"/>
+          <include name="tearDown"/>
+          <include name="chrome_setup"/>
         </methods>
-      </class> <!-- ESRS_Report.ExcelDownloader -->
-      <class name="ESRS_Report.Checkaggregateresult">
-        <methods>
-          <include name="checkaggregatedv5E154"/>
-          <include name="getadmintoken"/>
-        </methods>
-      </class> <!-- ESRS_Report.Checkaggregateresult -->
+      </class> <!-- daato_automation_test.Checkrepositorydata -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

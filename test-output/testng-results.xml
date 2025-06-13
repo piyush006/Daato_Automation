@@ -1,209 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="31" passed="31" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-12T13:01:38 IST" name="Suite" finished-at="2025-06-12T13:06:49 IST" duration-ms="310733">
+  <suite started-at="2025-06-12T23:25:23 IST" name="Default suite" finished-at="2025-06-12T23:26:16 IST" duration-ms="53583">
     <groups>
     </groups>
-    <test started-at="2025-06-12T13:01:38 IST" name="Test" finished-at="2025-06-12T13:06:49 IST" duration-ms="310733">
-      <class name="ESRS_Report.CreateReport">
-        <test-method signature="createsrsreport()[pri:1, instance:ESRS_Report.CreateReport@366647c2]" started-at="2025-06-12T13:01:49 IST" name="createsrsreport" finished-at="2025-06-12T13:01:54 IST" duration-ms="5580" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createsrsreport -->
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:ESRS_Report.CreateReport@366647c2]" started-at="2025-06-12T13:01:49 IST" name="getadmintoken" finished-at="2025-06-12T13:01:49 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getadmintoken -->
-        <test-method signature="waitForReportReady()[pri:2, instance:ESRS_Report.CreateReport@366647c2]" started-at="2025-06-12T13:01:54 IST" name="waitForReportReady" finished-at="2025-06-12T13:01:56 IST" duration-ms="1913" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- waitForReportReady -->
-      </class> <!-- ESRS_Report.CreateReport -->
-      <class name="ESRS_Report.Bulkactions">
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:ESRS_Report.Bulkactions@6a6afff2]" started-at="2025-06-12T13:01:56 IST" name="getadmintoken" finished-at="2025-06-12T13:01:56 IST" duration-ms="16" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getadmintoken -->
-        <test-method signature="markE16voluntaryoff()[pri:1, instance:ESRS_Report.Bulkactions@6a6afff2]" started-at="2025-06-12T13:01:56 IST" name="markE16voluntaryoff" finished-at="2025-06-12T13:03:07 IST" duration-ms="70775" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- markE16voluntaryoff -->
-        <test-method signature="markE17nonmaterial()[pri:2, instance:ESRS_Report.Bulkactions@6a6afff2]" started-at="2025-06-12T13:03:07 IST" name="markE17nonmaterial" finished-at="2025-06-12T13:03:08 IST" duration-ms="692" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- markE17nonmaterial -->
-        <test-method signature="completestep1()[pri:3, instance:ESRS_Report.Bulkactions@6a6afff2]" started-at="2025-06-12T13:03:08 IST" name="completestep1" finished-at="2025-06-12T13:03:08 IST" duration-ms="408" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- completestep1 -->
-        <test-method signature="assigndatapointtoentity()[pri:4, instance:ESRS_Report.Bulkactions@6a6afff2]" started-at="2025-06-12T13:03:08 IST" name="assigndatapointtoentity" finished-at="2025-06-12T13:03:14 IST" duration-ms="5448" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- assigndatapointtoentity -->
-        <test-method signature="startdatacollection()[pri:5, instance:ESRS_Report.Bulkactions@6a6afff2]" started-at="2025-06-12T13:03:14 IST" name="startdatacollection" finished-at="2025-06-12T13:03:15 IST" duration-ms="1860" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startdatacollection -->
-        <test-method signature="getdatacollectionid()[pri:6, instance:ESRS_Report.Bulkactions@6a6afff2]" started-at="2025-06-12T13:03:15 IST" name="getdatacollectionid" finished-at="2025-06-12T13:03:17 IST" duration-ms="1713" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getdatacollectionid -->
-        <test-method signature="getesrsentitydatacollectionid()[pri:7, instance:ESRS_Report.Bulkactions@6a6afff2]" started-at="2025-06-12T13:03:17 IST" name="getesrsentitydatacollectionid" finished-at="2025-06-12T13:03:18 IST" duration-ms="594" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getesrsentitydatacollectionid -->
-        <test-method signature="getesrsentitydatacollectionidparent()[pri:8, instance:ESRS_Report.Bulkactions@6a6afff2]" started-at="2025-06-12T13:03:18 IST" name="getesrsentitydatacollectionidparent" finished-at="2025-06-12T13:03:18 IST" duration-ms="486" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getesrsentitydatacollectionidparent -->
-        <test-method signature="completestep2()[pri:9, instance:ESRS_Report.Bulkactions@6a6afff2]" started-at="2025-06-12T13:03:18 IST" name="completestep2" finished-at="2025-06-12T13:03:19 IST" duration-ms="477" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- completestep2 -->
-      </class> <!-- ESRS_Report.Bulkactions -->
-      <class name="ESRS_Report.Generatereport">
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:ESRS_Report.Generatereport@2e55dd0c]" started-at="2025-06-12T13:06:45 IST" name="getadmintoken" finished-at="2025-06-12T13:06:45 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getadmintoken -->
-        <test-method signature="updatefinaldr()[pri:1, instance:ESRS_Report.Generatereport@2e55dd0c]" started-at="2025-06-12T13:06:45 IST" name="updatefinaldr" finished-at="2025-06-12T13:06:49 IST" duration-ms="3275" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updatefinaldr -->
-      </class> <!-- ESRS_Report.Generatereport -->
-      <class name="ESRS_Report.Checkaggregateresult">
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:ESRS_Report.Checkaggregateresult@62230c58]" started-at="2025-06-12T13:05:16 IST" name="getadmintoken" finished-at="2025-06-12T13:05:16 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getadmintoken -->
-        <test-method signature="checkaggregatedresultv5E152()[pri:1, instance:ESRS_Report.Checkaggregateresult@62230c58]" started-at="2025-06-12T13:05:16 IST" name="checkaggregatedresultv5E152" finished-at="2025-06-12T13:05:18 IST" duration-ms="2028" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkaggregatedresultv5E152 -->
-        <test-method signature="checkaggregatedv5E154()[pri:2, instance:ESRS_Report.Checkaggregateresult@62230c58]" started-at="2025-06-12T13:05:18 IST" name="checkaggregatedv5E154" finished-at="2025-06-12T13:05:19 IST" duration-ms="1787" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkaggregatedv5E154 -->
-        <test-method signature="getdisclousurerequirementid()[pri:3, instance:ESRS_Report.Checkaggregateresult@62230c58]" started-at="2025-06-12T13:05:19 IST" name="getdisclousurerequirementid" finished-at="2025-06-12T13:05:21 IST" duration-ms="1633" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getdisclousurerequirementid -->
-        <test-method signature="completeindividualdatapoints()[pri:4, instance:ESRS_Report.Checkaggregateresult@62230c58]" started-at="2025-06-12T13:05:21 IST" name="completeindividualdatapoints" finished-at="2025-06-12T13:06:43 IST" duration-ms="81726" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- completeindividualdatapoints -->
-        <test-method signature="completestep3()[pri:5, instance:ESRS_Report.Checkaggregateresult@62230c58]" started-at="2025-06-12T13:06:43 IST" name="completestep3" finished-at="2025-06-12T13:06:44 IST" duration-ms="765" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- completestep3 -->
-      </class> <!-- ESRS_Report.Checkaggregateresult -->
-      <class name="ESRS_Report.ExcelDownloader">
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:ESRS_Report.ExcelDownloader@2cd2a21f]" started-at="2025-06-12T13:06:44 IST" name="getadmintoken" finished-at="2025-06-12T13:06:44 IST" duration-ms="13" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getadmintoken -->
-        <test-method signature="downloadesrsexcel()[pri:1, instance:ESRS_Report.ExcelDownloader@2cd2a21f]" started-at="2025-06-12T13:06:44 IST" name="downloadesrsexcel" finished-at="2025-06-12T13:06:45 IST" duration-ms="1334" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- downloadesrsexcel -->
-        <test-method signature="Verifyexceldata()[pri:2, instance:ESRS_Report.ExcelDownloader@2cd2a21f]" started-at="2025-06-12T13:06:45 IST" name="Verifyexceldata" finished-at="2025-06-12T13:06:45 IST" duration-ms="520" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Verifyexceldata -->
-      </class> <!-- ESRS_Report.ExcelDownloader -->
-      <class name="ESRS_Report.Answerdatarequest">
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:ESRS_Report.Answerdatarequest@3d1cfad4]" started-at="2025-06-12T13:04:47 IST" name="getadmintoken" finished-at="2025-06-12T13:04:48 IST" duration-ms="857" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getadmintoken -->
-        <test-method signature="startchilddatacollection()[pri:1, instance:ESRS_Report.Answerdatarequest@3d1cfad4]" started-at="2025-06-12T13:04:48 IST" name="startchilddatacollection" finished-at="2025-06-12T13:05:00 IST" duration-ms="12365" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startchilddatacollection -->
-        <test-method signature="completedatacollectionchild()[pri:2, instance:ESRS_Report.Answerdatarequest@3d1cfad4]" started-at="2025-06-12T13:05:00 IST" name="completedatacollectionchild" finished-at="2025-06-12T13:05:01 IST" duration-ms="264" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- completedatacollectionchild -->
-        <test-method signature="startparentdatacollection()[pri:3, instance:ESRS_Report.Answerdatarequest@3d1cfad4]" started-at="2025-06-12T13:05:01 IST" name="startparentdatacollection" finished-at="2025-06-12T13:05:15 IST" duration-ms="13976" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startparentdatacollection -->
-        <test-method signature="completedatacollectionparent()[pri:4, instance:ESRS_Report.Answerdatarequest@3d1cfad4]" started-at="2025-06-12T13:05:15 IST" name="completedatacollectionparent" finished-at="2025-06-12T13:05:15 IST" duration-ms="291" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- completedatacollectionparent -->
-        <test-method signature="Completedatacollection()[pri:5, instance:ESRS_Report.Answerdatarequest@3d1cfad4]" started-at="2025-06-12T13:05:15 IST" name="Completedatacollection" finished-at="2025-06-12T13:05:16 IST" duration-ms="766" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Completedatacollection -->
-      </class> <!-- ESRS_Report.Answerdatarequest -->
-      <class name="ESRS_Report.Completefinalstep">
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:ESRS_Report.Completefinalstep@747edf66]" started-at="2025-06-12T13:04:39 IST" name="getadmintoken" finished-at="2025-06-12T13:04:39 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getadmintoken -->
-        <test-method signature="completefinalstep()[pri:0, instance:ESRS_Report.Completefinalstep@747edf66]" started-at="2025-06-12T13:04:39 IST" name="completefinalstep" finished-at="2025-06-12T13:04:47 IST" duration-ms="7871" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- completefinalstep -->
-      </class> <!-- ESRS_Report.Completefinalstep -->
-      <class name="ESRS_Report.Registerentity">
-        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:ESRS_Report.Registerentity@55536d9e]" started-at="2025-06-12T13:03:19 IST" name="setupRuntimeFile" finished-at="2025-06-12T13:03:19 IST" duration-ms="1" status="PASS">
+    <test started-at="2025-06-12T23:25:23 IST" name="Default test" finished-at="2025-06-12T23:26:16 IST" duration-ms="53583">
+      <class name="daato_automation_test.Checkrepositorydata">
+        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:daato_automation_test.Checkrepositorydata@c03cf28]" started-at="2025-06-12T23:25:23 IST" name="setupRuntimeFile" finished-at="2025-06-12T23:25:23 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupRuntimeFile -->
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:ESRS_Report.Registerentity@55536d9e]" started-at="2025-06-12T13:03:19 IST" name="getadmintoken" finished-at="2025-06-12T13:03:19 IST" duration-ms="10" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getadmintoken -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:ESRS_Report.Registerentity@55536d9e]" started-at="2025-06-12T13:03:19 IST" name="chrome_setup" finished-at="2025-06-12T13:03:24 IST" duration-ms="5222" status="PASS">
+        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.Checkrepositorydata@c03cf28]" started-at="2025-06-12T23:25:23 IST" name="chrome_setup" finished-at="2025-06-12T23:25:37 IST" duration-ms="14292" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chrome_setup -->
-        <test-method signature="registerentity()[pri:1, instance:ESRS_Report.Registerentity@55536d9e]" started-at="2025-06-12T13:03:24 IST" name="registerentity" finished-at="2025-06-12T13:03:59 IST" duration-ms="35201" status="PASS">
+        <test-method signature="GetexpectedResult()[pri:14, instance:daato_automation_test.Checkrepositorydata@c03cf28]" started-at="2025-06-12T23:25:37 IST" name="GetexpectedResult" finished-at="2025-06-12T23:26:07 IST" duration-ms="29479" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- registerentity -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ESRS_Report.Registerentity@55536d9e]" started-at="2025-06-12T13:03:59 IST" name="tearDown" finished-at="2025-06-12T13:03:59 IST" duration-ms="339" status="PASS">
+        </test-method> <!-- GetexpectedResult -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.Checkrepositorydata@c03cf28]" started-at="2025-06-12T23:26:07 IST" name="tearDown" finished-at="2025-06-12T23:26:07 IST" duration-ms="312" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:ESRS_Report.Registerentity@55536d9e]" started-at="2025-06-12T13:03:59 IST" name="chrome_setup" finished-at="2025-06-12T13:04:04 IST" duration-ms="4494" status="PASS">
+        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.Checkrepositorydata@c03cf28]" started-at="2025-06-12T23:26:07 IST" name="chrome_setup" finished-at="2025-06-12T23:26:15 IST" duration-ms="8291" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chrome_setup -->
-        <test-method signature="registerparentenity()[pri:2, instance:ESRS_Report.Registerentity@55536d9e]" started-at="2025-06-12T13:04:04 IST" name="registerparentenity" finished-at="2025-06-12T13:04:39 IST" duration-ms="34907" status="PASS">
+        <test-method signature="checkacutaldata()[pri:15, instance:daato_automation_test.Checkrepositorydata@c03cf28]" started-at="2025-06-12T23:26:15 IST" name="checkacutaldata" finished-at="2025-06-12T23:26:16 IST" duration-ms="874" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- registerparentenity -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ESRS_Report.Registerentity@55536d9e]" started-at="2025-06-12T13:04:39 IST" name="tearDown" finished-at="2025-06-12T13:04:39 IST" duration-ms="349" status="PASS">
+        </test-method> <!-- checkacutaldata -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.Checkrepositorydata@c03cf28]" started-at="2025-06-12T23:26:16 IST" name="tearDown" finished-at="2025-06-12T23:26:16 IST" duration-ms="274" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- ESRS_Report.Registerentity -->
-      <class name="ESRS_Report.CreateUsers">
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:ESRS_Report.CreateUsers@29647f75]" started-at="2025-06-12T13:01:38 IST" name="getadmintoken" finished-at="2025-06-12T13:01:40 IST" duration-ms="2502" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getadmintoken -->
-        <test-method signature="createparent()[pri:1, instance:ESRS_Report.CreateUsers@29647f75]" started-at="2025-06-12T13:01:40 IST" name="createparent" finished-at="2025-06-12T13:01:42 IST" duration-ms="1742" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createparent -->
-        <test-method signature="createparententity()[pri:2, instance:ESRS_Report.CreateUsers@29647f75]" started-at="2025-06-12T13:01:42 IST" name="createparententity" finished-at="2025-06-12T13:01:43 IST" duration-ms="459" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createparententity -->
-        <test-method signature="createchild()[pri:3, instance:ESRS_Report.CreateUsers@29647f75]" started-at="2025-06-12T13:01:43 IST" name="createchild" finished-at="2025-06-12T13:01:47 IST" duration-ms="4487" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createchild -->
-        <test-method signature="createchildentity()[pri:4, instance:ESRS_Report.CreateUsers@29647f75]" started-at="2025-06-12T13:01:47 IST" name="createchildentity" finished-at="2025-06-12T13:01:49 IST" duration-ms="1480" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createchildentity -->
-      </class> <!-- ESRS_Report.CreateUsers -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- daato_automation_test.Checkrepositorydata -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
