@@ -1,8 +1,7 @@
 name: Java Selenium CI with Downloads
 
 on:
-
-workflow_dispatch:
+  workflow_dispatch:
     inputs:
       module:
         description: 'Module to run'
@@ -44,6 +43,7 @@ jobs:
             SCS) mvn test -DsuiteXmlFile=testngscs.xml ;;
             DM) mvn test -DsuiteXmlFile=testngDoublemateriality.xml ;;
             ESRSLITE) mvn test -DsuiteXmlFile=testngESRSLITE.xml ;;
+            EU) mvn test -DsuiteXmlFile=testngEU.xml ;;
             *) echo "Invalid module name"; exit 1 ;;
           esac
 
