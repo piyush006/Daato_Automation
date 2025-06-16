@@ -37,15 +37,15 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      - name: Run TestNG tests
-	  run: |
-	      case '${{ github.event.inputs.module }}' in
-	        SCS) mvn test -DsuiteXmlFile=testngscs.xml ;;
-	        DM) mvn test -DsuiteXmlFile=testngDoublemateriality.xml ;;
-	        ESRSLITE) mvn test -DsuiteXmlFile=testngESRSLITE.xml ;;
-	        EU) mvn test -DsuiteXmlFile=testngEU.xml ;;
-	        *) echo "Invalid module name: ${{ github.event.inputs.module }}"; exit 1 ;;
-	      esac
+				- name: Run TestNG tests
+				  run: |
+				    case "${{ github.event.inputs.module }}" in
+				      SCS) mvn test -DsuiteXmlFile=testngscs.xml ;;
+				      DM) mvn test -DsuiteXmlFile=testngDoublemateriality.xml ;;
+				      ESRSLITE) mvn test -DsuiteXmlFile=testngESRSLITE.xml ;;
+				      EU) mvn test -DsuiteXmlFile=testngEU.xml ;;
+				      *) echo "Invalid module name: ${{ github.event.inputs.module }}"; exit 1 ;;
+				    esac
 
       - name: Convert TestNG Results to JSON
         if: always()
