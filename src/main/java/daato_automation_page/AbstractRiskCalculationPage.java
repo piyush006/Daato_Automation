@@ -50,6 +50,13 @@ public class AbstractRiskCalculationPage extends BasePage {
 
 	@FindBy(xpath = "//p[contains(text(),'Risk level')]")
 	WebElement riskLevel;
+	
+	@FindBy(xpath = "//p[normalize-space()='Influence']")
+	WebElement influence;
+	
+	
+	
+	//p[normalize-space()='Influence']
 
 	@FindBy(xpath = "//p[text()='Risk assessment']")
 	WebElement riskAssessment;
@@ -106,7 +113,7 @@ public class AbstractRiskCalculationPage extends BasePage {
 		
 		System.out.println("I am here");
 		//closeButton.click();
-		//riskLevel.click();
+		influence.click();
 	}
 
 	private void openNewTabAndNavigate(String url) throws InterruptedException {
