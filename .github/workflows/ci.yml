@@ -1,7 +1,8 @@
 name: Java Selenium CI with Downloads
 
 on:
-  workflow_dispatch:
+
+workflow_dispatch:
     inputs:
       module:
         description: 'Module to run'
@@ -34,16 +35,17 @@ jobs:
         with:
           path: ~/.m2
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-		  restore-keys: ${{ runner.os }}-maven-
-              - name: Run TestNG tests
-				  run: |
-				    case "${{ github.event.inputs.module }}" in
-				      SCS) mvn test -DsuiteXmlFile=testngscs.xml ;;
-				      DM) mvn test -DsuiteXmlFile=testngDoublemateriality.xml ;;
-				      ESRSLITE) mvn test -DsuiteXmlFile=testngESRSLITE.xml ;;
-				      EU) mvn test -DsuiteXmlFile=testngEU.xml ;;
-				      *) echo "Invalid module name: ${{ github.event.inputs.module }}"; exit 1 ;;
-				    esac
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Run TestNG tests
+        run: |
+          case "${{ github.event.inputs.module }}" in
+            SCS) mvn test -DsuiteXmlFile=testngscs.xml ;;
+            DM) mvn test -DsuiteXmlFile=testngDoublemateriality.xml ;;
+            ESRSLITE) mvn test -DsuiteXmlFile=testngESRSLITE.xml ;;
+            *) echo "Invalid module name"; exit 1 ;;
+          esac
 
       - name: Convert TestNG Results to JSON
         if: always()
