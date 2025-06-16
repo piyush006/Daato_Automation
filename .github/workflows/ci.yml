@@ -43,7 +43,6 @@ jobs:
             SCS) mvn test -DsuiteXmlFile=testngscs.xml ;;
             DM) mvn test -DsuiteXmlFile=testngDoublemateriality.xml ;;
             ESRSLITE) mvn test -DsuiteXmlFile=testngESRSLITE.xml ;;
-			EU) mvn test -DsuiteXmlFile=testngEU.xml ;;
             *) echo "Invalid module name"; exit 1 ;;
           esac
 
