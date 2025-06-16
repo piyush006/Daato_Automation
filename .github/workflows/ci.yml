@@ -34,9 +34,7 @@ jobs:
         with:
           path: ~/.m2
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
-				${{ runner.os }}-
+		  restore-keys: ${{ runner.os }}-maven-
               - name: Run TestNG tests
 				  run: |
 				    case "${{ github.event.inputs.module }}" in
