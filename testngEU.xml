@@ -1,0 +1,38 @@
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" preserve-order="true" parallel="none">
+  <test thread-count="1" name="Test">
+    <classes>
+
+
+
+
+<class name="EU_Taxonomy.CreateEUReport"/>
+<class name="EU_Taxonomy.Addactivity"/>
+<class name="EU_Taxonomy.Senddatarequest"/>
+<class name="EU_Taxonomy.Registerdataprovider"/>
+<class name="EU_Taxonomy.Acceptdatarequest"/>
+<class name="EU_Taxonomy.Fillminimumsafeguard"/>
+<class name="EU_Taxonomy.Alignactivity"/>
+<class name="EU_Taxonomy.Addfinancialdata"/>
+<class name="EU_Taxonomy.Completesteps"/>
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+</classes>
+</test>
+</suite>

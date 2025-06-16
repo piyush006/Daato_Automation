@@ -39,17 +39,20 @@ public class PropertyUtilsreadereu {
     public static String Alingmentid32() {
         return getValue("Alingmentid32");
     }
+    public static String dataproviderid() {
+        return getValue("dataproviderid");
+    }
+    public static String dataprovideremail() {
+        return getValue("dataprovideremail");
+    }
+    public static String Extractdid() {
+        return getValue("Extractdid");
+    }
     
     
     
     
-    
-    
-   
-    
-   
-    
-    
+      
     private static String getValue(String key) {
         Properties props = new Properties();
         try (FileInputStream input = new FileInputStream(FILE_PATH)) {

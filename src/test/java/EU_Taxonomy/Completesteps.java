@@ -3,11 +3,13 @@ package EU_Taxonomy;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import EU_Utils.Financial;
+import EU_Utils.Completestep;
 import EU_Utils.PropertyUtilsreadereu;
 import utils.AuthTokenadminUtil;
 
-public class Addfinancialdata {
+public class Completesteps {
+	
+	
 	
 	String admintoken;
 	
@@ -37,58 +39,21 @@ public class Addfinancialdata {
 	    Alingmentid32=PropertyUtilsreadereu.Alingmentid32();
          
 	}		
-	
-	
-	
-	
-		
-@Test(priority=1)
-	public void Updatestatus() {
-		
-		
-		
-		
-		Financial.updateStatus(admintoken, reportid);	
 		
 	
+	
+	@Test
+	public void completestep() {
+		
+		
+		
+		Completestep.updateSteps(admintoken, reportid);	
+		
+		
+		
 		
 		
 	}
-	
-	
-@Test(priority=2)	
-	
-	public void addfinancialdata() {
-	
-	
-	Financial.sendFinancialInformation(admintoken, reportid);
-	
-}
-	
-	
-@Test(priority=3)
-	
-public void addfinancialdata92() {
-	
-	
-	Financial.sendFinancialInformation92(admintoken, reportid, Activityid92);
-	
-	
-}
-
-
-
-@Test(priority=4)
-
-public void addfinancialdata32() {
-
-
-Financial.sendFinancialInformation92(admintoken, reportid, Activityid32);
-
-
-}
-	
-	
 	
 	
 	
