@@ -1,301 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="27" passed="27" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-16T15:49:09 IST" name="Suite" finished-at="2025-06-16T15:56:54 IST" duration-ms="465326">
+  <suite started-at="2025-06-16T17:59:49 IST" name="Suite" finished-at="2025-06-16T18:01:17 IST" duration-ms="88233">
     <groups>
     </groups>
-    <test started-at="2025-06-16T15:49:09 IST" name="Test" finished-at="2025-06-16T15:56:54 IST" duration-ms="465326">
-      <class name="DoubleMateriality.Acceptandfinshsurveryrequest">
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:DoubleMateriality.Acceptandfinshsurveryrequest@4da4253]" started-at="2025-06-16T15:50:08 IST" name="getadmintoken" finished-at="2025-06-16T15:50:08 IST" duration-ms="11" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getadmintoken -->
-        <test-method signature="acceptsurveyrequest()[pri:1, instance:DoubleMateriality.Acceptandfinshsurveryrequest@4da4253]" started-at="2025-06-16T15:50:08 IST" name="acceptsurveyrequest" finished-at="2025-06-16T15:50:09 IST" duration-ms="738" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- acceptsurveyrequest -->
-        <test-method signature="fishsurvert()[pri:2, instance:DoubleMateriality.Acceptandfinshsurveryrequest@4da4253]" started-at="2025-06-16T15:50:09 IST" name="fishsurvert" finished-at="2025-06-16T15:50:09 IST" duration-ms="403" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fishsurvert -->
-      </class> <!-- DoubleMateriality.Acceptandfinshsurveryrequest -->
-      <class name="DoubleMateriality.DownloadDMxlsx">
-        <test-method signature="downloadrepository()[pri:1, instance:DoubleMateriality.DownloadDMxlsx@3738449f]" started-at="2025-06-16T15:56:52 IST" name="downloadrepository" finished-at="2025-06-16T15:56:54 IST" duration-ms="1918" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- downloadrepository -->
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:DoubleMateriality.DownloadDMxlsx@3738449f]" started-at="2025-06-16T15:56:52 IST" name="getadmintoken" finished-at="2025-06-16T15:56:52 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getadmintoken -->
-        <test-method signature="checklatestfiledata()[pri:2, instance:DoubleMateriality.DownloadDMxlsx@3738449f]" started-at="2025-06-16T15:56:54 IST" name="checklatestfiledata" finished-at="2025-06-16T15:56:54 IST" duration-ms="743" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checklatestfiledata -->
-      </class> <!-- DoubleMateriality.DownloadDMxlsx -->
-      <class name="DoubleMateriality.ManualIROassessment">
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:DoubleMateriality.ManualIROassessment@2e55dd0c]" started-at="2025-06-16T15:53:00 IST" name="chrome_setup" finished-at="2025-06-16T15:53:05 IST" duration-ms="5081" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:DoubleMateriality.ManualIROassessment@2e55dd0c]" started-at="2025-06-16T15:53:00 IST" name="setupRuntimeFile" finished-at="2025-06-16T15:53:00 IST" duration-ms="0" status="PASS">
+    <test started-at="2025-06-16T17:59:49 IST" name="Test" finished-at="2025-06-16T18:01:17 IST" duration-ms="88233">
+      <class name="daato_automation_test.AddSupplierTest">
+        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:daato_automation_test.AddSupplierTest@46fa7c39]" started-at="2025-06-16T17:59:49 IST" name="setupRuntimeFile" finished-at="2025-06-16T17:59:49 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupRuntimeFile -->
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:DoubleMateriality.ManualIROassessment@2e55dd0c]" started-at="2025-06-16T15:53:00 IST" name="getadmintoken" finished-at="2025-06-16T15:53:00 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getadmintoken -->
-        <test-method signature="createmanualassessment()[pri:1, instance:DoubleMateriality.ManualIROassessment@2e55dd0c]" started-at="2025-06-16T15:53:05 IST" name="createmanualassessment" finished-at="2025-06-16T15:53:07 IST" duration-ms="2530" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createmanualassessment -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:DoubleMateriality.ManualIROassessment@2e55dd0c]" started-at="2025-06-16T15:53:07 IST" name="tearDown" finished-at="2025-06-16T15:53:08 IST" duration-ms="239" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:DoubleMateriality.ManualIROassessment@2e55dd0c]" started-at="2025-06-16T15:53:08 IST" name="chrome_setup" finished-at="2025-06-16T15:53:12 IST" duration-ms="4619" status="PASS">
+        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.AddSupplierTest@46fa7c39]" started-at="2025-06-16T17:59:49 IST" name="chrome_setup" finished-at="2025-06-16T17:59:57 IST" duration-ms="8363" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chrome_setup -->
-        <test-method signature="assessmanualassessment()[pri:2, instance:DoubleMateriality.ManualIROassessment@2e55dd0c]" started-at="2025-06-16T15:53:12 IST" name="assessmanualassessment" finished-at="2025-06-16T15:53:14 IST" duration-ms="1935" status="PASS">
+        <test-method signature="add_supplier()[pri:1, instance:daato_automation_test.AddSupplierTest@46fa7c39]" started-at="2025-06-16T17:59:57 IST" name="add_supplier" finished-at="2025-06-16T18:00:31 IST" duration-ms="33551" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- assessmanualassessment -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:DoubleMateriality.ManualIROassessment@2e55dd0c]" started-at="2025-06-16T15:53:14 IST" name="tearDown" finished-at="2025-06-16T15:53:14 IST" duration-ms="255" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:DoubleMateriality.ManualIROassessment@2e55dd0c]" started-at="2025-06-16T15:53:14 IST" name="chrome_setup" finished-at="2025-06-16T15:53:19 IST" duration-ms="5098" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="sendcollaborationrequest()[pri:3, instance:DoubleMateriality.ManualIROassessment@2e55dd0c]" started-at="2025-06-16T15:53:19 IST" name="sendcollaborationrequest" finished-at="2025-06-16T15:53:20 IST" duration-ms="713" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sendcollaborationrequest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:DoubleMateriality.ManualIROassessment@2e55dd0c]" started-at="2025-06-16T15:53:20 IST" name="tearDown" finished-at="2025-06-16T15:53:20 IST" duration-ms="220" status="PASS">
+        </test-method> <!-- add_supplier -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.AddSupplierTest@46fa7c39]" started-at="2025-06-16T18:00:31 IST" name="tearDown" finished-at="2025-06-16T18:00:31 IST" duration-ms="283" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- DoubleMateriality.ManualIROassessment -->
-      <class name="DoubleMateriality.Checkmanualscore">
-        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:DoubleMateriality.Checkmanualscore@e7edb54]" started-at="2025-06-16T15:53:55 IST" name="setupRuntimeFile" finished-at="2025-06-16T15:53:55 IST" duration-ms="0" status="PASS">
+      </class> <!-- daato_automation_test.AddSupplierTest -->
+      <class name="daato_automation_test.AbstractRiskCalculationTest">
+        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:daato_automation_test.AbstractRiskCalculationTest@8317c52]" started-at="2025-06-16T18:00:31 IST" name="setupRuntimeFile" finished-at="2025-06-16T18:00:31 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupRuntimeFile -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:DoubleMateriality.Checkmanualscore@e7edb54]" started-at="2025-06-16T15:53:55 IST" name="chrome_setup" finished-at="2025-06-16T15:53:59 IST" duration-ms="4501" status="PASS">
+        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.AbstractRiskCalculationTest@8317c52]" started-at="2025-06-16T18:00:31 IST" name="chrome_setup" finished-at="2025-06-16T18:00:36 IST" duration-ms="4764" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chrome_setup -->
-        <test-method signature="checkmaualscore()[pri:0, instance:DoubleMateriality.Checkmanualscore@e7edb54]" started-at="2025-06-16T15:53:59 IST" name="checkmaualscore" finished-at="2025-06-16T15:54:39 IST" duration-ms="39509" status="PASS">
+        <test-method signature="to_verify_abstrac_risk()[pri:2, instance:daato_automation_test.AbstractRiskCalculationTest@8317c52]" started-at="2025-06-16T18:00:36 IST" name="to_verify_abstrac_risk" finished-at="2025-06-16T18:01:17 IST" duration-ms="40945" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkmaualscore -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:DoubleMateriality.Checkmanualscore@e7edb54]" started-at="2025-06-16T15:54:39 IST" name="tearDown" finished-at="2025-06-16T15:54:39 IST" duration-ms="409" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- DoubleMateriality.Checkmanualscore -->
-      <class name="DoubleMateriality.Fillandsubmitsurveryrequest">
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:DoubleMateriality.Fillandsubmitsurveryrequest@865dd6]" started-at="2025-06-16T15:50:04 IST" name="getadmintoken" finished-at="2025-06-16T15:50:04 IST" duration-ms="507" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getadmintoken -->
-        <test-method signature="filldatarequest()[pri:1, instance:DoubleMateriality.Fillandsubmitsurveryrequest@865dd6]" started-at="2025-06-16T15:50:04 IST" name="filldatarequest" finished-at="2025-06-16T15:50:06 IST" duration-ms="2329" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- filldatarequest -->
-        <test-method signature="addentityspecificdisclousre()[pri:2, instance:DoubleMateriality.Fillandsubmitsurveryrequest@865dd6]" started-at="2025-06-16T15:50:06 IST" name="addentityspecificdisclousre" finished-at="2025-06-16T15:50:07 IST" duration-ms="310" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addentityspecificdisclousre -->
-        <test-method signature="submitrequest()[pri:3, instance:DoubleMateriality.Fillandsubmitsurveryrequest@865dd6]" started-at="2025-06-16T15:50:07 IST" name="submitrequest" finished-at="2025-06-16T15:50:08 IST" duration-ms="899" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- submitrequest -->
-        <test-method signature="getcontributorid()[pri:4, instance:DoubleMateriality.Fillandsubmitsurveryrequest@865dd6]" started-at="2025-06-16T15:50:08 IST" name="getcontributorid" finished-at="2025-06-16T15:50:08 IST" duration-ms="572" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getcontributorid -->
-      </class> <!-- DoubleMateriality.Fillandsubmitsurveryrequest -->
-      <class name="DoubleMateriality.Finalreportscore">
-        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:DoubleMateriality.Finalreportscore@378542de]" started-at="2025-06-16T15:54:39 IST" name="setupRuntimeFile" finished-at="2025-06-16T15:54:39 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupRuntimeFile -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:DoubleMateriality.Finalreportscore@378542de]" started-at="2025-06-16T15:54:39 IST" name="chrome_setup" finished-at="2025-06-16T15:54:44 IST" duration-ms="4668" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="checkfinalreportscore()[pri:1, instance:DoubleMateriality.Finalreportscore@378542de]" started-at="2025-06-16T15:54:44 IST" name="checkfinalreportscore" finished-at="2025-06-16T15:55:13 IST" duration-ms="29828" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkfinalreportscore -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:DoubleMateriality.Finalreportscore@378542de]" started-at="2025-06-16T15:55:13 IST" name="tearDown" finished-at="2025-06-16T15:55:14 IST" duration-ms="308" status="PASS">
+        </test-method> <!-- to_verify_abstrac_risk -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.AbstractRiskCalculationTest@8317c52]" started-at="2025-06-16T18:01:17 IST" name="tearDown" finished-at="2025-06-16T18:01:17 IST" duration-ms="273" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:DoubleMateriality.Finalreportscore@378542de]" started-at="2025-06-16T15:55:14 IST" name="chrome_setup" finished-at="2025-06-16T15:55:19 IST" duration-ms="5058" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="checkrankingview()[pri:2, instance:DoubleMateriality.Finalreportscore@378542de]" started-at="2025-06-16T15:55:19 IST" name="checkrankingview" finished-at="2025-06-16T15:56:51 IST" duration-ms="92558" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkrankingview -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:DoubleMateriality.Finalreportscore@378542de]" started-at="2025-06-16T15:56:51 IST" name="tearDown" finished-at="2025-06-16T15:56:52 IST" duration-ms="355" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- DoubleMateriality.Finalreportscore -->
-      <class name="DoubleMateriality.Registerstakeholder">
-        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:DoubleMateriality.Registerstakeholder@1649b0e6]" started-at="2025-06-16T15:49:19 IST" name="setupRuntimeFile" finished-at="2025-06-16T15:49:19 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupRuntimeFile -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:DoubleMateriality.Registerstakeholder@1649b0e6]" started-at="2025-06-16T15:49:19 IST" name="chrome_setup" finished-at="2025-06-16T15:49:25 IST" duration-ms="6015" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="loginasstakeholder()[pri:0, instance:DoubleMateriality.Registerstakeholder@1649b0e6]" started-at="2025-06-16T15:49:25 IST" name="loginasstakeholder" finished-at="2025-06-16T15:50:02 IST" duration-ms="37157" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginasstakeholder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:DoubleMateriality.Registerstakeholder@1649b0e6]" started-at="2025-06-16T15:50:02 IST" name="tearDown" finished-at="2025-06-16T15:50:04 IST" duration-ms="1189" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- DoubleMateriality.Registerstakeholder -->
-      <class name="DoubleMateriality.Answercollabrequest">
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:DoubleMateriality.Answercollabrequest@74455848]" started-at="2025-06-16T15:53:20 IST" name="chrome_setup" finished-at="2025-06-16T15:53:25 IST" duration-ms="4539" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:DoubleMateriality.Answercollabrequest@74455848]" started-at="2025-06-16T15:53:20 IST" name="setupRuntimeFile" finished-at="2025-06-16T15:53:20 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupRuntimeFile -->
-        <test-method signature="answercollabrequest()[pri:0, instance:DoubleMateriality.Answercollabrequest@74455848]" started-at="2025-06-16T15:53:25 IST" name="answercollabrequest" finished-at="2025-06-16T15:53:54 IST" duration-ms="29314" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- answercollabrequest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:DoubleMateriality.Answercollabrequest@74455848]" started-at="2025-06-16T15:53:54 IST" name="tearDown" finished-at="2025-06-16T15:53:55 IST" duration-ms="308" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- DoubleMateriality.Answercollabrequest -->
-      <class name="DoubleMateriality.Checksurveryresult">
-        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:DoubleMateriality.Checksurveryresult@3972a855]" started-at="2025-06-16T15:50:09 IST" name="setupRuntimeFile" finished-at="2025-06-16T15:50:09 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupRuntimeFile -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:DoubleMateriality.Checksurveryresult@3972a855]" started-at="2025-06-16T15:50:09 IST" name="chrome_setup" finished-at="2025-06-16T15:50:15 IST" duration-ms="5453" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="checksureryresult()[pri:0, instance:DoubleMateriality.Checksurveryresult@3972a855]" started-at="2025-06-16T15:50:15 IST" name="checksureryresult" finished-at="2025-06-16T15:50:55 IST" duration-ms="39706" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checksureryresult -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:DoubleMateriality.Checksurveryresult@3972a855]" started-at="2025-06-16T15:50:55 IST" name="tearDown" finished-at="2025-06-16T15:50:55 IST" duration-ms="332" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- DoubleMateriality.Checksurveryresult -->
-      <class name="DoubleMateriality.Startsurvery">
-        <test-method signature="startsurvey()[pri:0, instance:DoubleMateriality.Startsurvery@6a6afff2]" started-at="2025-06-16T15:49:19 IST" name="startsurvey" finished-at="2025-06-16T15:49:19 IST" duration-ms="524" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startsurvey -->
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:DoubleMateriality.Startsurvery@6a6afff2]" started-at="2025-06-16T15:49:19 IST" name="getadmintoken" finished-at="2025-06-16T15:49:19 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getadmintoken -->
-      </class> <!-- DoubleMateriality.Startsurvery -->
-      <class name="DoubleMateriality.Createstakeholder">
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:DoubleMateriality.Createstakeholder@29647f75]" started-at="2025-06-16T15:49:09 IST" name="getadmintoken" finished-at="2025-06-16T15:49:12 IST" duration-ms="2538" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getadmintoken -->
-        <test-method signature="createstakeholdergroup()[pri:1, instance:DoubleMateriality.Createstakeholder@29647f75]" started-at="2025-06-16T15:49:12 IST" name="createstakeholdergroup" finished-at="2025-06-16T15:49:12 IST" duration-ms="565" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createstakeholdergroup -->
-        <test-method signature="createstake()[pri:2, instance:DoubleMateriality.Createstakeholder@29647f75]" started-at="2025-06-16T15:49:12 IST" name="createstake" finished-at="2025-06-16T15:49:13 IST" duration-ms="1251" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createstake -->
-        <test-method signature="getstakeid()[pri:3, instance:DoubleMateriality.Createstakeholder@29647f75]" started-at="2025-06-16T15:49:13 IST" name="getstakeid" finished-at="2025-06-16T15:49:15 IST" duration-ms="1131" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getstakeid -->
-      </class> <!-- DoubleMateriality.Createstakeholder -->
-      <class name="DoubleMateriality.UploadandcheckIROscore">
-        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:DoubleMateriality.UploadandcheckIROscore@2cd2a21f]" started-at="2025-06-16T15:50:55 IST" name="setupRuntimeFile" finished-at="2025-06-16T15:50:55 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupRuntimeFile -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:DoubleMateriality.UploadandcheckIROscore@2cd2a21f]" started-at="2025-06-16T15:50:55 IST" name="chrome_setup" finished-at="2025-06-16T15:51:00 IST" duration-ms="4929" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:DoubleMateriality.UploadandcheckIROscore@2cd2a21f]" started-at="2025-06-16T15:50:55 IST" name="getadmintoken" finished-at="2025-06-16T15:50:55 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getadmintoken -->
-        <test-method signature="uploadiro()[pri:1, instance:DoubleMateriality.UploadandcheckIROscore@2cd2a21f]" started-at="2025-06-16T15:51:00 IST" name="uploadiro" finished-at="2025-06-16T15:51:31 IST" duration-ms="31672" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- uploadiro -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:DoubleMateriality.UploadandcheckIROscore@2cd2a21f]" started-at="2025-06-16T15:51:31 IST" name="tearDown" finished-at="2025-06-16T15:51:32 IST" duration-ms="308" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:DoubleMateriality.UploadandcheckIROscore@2cd2a21f]" started-at="2025-06-16T15:51:32 IST" name="chrome_setup" finished-at="2025-06-16T15:51:38 IST" duration-ms="5932" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="checkiroscore()[pri:2, instance:DoubleMateriality.UploadandcheckIROscore@2cd2a21f]" started-at="2025-06-16T15:51:38 IST" name="checkiroscore" finished-at="2025-06-16T15:52:09 IST" duration-ms="31602" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkiroscore -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:DoubleMateriality.UploadandcheckIROscore@2cd2a21f]" started-at="2025-06-16T15:52:09 IST" name="tearDown" finished-at="2025-06-16T15:52:10 IST" duration-ms="313" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:DoubleMateriality.UploadandcheckIROscore@2cd2a21f]" started-at="2025-06-16T15:52:10 IST" name="chrome_setup" finished-at="2025-06-16T15:52:15 IST" duration-ms="5025" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="checkassedetails()[pri:3, instance:DoubleMateriality.UploadandcheckIROscore@2cd2a21f]" started-at="2025-06-16T15:52:15 IST" name="checkassedetails" finished-at="2025-06-16T15:52:59 IST" duration-ms="44641" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkassedetails -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:DoubleMateriality.UploadandcheckIROscore@2cd2a21f]" started-at="2025-06-16T15:52:59 IST" name="tearDown" finished-at="2025-06-16T15:53:00 IST" duration-ms="369" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- DoubleMateriality.UploadandcheckIROscore -->
-      <class name="DoubleMateriality.CreateDMreport">
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:DoubleMateriality.CreateDMreport@366647c2]" started-at="2025-06-16T15:49:15 IST" name="getadmintoken" finished-at="2025-06-16T15:49:15 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getadmintoken -->
-        <test-method signature="createreport()[pri:1, instance:DoubleMateriality.CreateDMreport@366647c2]" started-at="2025-06-16T15:49:15 IST" name="createreport" finished-at="2025-06-16T15:49:15 IST" duration-ms="780" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createreport -->
-        <test-method signature="markTopicNonmaterial()[pri:2, instance:DoubleMateriality.CreateDMreport@366647c2]" started-at="2025-06-16T15:49:15 IST" name="markTopicNonmaterial" finished-at="2025-06-16T15:49:18 IST" duration-ms="2867" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- markTopicNonmaterial -->
-        <test-method signature="checkresponseaftermarkingasnonmaterial()[pri:3, instance:DoubleMateriality.CreateDMreport@366647c2]" started-at="2025-06-16T15:49:18 IST" name="checkresponseaftermarkingasnonmaterial" finished-at="2025-06-16T15:49:19 IST" duration-ms="423" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkresponseaftermarkingasnonmaterial -->
-      </class> <!-- DoubleMateriality.CreateDMreport -->
+      </class> <!-- daato_automation_test.AbstractRiskCalculationTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
