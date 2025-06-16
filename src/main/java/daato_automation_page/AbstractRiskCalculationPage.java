@@ -103,8 +103,10 @@ public class AbstractRiskCalculationPage extends BasePage {
 		threadSleep(PageConstants.WAIT_TWO);
 		selectCompany(company);
 		threadSleep(PageConstants.WAIT_TWO);
+		
+		System.out.println("I am here");
 		//closeButton.click();
-		riskLevel.click();
+		//riskLevel.click();
 	}
 
 	private void openNewTabAndNavigate(String url) throws InterruptedException {
