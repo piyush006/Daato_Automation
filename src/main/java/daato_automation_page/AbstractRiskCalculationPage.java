@@ -113,9 +113,9 @@ public class AbstractRiskCalculationPage extends BasePage {
 		
 		System.out.println("I am here");
 		//closeButton.click();
-		influence.click();
+		//influence.click();
 		
-		System.out.println("I am after clicking on influence");
+		//System.out.println("I am after clicking on influence");
 	}
 
 	private void openNewTabAndNavigate(String url) throws InterruptedException {
