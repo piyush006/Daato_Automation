@@ -3,15 +3,14 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="EU_Taxonomy.Registerdataprovider">
+      <class name="daato_automation_test.AbstractRiskCalculationTest">
         <methods>
-          <include name="getadmintoken"/>
           <include name="setupRuntimeFile"/>
-          <include name="registerdataprovider"/>
           <include name="tearDown"/>
+          <include name="to_verify_abstrac_risk"/>
           <include name="chrome_setup"/>
         </methods>
-      </class> <!-- EU_Taxonomy.Registerdataprovider -->
+      </class> <!-- daato_automation_test.AbstractRiskCalculationTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,13 +1,18 @@
 /* Hello, Welcome to Divya Coding */
 package daato_automation_test;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.testng.Assert;
@@ -102,12 +107,23 @@ public class AbstractRiskCalculationTest extends BaseTest{
 		
 		System.out.println("Verified abstract score");
 		
-		 driver.navigate().refresh();
+		// driver.navigate().refresh();
 		 
 		 Thread.sleep(4000);
 		 
+		 
 
-		driver.findElement(By.xpath("//p[contains(text(),'Abstract assessment')]")).click();
+		 File preFindScreenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	        FileUtils.copyFile(preFindScreenshot, new File("before_find_element.png"));
+	        System.out.println("Screenshot before element access saved.");
+
+	        // Now try to locate the element
+	        WebElement element = driver.findElement(By.xpath("//p[@class='sc-jlZhew hexFwu MuiTypography-root MuiTypography-body1'][normalize-space()='Abstract assessment']"));
+
+	        // (Optional) Scroll and click
+	        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+	        Thread.sleep(500);
+	        element.click();
 
 		String Final_Abstract_score = driver
 				.findElement(By.xpath("//div[@class='sc-izQBue bPAzNg MuiStack-root']//div[1]//p[2]")).getText();
