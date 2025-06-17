@@ -98,7 +98,14 @@ public class AbstractRiskCalculationTest extends BaseTest{
 
 		}
 
-		Thread.sleep(2000);
+	
+		
+		System.out.println("Verified abstract score");
+		
+		 driver.navigate().refresh();
+		 
+		 Thread.sleep(4000);
+		 
 
 		driver.findElement(By.xpath("//p[contains(text(),'Abstract assessment')]")).click();
 
