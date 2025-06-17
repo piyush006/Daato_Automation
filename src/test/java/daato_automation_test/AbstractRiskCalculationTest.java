@@ -71,6 +71,8 @@ public class AbstractRiskCalculationTest extends BaseTest{
 		System.out.println("piyush"+Company);
 
 		abstractRiskCalculation.riskLevel(Company);
+		
+		System.out.println("I am out to check readings");
 
 		java.util.List<WebElement> Actual_Risk1 = driver.findElements(By.xpath("//table/tbody/tr/td[3]"));
 
