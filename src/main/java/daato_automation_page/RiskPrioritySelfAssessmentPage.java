@@ -56,6 +56,14 @@ public class RiskPrioritySelfAssessmentPage extends BasePage {
 		//driver.findElement(By.xpath("//div[contains(text(),'" + company + "')]")).click();
 		threadSleep(PageConstants.WAIT_TWO);
 		//closeButton.click();
-		selfAssesButton.click();
+		 WebElement Selfassementtab = driver.findElement(By.xpath("(//p[contains(text(),'Self-assessment')])[1]"));
+	        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Selfassementtab);
+	        Thread.sleep(500); // allow scroll
+	        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", Selfassementtab);
+		
+		
+		
+		
+
 	}
 }

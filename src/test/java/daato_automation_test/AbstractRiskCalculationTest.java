@@ -113,10 +113,6 @@ public class AbstractRiskCalculationTest extends BaseTest{
 		 
 		 
 
-		 File preFindScreenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-	        FileUtils.copyFile(preFindScreenshot, new File("before_find_element.png"));
-	        System.out.println("Screenshot before element access saved.");
-
 	        // Now try to locate the element
 	        WebElement element = driver.findElement(By.xpath("//p[normalize-space()='Abstract assessment']"));
 	        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
