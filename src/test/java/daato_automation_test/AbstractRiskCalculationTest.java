@@ -118,13 +118,10 @@ public class AbstractRiskCalculationTest extends BaseTest{
 	        System.out.println("Screenshot before element access saved.");
 
 	        // Now try to locate the element
-	        WebElement element = driver.findElement(By.xpath("//p[@class='sc-jlZhew hexFwu MuiTypography-root MuiTypography-body1'][normalize-space()='Abstract assessment']"));
-
-	        // (Optional) Scroll and click
+	        WebElement element = driver.findElement(By.xpath("//p[normalize-space()='Abstract assessment']"));
 	        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-	        Thread.sleep(500);
-	        element.click();
-
+	        Thread.sleep(500); // allow scroll
+	        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 		String Final_Abstract_score = driver
 				.findElement(By.xpath("//div[@class='sc-izQBue bPAzNg MuiStack-root']//div[1]//p[2]")).getText();
 

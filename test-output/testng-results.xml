@@ -1,43 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-17T11:40:06 IST" name="Suite" finished-at="2025-06-17T11:41:38 IST" duration-ms="92031">
+  <suite started-at="2025-06-17T11:52:04 IST" name="Suite" finished-at="2025-06-17T11:52:57 IST" duration-ms="52075">
     <groups>
     </groups>
-    <test started-at="2025-06-17T11:40:06 IST" name="Test" finished-at="2025-06-17T11:41:38 IST" duration-ms="92031">
-      <class name="daato_automation_test.AddSupplierTest">
-        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:daato_automation_test.AddSupplierTest@46fa7c39]" started-at="2025-06-17T11:40:06 IST" name="setupRuntimeFile" finished-at="2025-06-17T11:40:06 IST" duration-ms="10" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupRuntimeFile -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.AddSupplierTest@46fa7c39]" started-at="2025-06-17T11:40:06 IST" name="chrome_setup" finished-at="2025-06-17T11:40:12 IST" duration-ms="5515" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chrome_setup -->
-        <test-method signature="add_supplier()[pri:1, instance:daato_automation_test.AddSupplierTest@46fa7c39]" started-at="2025-06-17T11:40:12 IST" name="add_supplier" finished-at="2025-06-17T11:40:44 IST" duration-ms="32009" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- add_supplier -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.AddSupplierTest@46fa7c39]" started-at="2025-06-17T11:40:44 IST" name="tearDown" finished-at="2025-06-17T11:40:44 IST" duration-ms="275" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- daato_automation_test.AddSupplierTest -->
+    <test started-at="2025-06-17T11:52:04 IST" name="Test" finished-at="2025-06-17T11:52:57 IST" duration-ms="52075">
       <class name="daato_automation_test.AbstractRiskCalculationTest">
-        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:daato_automation_test.AbstractRiskCalculationTest@8317c52]" started-at="2025-06-17T11:40:44 IST" name="setupRuntimeFile" finished-at="2025-06-17T11:40:44 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:daato_automation_test.AbstractRiskCalculationTest@41c2284a]" started-at="2025-06-17T11:52:04 IST" name="setupRuntimeFile" finished-at="2025-06-17T11:52:04 IST" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupRuntimeFile -->
-        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.AbstractRiskCalculationTest@8317c52]" started-at="2025-06-17T11:40:44 IST" name="chrome_setup" finished-at="2025-06-17T11:40:49 IST" duration-ms="4581" status="PASS">
+        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.AbstractRiskCalculationTest@41c2284a]" started-at="2025-06-17T11:52:04 IST" name="chrome_setup" finished-at="2025-06-17T11:52:10 IST" duration-ms="5575" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chrome_setup -->
-        <test-method signature="to_verify_abstrac_risk()[pri:2, instance:daato_automation_test.AbstractRiskCalculationTest@8317c52]" started-at="2025-06-17T11:40:49 IST" name="to_verify_abstrac_risk" finished-at="2025-06-17T11:41:38 IST" duration-ms="49343" status="PASS">
+        <test-method signature="to_verify_abstrac_risk()[pri:2, instance:daato_automation_test.AbstractRiskCalculationTest@41c2284a]" started-at="2025-06-17T11:52:10 IST" name="to_verify_abstrac_risk" finished-at="2025-06-17T11:52:56 IST" duration-ms="46185" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- to_verify_abstrac_risk -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.AbstractRiskCalculationTest@8317c52]" started-at="2025-06-17T11:41:38 IST" name="tearDown" finished-at="2025-06-17T11:41:38 IST" duration-ms="254" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.AbstractRiskCalculationTest@41c2284a]" started-at="2025-06-17T11:52:56 IST" name="tearDown" finished-at="2025-06-17T11:52:57 IST" duration-ms="257" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
