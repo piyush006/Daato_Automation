@@ -13,9 +13,7 @@
 <class name="EU_Taxonomy.Registerdataprovider"/>
 <class name="EU_Taxonomy.Acceptdatarequest"/>
 <class name="EU_Taxonomy.Fillminimumsafeguard"/>
-<class name="EU_Taxonomy.Alignactivity"/>
-<class name="EU_Taxonomy.Addfinancialdata"/>
-<class name="EU_Taxonomy.Completesteps"/>
+
 
 
 

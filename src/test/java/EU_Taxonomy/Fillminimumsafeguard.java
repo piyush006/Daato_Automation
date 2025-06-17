@@ -40,7 +40,7 @@ String Activityid32;
 	@Test(priority=1)
 	public void fillMS92() {
 		
-		Fillmsafguard.submitAll(admintoken, Min91, reportid, Activityid92);
+		Fillmsafguard.submitAll(admintoken, Min91, reportid, reportid);
 		
 		
 		
