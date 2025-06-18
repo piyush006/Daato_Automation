@@ -31,7 +31,7 @@ public class EURegisterdataprovider extends BasePage{
 	
 	
 	
-	@FindBy(xpath = "//button[normalize-space()='Submitj']")
+	@FindBy(xpath = "//button[normalize-space()='Submit']")
 	WebElement clicksubmitbuton;
 	
 	@FindBy(xpath = "//button[@class='sc-iGgWBj cuoIjU MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth sc-gsFSXq cOyzay MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth']")
