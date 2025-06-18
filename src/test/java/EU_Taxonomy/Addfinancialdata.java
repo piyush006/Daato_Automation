@@ -64,7 +64,7 @@ public class Addfinancialdata {
 	Financial.sendFinancialInformation(admintoken, reportid);
 	
 	
-	 System.out.println("✅ TESTED OK: Organization financial data updated successfully");
+	 System.out.println("🧪 TEST PASSED: Organization financial data updated successfully");
 	
 }
 	
@@ -76,7 +76,7 @@ public void addfinancialdata92() {
 	
 	Financial.sendFinancialInformation92(admintoken, reportid, Activityid92);
 	
-	System.out.println("✅ TESTED OK: Activity 9.2 financial data updated successfully");
+	System.out.println("🧪 TEST PASSED: Activity 9.2 financial data updated successfully");
 	
 }
 
@@ -90,7 +90,7 @@ public void addfinancialdata32() {
 Financial.sendFinancialInformation92(admintoken, reportid, Activityid32);
 
 
-System.out.println("✅ TESTED OK: Activity 3.2 financial data updated successfully");
+System.out.println("🧪 TEST PASSED: Activity 3.2 financial data updated successfully");
 
 }
 	

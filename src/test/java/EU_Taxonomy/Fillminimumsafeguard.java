@@ -43,7 +43,7 @@ String Activityid32;
 		Fillmsafguard.submitAll(admintoken, Min91, reportid, Activityid92);
 		
 		
-		System.out.println("✅ TESTED OK: Minimum Safeguard for 9.1 Activity satisfied");
+		System.out.println("🧪 TEST PASSED: Minimum Safeguard for 9.1 Activity satisfied");
 		
 		
 	}
@@ -57,7 +57,7 @@ String Activityid32;
 		Fillmsafguard.submitAll(admintoken, Min32, reportid, Activityid32);	
 		
 		
-		System.out.println("✅ TESTED OK: Minimum Safeguard for 3.2 Activity satisfied");
+		System.out.println("🧪 TEST PASSED: Minimum Safeguard for 3.2 Activity satisfied");
 	}
 	
 	

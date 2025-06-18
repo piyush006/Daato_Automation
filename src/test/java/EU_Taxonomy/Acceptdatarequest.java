@@ -44,7 +44,7 @@ public class Acceptdatarequest {
 		
 		Datarequest.acceptRequest(admintoken, Extractdid);
 		
-		System.out.println("✅ TESTED OK: Data request Accepted successfully");
+		System.out.println("🧪 TEST PASSED: Data request Accepted successfully");
 		
 		
 	}
