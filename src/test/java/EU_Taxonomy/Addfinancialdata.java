@@ -63,6 +63,9 @@ public class Addfinancialdata {
 	
 	Financial.sendFinancialInformation(admintoken, reportid);
 	
+	
+	 System.out.println("✅ Organization financial data updated successfully");
+	
 }
 	
 	
@@ -73,6 +76,7 @@ public void addfinancialdata92() {
 	
 	Financial.sendFinancialInformation92(admintoken, reportid, Activityid92);
 	
+	System.out.println("✅ Activity 9.2 financial data updated successfully");
 	
 }
 
@@ -85,6 +89,8 @@ public void addfinancialdata32() {
 
 Financial.sendFinancialInformation92(admintoken, reportid, Activityid32);
 
+
+System.out.println("✅ Activity 3.2 financial data updated successfully");
 
 }
 	

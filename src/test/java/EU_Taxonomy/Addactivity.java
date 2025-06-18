@@ -86,7 +86,7 @@ public void addactivityfirst() {
         		
 		
     }
-	
+	 
 	
 	
 	@Test(priority=4)
@@ -106,7 +106,7 @@ public void addactivityfirst() {
 	PropertyutilwriterEU.writeProperty("Alingmentid32", Alingmentid32);
 	
 	
-	
+	 System.out.println("✅ Activity 9.1 and its dependent activity 3.2 is added successfully");
 	
 		
 }

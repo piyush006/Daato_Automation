@@ -55,6 +55,8 @@ public class Registerdataprovider extends BaseTest{
     System.out.println("ID received in first method: " + Extractdid);
 		
     PropertyutilwriterEU.writeProperty("Extractdid", Extractdid);
+    
+    System.out.println("✅ Data Provider Registered Successfully");
 	    
 		
 		

@@ -58,7 +58,7 @@ public class Alignactivity {
 	Alignactivityutility client = new Alignactivityutility(admintoken, Alingmentid32, reportid, Activityid32);
       client.sendAllRequests();
 		
-		
+      System.out.println("✅ Activity 3.2 Aligned successfully");
 		
 		
 	}
@@ -78,7 +78,7 @@ public class Alignactivity {
 				
 		
 		
-		
+	      System.out.println("✅ Activity 9.1 Aligned successfully");
 		
 		
 	}
