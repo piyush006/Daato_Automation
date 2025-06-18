@@ -50,7 +50,7 @@ String	datacollectionid;
         PropertyutilwriterEU.writeProperty("datacollectionid", datacollectionid);
         
         
-        
+        System.out.println("✅ TESTED OK: Report created successfully");
         
         
         

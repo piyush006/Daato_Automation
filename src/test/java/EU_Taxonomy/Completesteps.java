@@ -50,7 +50,7 @@ public class Completesteps {
 		Completestep.updateSteps(admintoken, reportid);	
 		
 		
-		System.out.println("✅ All the steps completed Successfully");
+		System.out.println("✅ TESTED OK: All the steps completed Successfully");
 		
 		
 	}
