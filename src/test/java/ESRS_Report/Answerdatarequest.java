@@ -50,7 +50,7 @@ public class Answerdatarequest {
 	getEntityDataCollectionIdparent=PropertyUtilReaderESRS.esrsentitydatacollectionidparent();
 	
 	
-	}	
+	}	 
 	
 	
 	
@@ -61,7 +61,7 @@ public class Answerdatarequest {
 
 	        Answerdatacollectionrequest.sendAllRequestschild(childentitytoken, esrsentitydatacollectionid);
 		
-		
+	        System.out.println("TEST PASSED: Child Entity filled E15 Data poitns successfully");
 		
 	}
 	
@@ -79,7 +79,7 @@ public class Answerdatarequest {
 		Answerdatacollectionrequest.updateStatuschild(childentitytoken, dataCollectionId, childentityid);
 		
 		
-		
+		System.out.println("TEST PASSED: Child Entity Data collection Request completed successfully");
 		
 		
 	}
@@ -96,6 +96,7 @@ public class Answerdatarequest {
 	        Answerdatacollectionrequest.sendAllRequestsparent(parententitytoken, getEntityDataCollectionIdparent);
 		
 				
+	        System.out.println("TEST PASSED: Parent Entity Data filled E15 Data poitns under own data collection tab successfully ");
 		
 	}
 	
@@ -111,7 +112,7 @@ public class Answerdatarequest {
 		
 		 Answerdatacollectionrequest.updateStatusparent(parententitytoken, dataCollectionId,parententityid);
 		
-		
+		 System.out.println("TEST PASSED: Parent Entity Data Collection completed successfully");
 		
 		
 		
@@ -129,6 +130,7 @@ public class Answerdatarequest {
 		Answerdatacollectionrequest.completeDataCollection(admintoken, dataCollectionId);	
 		
 		
+		System.out.println("TEST PASSED: Final Data Collection Completed Successfully");
 		
 		
 		

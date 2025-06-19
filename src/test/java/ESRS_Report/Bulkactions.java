@@ -45,7 +45,7 @@ String parententityid;
 		
 		
 		
-		
+		 
 		
 		
 		System.out.println(admintoken);
@@ -57,7 +57,7 @@ String parententityid;
 		
         assertFalse(included, "❌ Test failed: 'included' is not false for ID v5E169");
 		
-		
+        System.out.println("TEST PASSED: Some data points of Disclosure E16 marked as voluntary Successfully");
 		
 	}
 	
@@ -76,7 +76,7 @@ String parententityid;
 		Bulkactionstep2.markE17nonmateridal(admintoken, reportid);	
 		
 		
-		
+		 System.out.println("TEST PASSED: Disclosure E17 marked as Non material Successfully");
 		
 		
 		
@@ -94,7 +94,7 @@ public void completestep1() {
 		Bulkactionstep2.completestep1(admintoken, reportid);
 		
 		
-		
+		 System.out.println("TEST PASSED: Step 1 Completed Successfully");
 		
 		
 	}
@@ -108,8 +108,9 @@ public void assigndatapointtoentity() throws InterruptedException {
 	
 	
 Bulkactionstep2.aggregatedatapoints(admintoken, reportid, parententityid, childentityid);
+
 	
-	
+System.out.println("TEST PASSED: Assigned E15 data points to Parent and Child Entity Successfully");
 	
 }
 	
@@ -126,7 +127,7 @@ public void startdatacollection() {
 
 	Bulkactionstep2.startReport(admintoken, reportid);
 	
-	
+	System.out.println("TEST PASSED: Data collection started Successfully");
 
 	
 }
@@ -188,7 +189,7 @@ public void completestep2() {
 	
 	Bulkactionstep2.completestep2(admintoken, reportid);
 	
-	
+	System.out.println("TEST PASSED: Step 2 Completed Successfully");
 	
 }
 	

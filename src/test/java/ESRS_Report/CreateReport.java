@@ -60,6 +60,7 @@ public class CreateReport {
 	            // Continue checking until config sync completes
 	            if (!responseBody.contains("config is syncing") && statusCode == 200) {
 	                System.out.println("✅ Report is ready.");
+	                System.out.println("TEST PASSED: ESRS Report Created Successfully");
 	                return;
 	            }
 
@@ -72,6 +73,8 @@ public class CreateReport {
 	        }
 
 	        throw new RuntimeException("❌ Report not ready after maximum retries.");
-	    }
+	    } 
+	    
+	   
 }
 

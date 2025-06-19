@@ -87,8 +87,8 @@ public class Registerentity extends BaseTest{
 	
 	threadSleep(TestConstants.WAIT_TWO);
 	
-
-     
+	System.out.println("TEST PASSED: Child Entity manager Received Invitaion and Data collection request and registered Successfully");
+      
 	
 }
 	
@@ -134,6 +134,9 @@ public class Registerentity extends BaseTest{
 	
 	
 	threadSleep(TestConstants.WAIT_TWO);
+	
+	
+	System.out.println("TEST PASSED: Parent Entity manager Received Invitaion and Data collection request and registered Successfully");
 	
 		}
 	

@@ -34,7 +34,7 @@ public class Generatereport {
 	
 	
 @Test(priority=1)
-	
+	 
 	
 	public void updatefinaldr() {
 	
@@ -42,6 +42,7 @@ public class Generatereport {
 	
 		GenerateReport.update(admintoken, disclosureRequirementReportId);
 		
+		System.out.println("TEST PASSED: Report DOC Generated Successfully");
 		
 }
 	

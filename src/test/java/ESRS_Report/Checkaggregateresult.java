@@ -24,7 +24,7 @@ String parententityid;
 	@BeforeClass
 	public void getadmintoken() {
 		
-  
+   
 	
 	
 	
@@ -44,7 +44,7 @@ String parententityid;
 		CheckaggregatedResult.getAggregatedDataStatus(admintoken, reportid);	
 	
 		
-		
+		System.out.println("TEST PASSED: Aggregated Data on third step for E15 data points showing correctly");
 		
 		
 	}
@@ -58,7 +58,7 @@ String parententityid;
 		
 		CheckaggregatedResult.getAggregatedDataStatuspercentage(admintoken, reportid);	
 	
-		
+		System.out.println("TEST PASSED: % Aggregated Data on third step for E15 data points showing correctly");
 		
 		
 		

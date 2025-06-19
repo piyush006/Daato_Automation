@@ -98,6 +98,8 @@ public class ExcelDownloader {
         } catch (Exception e) {
             e.printStackTrace();
         }
+		
+		System.out.println("TEST PASSED: Excel - XLSX Report for Data point E15 Downloaded Successfully");
     	
 }
 	
@@ -139,8 +141,8 @@ public class ExcelDownloader {
 	    assertEquals(Comparativeyearvaluechild, value1);
 	    
 		
-		
-		
+	    System.out.println("TEST PASSED: Excel - Tested Random Data Data points for E15 in excel readings are correct");
+		 
 			
 		
 	}	

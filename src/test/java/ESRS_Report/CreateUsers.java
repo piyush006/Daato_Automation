@@ -56,6 +56,8 @@ public void createparent() {
     ProperyUtilWriterESRS.writeProperty("parentid", parentid);
     ProperyUtilWriterESRS.writeProperty("parentemail", parentemail);
     
+    System.out.println("TEST PASSED: ESRS Parent Entity manager created Successfully");
+    
     
     
 	}	
@@ -70,7 +72,7 @@ parententityid=Creatuser.createparentEntity(admintoken, parentid);
 	
 	 ProperyUtilWriterESRS.writeProperty("parententityid", parententityid);
 	
-	
+	 System.out.println("TEST PASSED: ESRS Parent Entity created Successfully");
 }
 
 
@@ -91,6 +93,8 @@ public void createchild() throws InterruptedException {
 	
     ProperyUtilWriterESRS.writeProperty("childid", childid);
     ProperyUtilWriterESRS.writeProperty("childemail", childemail);	
+    
+    System.out.println("TEST PASSED: ESRS Child Entity manager created Successfully");
 	
 	
 	
@@ -111,7 +115,7 @@ public void createchildentity() throws InterruptedException {
 	
 	 ProperyUtilWriterESRS.writeProperty("childentityid", childentityid);
 	
-	 
+	 System.out.println("TEST PASSED: ESRS Child Entity created Successfully");
 	 
 	
 }

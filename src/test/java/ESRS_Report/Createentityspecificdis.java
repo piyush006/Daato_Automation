@@ -25,7 +25,7 @@ public class Createentityspecificdis {
    
 	reportid=PropertyUtilReaderESRS.reportid();
 		
-		}
+		} 
 	
 	
 	
@@ -36,6 +36,9 @@ public class Createentityspecificdis {
 		
 		
 		CreateESRSreport.createEntityCustomDisclosure(admintoken, reportid);	
+		
+		
+		System.out.println("TEST PASSED: Entity specific Disclousre created Successfully");
 		
 		
 			}
@@ -53,6 +56,8 @@ public class Createentityspecificdis {
 		System.out.println("MDR1 Disclosure ID: " + entityspecificdisclousureid);
 		
 		ProperyUtilWriterESRS.writeProperty("entityspecificdisclousureid", entityspecificdisclousureid);
+		
+		
 	
 	}
 	
@@ -65,7 +70,9 @@ public class Createentityspecificdis {
 		CreateESRSreport.updateEsrsEntity(admintoken, reportid, entityspecificdisclousureid);
 		
 		 Thread.sleep(5000);
-		
+		 
+		 
+		 System.out.println("TEST PASSED: Entity specific Disclousre Marked as Non material Successfully");
 		
 	}
 	

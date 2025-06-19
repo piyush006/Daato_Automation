@@ -37,7 +37,7 @@ reportid=PropertyUtilReaderESRS.reportid();
 		
 		Completefinal.updateMultipleDisclosures(admintoken, reportid);	
 		
-		
+		System.out.println("TEST PASSED: Final Step Collection Completed Successfully For E15");
 		}
 	
 	
