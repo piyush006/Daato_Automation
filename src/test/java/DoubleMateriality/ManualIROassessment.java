@@ -51,6 +51,8 @@ PropertyUtilWriter.writeProperty("Assessmentreportid", Assessmentreportid);
 
 System.out.println(Assessmentreportid);
 
+System.out.println("TEST PASSED: Manaul IRO Created Successfully");
+
 }
 
 
@@ -62,6 +64,9 @@ public void assessmanualassessment() {
 	
 	
 ManualIRO.performAllPutCalls(admintoken, Assessmentreportid, reportId, iroId);
+
+System.out.println("TEST PASSED: Manaul IRO assessed successfully");
+
 	
 	
 	
@@ -76,7 +81,7 @@ public void sendcollaborationrequest() {
 	ManualIRO.sendcollaborationrequest(admintoken, reportId, Assessmentreportid, iroId, contributorId);
 	
 	
-	
+	System.out.println("TEST PASSED: Collaboration request sent Successfully");
 	
 	
 	

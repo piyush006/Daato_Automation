@@ -66,7 +66,12 @@ public void checksureryresult() throws InterruptedException {
 	assertEquals(matterScoreMap.get("Substances of very high concern (in relation to pollution)"), "Medium");
 	assertEquals(matterScoreMap.get("Microplastics"), "Low");
 	
+	
+	System.out.println("TEST PASSED: Survery Results Showing Correct");
+	
   check.completestepfirst();
+  
+  
 
 
 }

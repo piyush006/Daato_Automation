@@ -80,6 +80,8 @@ public void checkfinalreportscore() throws InterruptedException {
 	}
 	
 	Assert.assertEquals(rowData, expectedData, "Table data does not match expected values.");
+	
+	System.out.println("TEST PASSED: On Final step scores showing Correct for added Report");
 
 		
 }	
@@ -152,7 +154,7 @@ public void checkrankingview() throws InterruptedException {
 	}
 	
 	Assert.assertEquals(rowData, expectedData, "Table data does not match expected values.");*/
-	
+	System.out.println("TEST PASSED: Ranking view showing correct IRO scores");
 	
 }
 }

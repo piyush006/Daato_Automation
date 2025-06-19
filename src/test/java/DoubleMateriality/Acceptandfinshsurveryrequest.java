@@ -29,11 +29,13 @@ String reportId;
 public void acceptsurveyrequest() {
 	
 	
-	
+Fillsurveryrequest.acceptRequest(admintoken, extractedId);	
+
+
+System.out.println("TEST PASSED: Survey Request Accepted by Admin");
 	
 
-Fillsurveryrequest.acceptRequest(admintoken, extractedId);		
-	
+
 	
 }	
 	
@@ -47,6 +49,8 @@ public void fishsurvert()
 	
 	Fillsurveryrequest.deleteSurveyScope(admintoken, reportId);
 	
+	
+	System.out.println("TEST PASSED: Survery Finished by Admin");
 	
 	
 }

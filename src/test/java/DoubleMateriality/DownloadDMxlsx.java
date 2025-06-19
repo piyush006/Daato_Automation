@@ -67,6 +67,7 @@ public class DownloadDMxlsx {
 	    DMfiledownloader.downloadFileFromUrl(url, downloadPath.toString());
 	    
 	    
+	    System.out.println("TEST PASSED: DM excel file downloaded Successfully");
 	    
 	
 }	
@@ -148,6 +149,9 @@ public void checklatestfiledata() throws IOException {
     Assert.assertEquals(Actual_type, expectedTypes);
     Assert.assertEquals(Actual_nature, expectedNatures);
     Assert.assertEquals(Actual_timeframe, expectedTimeframes);
+    
+    
+    System.out.println("TEST PASSED: IRO Details showing correct on excel file");
     
     
     

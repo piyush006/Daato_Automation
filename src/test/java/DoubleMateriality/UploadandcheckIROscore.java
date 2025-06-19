@@ -58,6 +58,8 @@ login.LoginApplication(PropertyFileUtils.getUser(), PropertyFileUtils.getPasswor
 
 complete.completestepfirst2();
 
+System.out.println("TEST PASSED: Bulk IRO Uploded Successfully");
+
 				
 }
 	
@@ -112,6 +114,9 @@ public void checkiroscore() throws InterruptedException {
 	assertEquals(titleAssessmentMap.get("Automatedrisk02"), "Very high");
 	
 	
+	System.out.println("TEST PASSED: Scores showing correct for Bulk IRO's After Uploading");
+	
+	
 }
 
 
@@ -142,7 +147,7 @@ public void checkassedetails() throws InterruptedException {
 	Assert.assertEquals(Actualpotential, Expectedimpact);
 	Assert.assertEquals(ActualtypeOfImpact, Expectedpotential);
 	
-	
+	System.out.println("TEST PASSED: Bulk IRO details like ActualtimeFrame,Actualimpact,Actualpotential,ActualtypeOfImpact are showing correct on Third step");
 	
 }
 

@@ -36,7 +36,7 @@ public class Fillandsubmitsurveryrequest {
 		
 	Fillsurveryrequest.submitScoring(stakeholdertoken, extractedId2);
 		
-		
+	System.out.println("TEST PASSED: Survery Request Filled Sucessfully by Stakeholder");
 		
 		
 	}	
@@ -51,6 +51,8 @@ public void addentityspecificdisclousre() {
 	
 	Fillsurveryrequest.submitCustomMatter(stakeholdertoken, extractedId2);
 	
+	System.out.println("TEST PASSED: Entity Specific Disclousure added Successfully by Stakeholder");
+	
 }	
 	//@Test(enabled=false)
 @Test(priority=3)
@@ -62,6 +64,7 @@ public void submitrequest() {
 	
 	Fillsurveryrequest.updateRequestStatus(stakeholdertoken, extractedId2);
 	
+	System.out.println("TEST PASSED: Stakeholder submitted the request Successfully");
 	
 }
 

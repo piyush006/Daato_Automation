@@ -44,6 +44,8 @@ public void startsurvey() {
 	
 	SendSurvey.sendSurveyToStakeholder(admintoken, reportId, stakeid);
 	
+	System.out.println("TEST PASSED: Survery Started Successfully and Included Newly Created stakeholder");
+	
 	
 }	
 

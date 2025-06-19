@@ -71,6 +71,8 @@ List<WebElement> rows = driver.findElements(By.xpath(
 	Checkirosocore complete = new Checkirosocore(driver);
 	complete.completestepfirst3();
 	
+	System.out.println("TEST PASSED: Manaul IRO Score Showing Correct");
+	
 	
 	
 	

@@ -39,7 +39,7 @@ public class Createstakeholder {
 		System.out.println(groupid);
 		
 		
- 
+		System.out.println("TEST PASSED: Stakeholder Group Created Successfully");
 		
 		
 	}
@@ -54,7 +54,7 @@ public class Createstakeholder {
 	
 	Createstack.createStakeholder(admintoken, groupid);
 		
-		
+	System.out.println("TEST PASSED: Stakeholder Created and assigned to newly created group Successfully");
 		
 	}
 	

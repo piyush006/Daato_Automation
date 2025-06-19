@@ -107,8 +107,14 @@ public void loginasstakeholder() throws InterruptedException {
     
     
     PropertyUtilWriter.writeProperty("extractedId", extractedId);
+    
+    
+    
+    System.out.println("TEST PASSED: Stakeholder Registered Successfully");
 	
 }
+
+
 
 
 

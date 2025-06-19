@@ -43,7 +43,7 @@ public void createreport() {
 	PropertyUtilWriter.writeProperty("reportid", reportid);
 	
 	
-	
+	 System.out.println("TEST PASSED: Double Materiality Reported Created Successfully");
 }
 
 
@@ -54,8 +54,9 @@ public void markTopicNonmaterial() {
 	
 	
 	
-	Markasnonmaterial.markasnonmaterial(admintoken, reportid);	
+	Markasnonmaterial.markasnonmaterial(admintoken, reportid);
 	
+	System.out.println("TEST PASSED: Following topics marked as non material: Energy,pollution of air,Pollution of water,Pollution of soil and many more..");
 }
 
 
@@ -74,6 +75,7 @@ System.out.println("Default Material Value: " + ActualisDefaultMaterial);
 // Assertion: Test will pass only if value is false
 
 	Assert.assertEquals(ActualisDefaultMaterial, ExpectedisDefaultMaterial);
+	
 	
 
 }
