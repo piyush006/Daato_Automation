@@ -69,7 +69,7 @@ public void senddatarequest() {
 	Datarequest.sendRequest(admintoken, reportid, Activityid32, Mins32, dataproviderid);
 	
 	
-	System.out.println("🧪 TEST PASSED: Data request sent successfully");
+	System.out.println("TEST PASSED: Data request sent successfully");
 
 	
 	

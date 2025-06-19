@@ -56,7 +56,7 @@ public class Registerdataprovider extends BaseTest{
 		
     PropertyutilwriterEU.writeProperty("Extractdid", Extractdid);
     
-    System.out.println("🧪 TEST PASSED: Data Provider Registered Successfully");
+    System.out.println("TEST PASSED: Data Provider Registered Successfully");
 	    
 		
 		
