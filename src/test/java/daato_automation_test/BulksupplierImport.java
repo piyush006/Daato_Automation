@@ -34,6 +34,8 @@ public class BulksupplierImport extends BaseTest{
 	        System.out.println("Admin Token:" + adminToken);	
 	        
 	     SCSbulkactions.uploadbulksupplier(adminToken);   
+	     
+	     System.out.println("TEST PASSED: Bulk Suppliers are Imported Successfully");
 		
 		
 		

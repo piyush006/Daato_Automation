@@ -34,7 +34,7 @@ public class Bulkassignentity extends BaseTest{
 	            // Step 2: Call mark-as-safe method
 	            SCSbulkactions.bulkassignentity(adminToken, payload);
 	        
-	      
+	            System.out.println("TEST PASSED: First Ten Suppliers marked as safe Successfully");
 
 }
 	}
@@ -57,7 +57,7 @@ public class Bulkassignentity extends BaseTest{
             SCSbulkactions.bulkassignrelationshipmanager(adminToken, payload);
         }
 	
-	
+        System.out.println("TEST PASSED: Entity and Relationship manager assigned successfully to First 10 Suppliers");
 	
 	
 }

@@ -35,6 +35,8 @@ public class Markassafe extends BaseTest{
 	        if (payload != null) {
 	            // Step 2: Call mark-as-safe method
 	            SCSbulkactions.bulkmarkassafe(adminToken, payload);
+	             
+	            System.out.println("TEST PASSED: First Ten Suppliers marked as safe Successfully");
 	      
 	}
 	}

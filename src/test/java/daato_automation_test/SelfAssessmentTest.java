@@ -139,6 +139,8 @@ public class SelfAssessmentTest extends BaseTest {
 		SelfAssessmentPage selfAssessmentPage2 = new SelfAssessmentPage(driver);
 		selfAssessmentPage2.generalInformation(revenue, location);
 		System.out.println("general1");
+		
+		System.out.println("TEST PASSED: Supplier Received SAQ and Registered Successfully");
 
 	}
 

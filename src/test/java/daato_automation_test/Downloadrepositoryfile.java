@@ -51,6 +51,8 @@ public class Downloadrepositoryfile extends BaseTest{
 	    Files.createDirectories(downloadPath); // Creates folder if not exists
 	    FileDownloader.downloadFileFromUrl(url, downloadPath.toString());
 	    
+	    System.out.println("TEST PASSED: Supplier Repository File Downloaded Successfully");
+	    
 	 // Step 3: Download file to custom download folder
 	   /* String downloadPath = System.getProperty("user.dir") + "/downloads";
 	    new File(downloadPath).mkdirs(); // Ensure directory exists

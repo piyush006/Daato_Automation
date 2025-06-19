@@ -45,6 +45,8 @@ public class SendCOCTest extends BaseTest {
 
 		SendCOCPage sendCOCPage = new SendCOCPage(driver);
 		sendCOCPage.sendCodeOfConduct(Company);
+		
+		System.out.println("TEST PASSED: COC Request Send to Supplier Successfully");
 
 	}
 

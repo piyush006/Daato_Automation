@@ -128,8 +128,8 @@ public class AddSupplierTest extends BaseTest {
 		    
 		    
 		    
-		    
-		    
+		    System.out.println("TEST PASSED: Supplier Added Successfully");
+		     
 		    
 		    
 		    

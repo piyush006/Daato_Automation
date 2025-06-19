@@ -160,7 +160,9 @@ public class AbstractRiskCalculationTest extends BaseTest{
 
 		Assert.assertEquals(Actual_Result1, Expected_Result);
 		Assert.assertEquals(Final_Abstract_score, Expected_Abstract_score);
-
+		
+		System.out.println("TEST PASSED: Abstract Risk Showing Correctly As per settings");
+ 
 	}
 
 }

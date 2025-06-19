@@ -77,6 +77,8 @@ String adminToken;
 	
 	Incidenthelper.incidentdetials(supplierid, adminToken);
 	
+	 System.out.println("TEST PASSED: Incident Added successfully");
+	
 	
 
 }
@@ -96,7 +98,7 @@ String adminToken;
 	    Assert.assertEquals(ActualriskPriorityLevel, ExpectedriskPriorityLevel);
 	 
 	
-	
+	    System.out.println("TEST PASSED: Supplier risk decreased by one afer linking incident to supplier");
 	
 }
 }

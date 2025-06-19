@@ -66,6 +66,7 @@ public class RiskPrioritySelfAssessmentTest extends BaseTest {
 				
 				java.util.List<WebElement> status = driver
 						.findElements(By.xpath("//div[@class='sc-dAlyuH dnwsPK MuiBox-root']/p[2]"));
+				
 			
 
 		/*for (WebElement status1 : status)
@@ -105,5 +106,7 @@ public class RiskPrioritySelfAssessmentTest extends BaseTest {
         }
         
         Assert.assertEquals(Actual_Result, Expected_Result);
+        
+        System.out.println("TEST PASSED: SAQ Score for all SAQ category Showing low After SAQ Approved Previous Score = Very High Current Score = Low ");
     }
 }

@@ -53,6 +53,8 @@ UploadRepository downloadfile =  new UploadRepository(driver);
 
 downloadfile.uploadrepositoryfile(excelpath);
 
+System.out.println("TEST PASSED: Supplier Repository File Uploaded Successfully");
+
 }
 
 @Test(priority=17)
@@ -85,7 +87,7 @@ public  void checkcontactnameaftereditrepo() throws IOException, InterruptedExce
     
 		
 	
-	
+    System.out.println("TEST PASSED: Details Edited by repository file to added supplier showing correct on UI after file uploaded again"); 
 	
 }
 

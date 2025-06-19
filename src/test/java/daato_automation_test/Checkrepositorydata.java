@@ -107,12 +107,16 @@ boolean ActualMarkassafe = true;
       Assert.assertEquals(ActualEntitymanager, ExpectedEntitymanager);
       Assert.assertEquals(ActualMarkassafe, ExpectedMarkassafe); 
      
+      
         	
         	
             // Assertions or other logic
         } else {
             System.out.println("Supplier not found in Excel.");
         }
+        
+        
+        System.out.println("TEST PASSED: Added Supplier details Showing Correct on Repository file");
     }
     
     

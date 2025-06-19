@@ -103,6 +103,9 @@ public void fillsaq() throws IOException, InterruptedException {
     ApiHelper.executeAllPutCallscoc(token, cocReportId);
     
     ApiHelper.postcocRequestState(token, cocRequestId);
+    
+    
+    System.out.println("TEST PASSED: SAQ and COC Request Filled and Submitted Successfully");
 
     // Step 3: Make the GET call with Authorization header
    /* Response response = RestAssured

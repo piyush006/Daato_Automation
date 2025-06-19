@@ -98,6 +98,8 @@ public class SelfAssessmentSAQTest extends BaseTest {
 		Company = reader.getCellData("Recent_Added", "Company_Name", 2);
         System.out.println(Company);
 		selfAssessmentSAQPage.sendSAQ(Company);
+		
+		System.out.println("TEST PASSED: SAQ Request Sent to Supplier Successfully");
 
 	}
 

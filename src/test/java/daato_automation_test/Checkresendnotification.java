@@ -57,6 +57,8 @@ public class Checkresendnotification extends BaseTest{
 	 System.out.println(requestId);
 	 
 	 Addsinglesupplier.resendcocnotification(requestId, adminToken);
+	 
+	 System.out.println("TEST PASSED: Notification send to supplier Successfully");
 	
 	}
 	

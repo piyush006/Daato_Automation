@@ -75,10 +75,10 @@ public class Acceptsaqandcoc extends BaseTest{
 	        ApiHelper.acceptSAQandcoc(adminToken, requestInfo.cocRequestId);
 	    }
 	    
-    
+	    System.out.println("TEST PASSED: SAQ and COC Request Approved Successfully");
     
 	}	
 	
-
+	
 }
 
