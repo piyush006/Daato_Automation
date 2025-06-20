@@ -6,6 +6,7 @@
 
 <class name="ESRS_Report.CreateUsers"/>
 <class name="ESRS_Report.CreateReport"/>
+<class name="ESRS_Report.Createentityspecificdis"/>
 <class name="ESRS_Report.Bulkactions"/>
 <class name="ESRS_Report.Registerentity"/>
 <class name="ESRS_Report.Completefinalstep"/>

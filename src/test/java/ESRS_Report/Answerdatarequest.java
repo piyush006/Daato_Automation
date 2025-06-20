@@ -61,7 +61,7 @@ public class Answerdatarequest {
 
 	        Answerdatacollectionrequest.sendAllRequestschild(childentitytoken, esrsentitydatacollectionid);
 		
-	        System.out.println("TEST PASSED: Child Entity filled E15 Data poitns successfully");
+	        System.out.println("TEST PASSED: Child Entity filled E15 Data points successfully");
 		
 	}
 	
@@ -96,7 +96,7 @@ public class Answerdatarequest {
 	        Answerdatacollectionrequest.sendAllRequestsparent(parententitytoken, getEntityDataCollectionIdparent);
 		
 				
-	        System.out.println("TEST PASSED: Parent Entity Data filled E15 Data poitns under own data collection tab successfully ");
+	        System.out.println("TEST PASSED: Parent Entity filled E15 Data points under own data collection tab successfully ");
 		
 	}
 	
@@ -130,7 +130,7 @@ public class Answerdatarequest {
 		Answerdatacollectionrequest.completeDataCollection(admintoken, dataCollectionId);	
 		
 		
-		System.out.println("TEST PASSED: Final Data Collection Completed Successfully");
+		
 		
 		
 		

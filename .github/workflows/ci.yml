@@ -44,6 +44,10 @@ jobs:
             DM) mvn test -DsuiteXmlFile=testngDoublemateriality.xml ;;
             ESRSLITE) mvn test -DsuiteXmlFile=testngESRSLITE.xml ;;
             EU) mvn test -DsuiteXmlFile=testngEU.xml ;;
+            CREATEREPORTS) mvn test -DsuiteXmlFile=CreateReports.xml ;;
+            USERMANAGEMENT) mvn test -DsuiteXmlFile=Usermanagement.xml ;;
+            REPORTINGSTRUCTURE) mvn test -DsuiteXmlFile=Reportingstructure.xml ;;
+            ADDREGISTERSUPPLIER) mvn test -DsuiteXmlFile=Add&registersupplier.xml ;;
             *) echo "Invalid module name"; exit 1 ;;
           esac
 

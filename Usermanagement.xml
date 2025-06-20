@@ -1,0 +1,25 @@
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" preserve-order="true" parallel="none">
+  <test thread-count="1" name="Test">
+    <classes>
+
+
+<class name="ESRS_Report.Usermangement"/>
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+</classes>
+</test>
+</suite>

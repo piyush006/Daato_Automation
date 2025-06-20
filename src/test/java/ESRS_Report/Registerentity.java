@@ -87,7 +87,7 @@ public class Registerentity extends BaseTest{
 	
 	threadSleep(TestConstants.WAIT_TWO);
 	
-	System.out.println("TEST PASSED: Child Entity manager Received Invitaion and Data collection request and registered Successfully");
+	System.out.println("TEST PASSED: The ESRS Child Entity Manager received the invitation email and data collection request, and registered successfully");
       
 	
 }
@@ -136,7 +136,7 @@ public class Registerentity extends BaseTest{
 	threadSleep(TestConstants.WAIT_TWO);
 	
 	
-	System.out.println("TEST PASSED: Parent Entity manager Received Invitaion and Data collection request and registered Successfully");
+	System.out.println("TEST PASSED: The ESRS Parent Entity Manager received the invitation email and data collection request, and registered successfully");
 	
 		}
 	
