@@ -1,33 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-20T09:23:23 IST" name="Suite" finished-at="2025-06-20T09:23:32 IST" duration-ms="9081">
+  <suite started-at="2025-06-20T12:08:24 IST" name="Default suite" finished-at="2025-06-20T12:11:19 IST" duration-ms="175108">
     <groups>
     </groups>
-    <test started-at="2025-06-20T09:23:23 IST" name="Test" finished-at="2025-06-20T09:23:32 IST" duration-ms="9081">
-      <class name="DoubleMateriality.CreateReports">
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:DoubleMateriality.CreateReports@343570b7]" started-at="2025-06-20T09:23:23 IST" name="getadmintoken" finished-at="2025-06-20T09:23:26 IST" duration-ms="3065" status="PASS">
+    <test started-at="2025-06-20T12:08:24 IST" name="Default test" finished-at="2025-06-20T12:11:19 IST" duration-ms="175108">
+      <class name="daato_automation_test.Addsupplier_emails">
+        <test-method is-config="true" signature="setupRuntimeFile()[pri:0, instance:daato_automation_test.Addsupplier_emails@46fa7c39]" started-at="2025-06-20T12:08:24 IST" name="setupRuntimeFile" finished-at="2025-06-20T12:08:24 IST" duration-ms="15" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getadmintoken -->
-        <test-method signature="createreport()[pri:1, instance:DoubleMateriality.CreateReports@343570b7]" started-at="2025-06-20T09:23:26 IST" name="createreport" finished-at="2025-06-20T09:23:27 IST" duration-ms="861" status="PASS">
+        </test-method> <!-- setupRuntimeFile -->
+        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.Addsupplier_emails@46fa7c39]" started-at="2025-06-20T12:08:24 IST" name="chrome_setup" finished-at="2025-06-20T12:08:32 IST" duration-ms="7431" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createreport -->
-        <test-method signature="createsrsreport()[pri:2, instance:DoubleMateriality.CreateReports@343570b7]" started-at="2025-06-20T09:23:27 IST" name="createsrsreport" finished-at="2025-06-20T09:23:29 IST" duration-ms="2487" status="PASS">
+        </test-method> <!-- chrome_setup -->
+        <test-method signature="add_supplier()[pri:1, instance:daato_automation_test.Addsupplier_emails@46fa7c39]" started-at="2025-06-20T12:08:32 IST" name="add_supplier" finished-at="2025-06-20T12:09:22 IST" duration-ms="50318" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createsrsreport -->
-        <test-method signature="waitForReportReady()[pri:3, instance:DoubleMateriality.CreateReports@343570b7]" started-at="2025-06-20T09:23:29 IST" name="waitForReportReady" finished-at="2025-06-20T09:23:31 IST" duration-ms="2033" status="PASS">
+        </test-method> <!-- add_supplier -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.Addsupplier_emails@46fa7c39]" started-at="2025-06-20T12:09:22 IST" name="tearDown" finished-at="2025-06-20T12:09:23 IST" duration-ms="638" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- waitForReportReady -->
-        <test-method signature="createEUreport()[pri:4, instance:DoubleMateriality.CreateReports@343570b7]" started-at="2025-06-20T09:23:31 IST" name="createEUreport" finished-at="2025-06-20T09:23:32 IST" duration-ms="566" status="PASS">
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.Addsupplier_emails@46fa7c39]" started-at="2025-06-20T12:09:23 IST" name="chrome_setup" finished-at="2025-06-20T12:09:29 IST" duration-ms="6239" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createEUreport -->
-      </class> <!-- DoubleMateriality.CreateReports -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- chrome_setup -->
+        <test-method signature="sendSAQ()[pri:2, instance:daato_automation_test.Addsupplier_emails@46fa7c39]" started-at="2025-06-20T12:09:29 IST" name="sendSAQ" finished-at="2025-06-20T12:10:06 IST" duration-ms="37098" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendSAQ -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.Addsupplier_emails@46fa7c39]" started-at="2025-06-20T12:10:06 IST" name="tearDown" finished-at="2025-06-20T12:10:07 IST" duration-ms="519" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="chrome_setup()[pri:0, instance:daato_automation_test.Addsupplier_emails@46fa7c39]" started-at="2025-06-20T12:10:07 IST" name="chrome_setup" finished-at="2025-06-20T12:10:14 IST" duration-ms="7598" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chrome_setup -->
+        <test-method signature="General_information()[pri:3, instance:daato_automation_test.Addsupplier_emails@46fa7c39]" started-at="2025-06-20T12:10:14 IST" name="General_information" finished-at="2025-06-20T12:11:19 IST" duration-ms="64600" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- General_information -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:daato_automation_test.Addsupplier_emails@46fa7c39]" started-at="2025-06-20T12:11:19 IST" name="tearDown" finished-at="2025-06-20T12:11:19 IST" duration-ms="568" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- daato_automation_test.Addsupplier_emails -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

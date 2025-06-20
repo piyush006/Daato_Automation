@@ -19,7 +19,7 @@ public class Alignactivity92 {
 	        this.token = token;
 	        this.alignmentReportId = alignmentReportId;
 	        this.reportId = reportId;
-	        this.activityId = activityId;
+	        this.activityId = activityId; 
 	    }
 
 	    public void sendAllRequests() {

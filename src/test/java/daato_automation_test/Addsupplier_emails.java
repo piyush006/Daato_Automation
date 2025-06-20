@@ -268,6 +268,8 @@ public class Addsupplier_emails extends BaseTest {
 		URL1 = reader.getCellData("Recent_Added", "Currenturl", 2);
 		System.out.println("url");
 		System.out.println(URL);
+		
+		Thread.sleep(4000);
 		SelfAssessmentPage selfAssessmentPage2 = new SelfAssessmentPage(driver);
 		selfAssessmentPage2.generalInformation(revenue, location);
 		System.out.println("general1");

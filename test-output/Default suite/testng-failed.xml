@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="EU_Taxonomy.Registerdataprovider">
+      <class name="daato_automation_test.Addsupplier_emails">
         <methods>
+          <include name="General_information"/>
           <include name="setupRuntimeFile"/>
-          <include name="getadmintoken"/>
-          <include name="approvedatarequest"/>
           <include name="tearDown"/>
           <include name="chrome_setup"/>
         </methods>
-      </class> <!-- EU_Taxonomy.Registerdataprovider -->
+      </class> <!-- daato_automation_test.Addsupplier_emails -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
