@@ -25,7 +25,7 @@ public class AddSupplierPage extends BasePage {
 	public AddSupplierPage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this); 
 	}
 
 	@FindBy(xpath = "//header/div[1]/div[2]/div[1]/button[1]")

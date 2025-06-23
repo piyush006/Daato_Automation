@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -17,6 +19,8 @@ import daato_automation_testcomponent.BaseTest;
 import daato_automation_testcomponent.TestConstants;
 import utils.AuthTokenadminUtil;
 import utils.AuthTokenstakeholder;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import java.time.Duration;
 
 public class Registerstakeholder extends BaseTest{
 	
@@ -60,7 +64,7 @@ public void loginasstakeholder() throws InterruptedException {
 	threadSleep(TestConstants.WAIT_TWO);
 	WebElement button = driver.findElement(By.id("kc-login"));
 	button.click();	
-	threadSleep(TestConstants.WAIT_TWO);
+	threadSleep(TestConstants.WAIT_TWO); 
 	fillsurvery.yopmailLoginforOTP(Email);
 	
 
@@ -73,8 +77,15 @@ public void loginasstakeholder() throws InterruptedException {
 	passwordConfirmField.sendKeys("12");
 	
 	threadSleep(TestConstants.WAIT_ONE);
-	WebElement submitNewPassButton = driver.findElement(By.xpath("//input[@type='submit']"));
-	submitNewPassButton.click();
+	
+	
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+	// Wait for the button to be visible and clickable
+	WebElement submitUpdateButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@value='Submit']")));
+	submitUpdateButton.click();
+	
+	
 	
 	threadSleep(TestConstants.WAIT_ONE);
 	
@@ -83,9 +94,12 @@ public void loginasstakeholder() throws InterruptedException {
 	
 	threadSleep(TestConstants.WAIT_ONE);
 	
-	// Using value attribute in XPath
-	WebElement submitUpdateButton = driver.findElement(By.xpath("//input[@value='Submit']"));
-	submitUpdateButton.click();
+	WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+	// Wait for the button to be visible and clickable
+	WebElement submitUpdateButton2 = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@value='Submit']")));
+	submitUpdateButton2.click();
+	
 	
 	
 	threadSleep(TestConstants.WAIT_THREE);

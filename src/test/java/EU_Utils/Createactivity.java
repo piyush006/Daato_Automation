@@ -177,7 +177,7 @@ public class Createactivity {
 	        System.out.println("✅ environmentalCriteriaReportId for 3.2: " + reportIdFor3_2);
 
 	        // Now you can return or use these as needed
-	    }
+	    } 
 	 
 	 
 	 

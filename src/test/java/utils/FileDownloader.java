@@ -30,7 +30,7 @@ import io.restassured.response.Response;
 			        connection.setRequestMethod("GET");
 
 			        int status = connection.getResponseCode();
-			        System.out.println("HTTP Status: " + status);
+			        System.out.println("HTTP Status: " + status); 
 
 			        if (status == 200) {
 			        	InputStream inputStream = connection.getInputStream();

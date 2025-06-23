@@ -20,7 +20,7 @@ public class Createreport {
         String payload = "{\n" +
                 "  \"name\": \"" + uniqueName + "\",\n" +
                 "  \"year\": \"2025\",\n" +
-                "  \"collectData\": \"no\"\n" +
+                "  \"collectData\": \"no\"\n" + 
                 "}";
 
         Response response = given()

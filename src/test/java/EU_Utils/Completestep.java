@@ -17,7 +17,7 @@ public class Completestep {
         String[] payloads = {
             "{\"step\":{\"eligibility\":\"complete\"}}",
             "{\"step\":{\"mss\":\"complete\"}}",
-            "{\"step\":{\"alignment\":\"complete\"}}",
+            "{\"step\":{\"alignment\":\"complete\"}}", 
             "{\"step\":{\"financialInformation\":\"complete\"}}",
             "{\"step\":{\"analytics\":\"complete\"}}"
         };
