@@ -64,7 +64,7 @@ public class BaseTest {
 	        ops.addArguments("--remote-allow-origins=*"); // Fix CORS issues if any
 	    }
 	    
-	 //   ops.addArguments("--headless=new");
+	   ops.addArguments("--headless=new");
 	    ops.addArguments("--remote-allow-origins=*");
 	    ops.addArguments("--window-size=1920,1080");
 	    ops.addArguments("--disable-gpu");

@@ -2,8 +2,12 @@ package ESRS_Report;
 
 import java.util.ArrayList;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -18,6 +22,9 @@ import daato_automation_pagecomponent.PageConstants;
 import daato_automation_testcomponent.BaseTest;
 import daato_automation_testcomponent.TestConstants;
 import utils.AuthTokenadminUtil;
+
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 public class Registerentity extends BaseTest{
@@ -73,24 +80,31 @@ public class Registerentity extends BaseTest{
 	WebElement passwordConfirmField = driver.findElement(By.xpath("//input[@id='password-confirm']"));
 	passwordConfirmField.sendKeys("12");
 	
-	threadSleep(TestConstants.WAIT_ONE);
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	takeScreenshot("before_submit.png");
+	
+	System.out.println("clickedhere");
+	
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
+	WebElement submitNewPassButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='submit']")));
+
+	// Scroll into view using JavaScript
+	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", submitNewPassButton);
+
+	// Optional small wait to let rendering catch up
+	Thread.sleep(500);
+
+	// Click via JavaScript if still not interactable
 	
-	WebElement submitNewPassButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type='submit']")));
-	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", submitNewPassButton);
-	submitNewPassButton.click();
+	System.out.println("I am here before submit");
+	try {
+	    wait.until(ExpectedConditions.elementToBeClickable(submitNewPassButton)).click();
+	} catch (ElementNotInteractableException e) {
+	    System.out.println("Fallback to JS click due to headless issues");
+	    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", submitNewPassButton);
+	}
 	
-	//threadSleep(TestConstants.WAIT_ONE);
 	
-	//WebElement lastNameField = driver.findElement(By.xpath("//input[@id='lastName']"));
-	//lastNameField.sendKeys("Test");
-	
-//	threadSleep(TestConstants.WAIT_ONE);
-	
-	// Using value attribute in XPath
-//	WebElement submitUpdateButton = driver.findElement(By.xpath("//input[@value='Submit']"));
-//	submitUpdateButton.click();
 	
 	
 	threadSleep(TestConstants.WAIT_TWO);
@@ -134,14 +148,28 @@ public class Registerentity extends BaseTest{
 	WebElement passwordConfirmField = driver.findElement(By.xpath("//input[@id='password-confirm']"));
 	passwordConfirmField.sendKeys("12");
 	
+	System.out.println("I am here before submit");
+	
+	takeScreenshot("before_submit.png");
+	
 	
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-	
-	WebElement submitNewPassButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type='submit']")));
-	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", submitNewPassButton);
-	submitNewPassButton.click();
-	
+	WebElement submitNewPassButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='submit']")));
+
+	// Scroll into view using JavaScript
+	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", submitNewPassButton);
+
+	// Optional small wait to let rendering catch up
+	Thread.sleep(500);
+
+	// Click via JavaScript if still not interactable
+	try {
+	    wait.until(ExpectedConditions.elementToBeClickable(submitNewPassButton)).click();
+	} catch (ElementNotInteractableException e) {
+	    System.out.println("Fallback to JS click due to headless issues");
+	    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", submitNewPassButton);
+	}
 	
 	
 	threadSleep(TestConstants.WAIT_TWO);
@@ -152,6 +180,16 @@ public class Registerentity extends BaseTest{
 		}
 	
 	
+	public void takeScreenshot(String fileName) {
+	    try {
+	        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	        String filePath = System.getProperty("user.dir") + "/screenshots/" + fileName;
+	        FileUtils.copyFile(srcFile, new File(filePath));
+	        System.out.println("Screenshot saved at: " + filePath);
+	    } catch (IOException e) {
+	        System.out.println("Screenshot failed: " + e.getMessage());
+	    }
+	}
 	
 	
 	
