@@ -114,48 +114,60 @@ public class Creatuser {
 	    public static Map<String, String> createchilduser(String token) {
 	        RestAssured.baseURI = "https://qa.daato.app";
 
-	        // Generate a random 4-digit number
 	        Random random = new Random();
-	        int randomNumber = random.nextInt(10000);  // Generates a number between 0 and 9999
+	        String userId = null;
+	        String email = null;
+	        String firstName = null;
+	        Response response = null;
 
-	        // Ensure the number is always 4 digits (padded with leading zeros if needed)
-	        String randomDigits = String.format("%04d", randomNumber);
+	        int attempt = 1;
+	        while (true) {
+	            // Generate random 4-digit user
+	            int randomNumber = random.nextInt(10000);
+	            String randomDigits = String.format("%04d", randomNumber);
+	            email = "Automatedesrschild" + randomDigits + "@yopmail.com";
+	            firstName = "Automatedchild" + randomDigits;
 
-	        // Create the email and firstName using the random number
-	        String email = "Automatedesrschild" + randomDigits + "@yopmail.com";
-	        String firstName = "Automatedchild" + randomDigits;
+	            String payload = "{\n" +
+	                    "  \"email\": \"" + email + "\",\n" +
+	                    "  \"roleNames\": [\"esrs_entity_manager\"],\n" +
+	                    "  \"firstName\": \"" + firstName + "\",\n" +
+	                    "  \"lastName\": \"parent\"\n" +
+	                    "}";
 
-	        // Create the payload with the generated email and first name
-	        String payload = "{\n" +
-	                "  \"email\": \"" + email + "\",\n" +
-	                "  \"roleNames\": [\"esrs_entity_manager\"],\n" +
-	                "  \"firstName\": \"" + firstName + "\",\n" +
-	                "  \"lastName\": \"parent\"\n" +
-	                "}";
+	            response = given()
+	                    .header("Authorization", "Bearer " + token)
+	                    .header("Content-Type", "application/json")
+	                    .body(payload)
+	                    .when()
+	                    .post("/api/users")
+	                    .then()
+	                    .extract()
+	                    .response();
 
-	        // Send the request and get the response
-	        Response response = given()
-	                .header("Authorization", "Bearer " + token)
-	                .header("Content-Type", "application/json")
-	                .body(payload)
-	                .when()
-	                .post("/api/users")
-	                .then()
-	               // .statusCode(201)
-	                .extract()
-	                .response();
+	            System.out.println("Attempt #" + attempt + " → Status Code: " + response.statusCode());
+	            System.out.println("Response Body: " + response.asString());
 
-	        String userId = response.jsonPath().getString("user_id");
+	            if (response.statusCode() == 201) {
+	                break;
+	            }
 
-	        System.out.println("User created -> user_id: " + userId + ", email: " + email + ", firstName: " + firstName);
+	            attempt++;
 
-	        // Return both values in a map
+	            if (attempt > 10) {  // Prevent infinite loop
+	                throw new RuntimeException("❌ Failed to create user after 10 attempts");
+	            }
+	        }
+
+	        userId = response.jsonPath().getString("user_id");
+	        System.out.println("✅ User created -> user_id: " + userId + ", email: " + email + ", firstName: " + firstName);
+
 	        Map<String, String> result = new HashMap<>();
 	        result.put("user_id", userId);
 	        result.put("email", email);
 
 	        return result;
-	    }	
+	    }
 	    
 	    
 	    
