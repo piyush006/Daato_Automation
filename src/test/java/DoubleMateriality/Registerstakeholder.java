@@ -3,6 +3,7 @@ package DoubleMateriality;
 import java.util.ArrayList;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -79,15 +80,31 @@ public void loginasstakeholder() throws InterruptedException {
 	
 	threadSleep(TestConstants.WAIT_ONE);
 	
+	System.out.println("I am here before submit");
 	
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 	// Wait for the button to be visible and clickable
     
+
+	WebElement submitNewPassButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='submit']")));
+
+	// Scroll into view using JavaScript
+	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", submitNewPassButton);
+
+	// Optional small wait to let rendering catch up
+	Thread.sleep(500);
+
+	// Click via JavaScript if still not interactable
 	
-	WebElement submitNewPassButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type='submit']")));
-	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", submitNewPassButton);
-	submitNewPassButton.click();
+	
+	
+	try {
+	    wait.until(ExpectedConditions.elementToBeClickable(submitNewPassButton)).click();
+	} catch (ElementNotInteractableException e) {
+	    System.out.println("Fallback to JS click due to headless issues");
+	    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", submitNewPassButton);
+	}
 	
 	
 	
@@ -104,9 +121,25 @@ public void loginasstakeholder() throws InterruptedException {
 
 
 	
-	WebElement submitNewPassButton2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type='submit']")));
-	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", submitNewPassButton2);
-	submitNewPassButton2.click();
+
+	WebElement submitNewPassButton2 = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='submit']")));
+
+	// Scroll into view using JavaScript
+	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", submitNewPassButton2);
+
+	// Optional small wait to let rendering catch up
+	Thread.sleep(500);
+
+	// Click via JavaScript if still not interactable
+	
+	
+	try {
+	    wait.until(ExpectedConditions.elementToBeClickable(submitNewPassButton2)).click();
+	} catch (ElementNotInteractableException e) {
+	    System.out.println("Fallback to JS click due to headless issues");
+	    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", submitNewPassButton2);
+	}
+	
 	
 	
 	

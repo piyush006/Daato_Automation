@@ -96,7 +96,7 @@ public class Registerentity extends BaseTest{
 
 	// Click via JavaScript if still not interactable
 	
-	System.out.println("I am here before submit");
+	
 	try {
 	    wait.until(ExpectedConditions.elementToBeClickable(submitNewPassButton)).click();
 	} catch (ElementNotInteractableException e) {
