@@ -3,6 +3,7 @@ package DoubleMateriality;
 import java.util.ArrayList;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -82,8 +83,11 @@ public void loginasstakeholder() throws InterruptedException {
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 	// Wait for the button to be visible and clickable
-	WebElement submitUpdateButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@value='Submit']")));
-	submitUpdateButton.click();
+    
+	
+	WebElement submitNewPassButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type='submit']")));
+	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", submitNewPassButton);
+	submitNewPassButton.click();
 	
 	
 	
@@ -94,11 +98,15 @@ public void loginasstakeholder() throws InterruptedException {
 	
 	threadSleep(TestConstants.WAIT_ONE);
 	
-	WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
+	
 
 	// Wait for the button to be visible and clickable
-	WebElement submitUpdateButton2 = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@value='Submit']")));
-	submitUpdateButton2.click();
+
+
+	
+	WebElement submitNewPassButton2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type='submit']")));
+	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", submitNewPassButton2);
+	submitNewPassButton2.click();
 	
 	
 	

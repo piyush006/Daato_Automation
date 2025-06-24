@@ -3,7 +3,10 @@ package ESRS_Report;
 import java.util.ArrayList;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -15,6 +18,7 @@ import daato_automation_pagecomponent.PageConstants;
 import daato_automation_testcomponent.BaseTest;
 import daato_automation_testcomponent.TestConstants;
 import utils.AuthTokenadminUtil;
+import java.time.Duration;
 
 public class Registerentity extends BaseTest{
 	
@@ -70,7 +74,11 @@ public class Registerentity extends BaseTest{
 	passwordConfirmField.sendKeys("12");
 	
 	threadSleep(TestConstants.WAIT_ONE);
-	WebElement submitNewPassButton = driver.findElement(By.xpath("//input[@type='submit']"));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+	
+	WebElement submitNewPassButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type='submit']")));
+	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", submitNewPassButton);
 	submitNewPassButton.click();
 	
 	//threadSleep(TestConstants.WAIT_ONE);
@@ -126,10 +134,13 @@ public class Registerentity extends BaseTest{
 	WebElement passwordConfirmField = driver.findElement(By.xpath("//input[@id='password-confirm']"));
 	passwordConfirmField.sendKeys("12");
 	
-	threadSleep(TestConstants.WAIT_ONE);
-	WebElement submitNewPassButton = driver.findElement(By.xpath("//input[@type='submit']"));
-	submitNewPassButton.click();
 	
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+	
+	WebElement submitNewPassButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type='submit']")));
+	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", submitNewPassButton);
+	submitNewPassButton.click();
 	
 	
 	

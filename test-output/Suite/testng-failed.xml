@@ -3,14 +3,12 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="daato_automation_test.AbstractRiskCalculationTest">
+      <class name="ESRS_Report.Bulkactions">
         <methods>
-          <include name="setupRuntimeFile"/>
-          <include name="tearDown"/>
-          <include name="to_verify_abstrac_risk"/>
-          <include name="chrome_setup"/>
+          <include name="getadmintoken"/>
+          <include name="markE16voluntaryoff"/>
         </methods>
-      </class> <!-- daato_automation_test.AbstractRiskCalculationTest -->
+      </class> <!-- ESRS_Report.Bulkactions -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
