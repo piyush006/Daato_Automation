@@ -64,7 +64,7 @@ public void createparent() {
 
 @Test(priority=2)
 
-public void createparententity() {
+public void createparententity() throws InterruptedException {
 	
 parententityid=Creatuser.createparentEntity(admintoken, parentid);
 	
@@ -73,7 +73,10 @@ parententityid=Creatuser.createparentEntity(admintoken, parentid);
 	 ProperyUtilWriterESRS.writeProperty("parententityid", parententityid);
 	
 	 System.out.println("TEST PASSED: ESRS Parent Entity created Successfully");
+	 
+	 Thread.sleep(10000);
 }
+
 
 
 @Test(priority=3)

@@ -3,12 +3,12 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="ESRS_Report.Bulkactions">
+      <class name="DoubleMateriality.DownloadDMxlsx">
         <methods>
           <include name="getadmintoken"/>
-          <include name="markE16voluntaryoff"/>
+          <include name="downloadrepository"/>
         </methods>
-      </class> <!-- ESRS_Report.Bulkactions -->
+      </class> <!-- DoubleMateriality.DownloadDMxlsx -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
