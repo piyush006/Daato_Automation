@@ -5,14 +5,18 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import daato_automation_pagecomponent.BasePage;
 import daato_automation_pagecomponent.PageConstants;
+import java.time.Duration;
 
 public class Fillsurvey extends BasePage{
 
@@ -61,7 +65,20 @@ public class Fillsurvey extends BasePage{
 		threadSleep(PageConstants.WAIT_TWO);
 		driver.switchTo().frame(mailFrame);
 		threadSleep(PageConstants.WAIT_TWO);
-		viewToRequestButton.click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		// Wait until button is clickable
+		WebElement viewToRequestButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'View the request')]")));
+
+		// Scroll into view if necessary
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", viewToRequestButton);
+
+		// Extra: wait for visibility
+		wait.until(ExpectedConditions.visibilityOf(viewToRequestButton));
+
+		// Now click using JavaScript (bypasses overlay or hidden DOM issues)
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", viewToRequestButton);
+		//viewToRequestButton.click();
 
 	}
 	

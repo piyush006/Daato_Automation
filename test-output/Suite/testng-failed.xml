@@ -3,12 +3,15 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="DoubleMateriality.DownloadDMxlsx">
+      <class name="EU_Taxonomy.Registerdataprovider">
         <methods>
           <include name="getadmintoken"/>
-          <include name="downloadrepository"/>
+          <include name="setupRuntimeFile"/>
+          <include name="registerdataprovider"/>
+          <include name="tearDown"/>
+          <include name="chrome_setup"/>
         </methods>
-      </class> <!-- DoubleMateriality.DownloadDMxlsx -->
+      </class> <!-- EU_Taxonomy.Registerdataprovider -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

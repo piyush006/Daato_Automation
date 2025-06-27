@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-27T12:43:26 IST" name="Default suite" finished-at="2025-06-27T12:43:33 IST" duration-ms="6312">
+  <suite started-at="2025-06-27T15:20:54 IST" name="Default suite" finished-at="2025-06-27T15:20:59 IST" duration-ms="5452">
     <groups>
     </groups>
-    <test started-at="2025-06-27T12:43:26 IST" name="Default test" finished-at="2025-06-27T12:43:33 IST" duration-ms="6312">
-      <class name="ESRS_Report.Generatereport">
-        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:ESRS_Report.Generatereport@ba54932]" started-at="2025-06-27T12:43:26 IST" name="getadmintoken" finished-at="2025-06-27T12:43:31 IST" duration-ms="4369" status="PASS">
+    <test started-at="2025-06-27T15:20:54 IST" name="Default test" finished-at="2025-06-27T15:20:59 IST" duration-ms="5452">
+      <class name="EU_Taxonomy.Acceptdatarequest">
+        <test-method is-config="true" signature="getadmintoken()[pri:0, instance:EU_Taxonomy.Acceptdatarequest@ba54932]" started-at="2025-06-27T15:20:54 IST" name="getadmintoken" finished-at="2025-06-27T15:20:58 IST" duration-ms="3722" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getadmintoken -->
-        <test-method signature="updatefinaldr()[pri:1, instance:ESRS_Report.Generatereport@ba54932]" started-at="2025-06-27T12:43:31 IST" name="updatefinaldr" finished-at="2025-06-27T12:43:33 IST" duration-ms="1891" status="PASS">
+        <test-method signature="approvedatarequest()[pri:0, instance:EU_Taxonomy.Acceptdatarequest@ba54932]" started-at="2025-06-27T15:20:58 IST" name="approvedatarequest" finished-at="2025-06-27T15:20:59 IST" duration-ms="1695" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- updatefinaldr -->
-      </class> <!-- ESRS_Report.Generatereport -->
+        </test-method> <!-- approvedatarequest -->
+      </class> <!-- EU_Taxonomy.Acceptdatarequest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -176,11 +176,11 @@ threadSleep(PageConstants.WAIT_FOUR);
  		
  		
  		
- 		threadSleep(PageConstants.WAIT_ONE);
+ 		threadSleep(PageConstants.WAIT_TWO);
  		
  		confirmandsubmit.click();
  		
- 		threadSleep(PageConstants.WAIT_THREE);
+ 		threadSleep(PageConstants.WAIT_FOUR);
  		
  		
  		return Extractedid;
