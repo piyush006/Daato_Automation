@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -89,9 +90,29 @@ public class EURegisterdataprovider extends BasePage{
 	passwordConfirmField.sendKeys("12");
 	
 	threadSleep(PageConstants.WAIT_ONE);
-	WebElement submitNewPassButton = driver.findElement(By.xpath("//input[@type='submit']"));
-	submitNewPassButton.click();
+	WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+	// Wait for the button to be visible and clickable
+    
+
+	WebElement submitNewPassButton = wait3.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='submit']")));
+
+	// Scroll into view using JavaScript
+	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", submitNewPassButton);
+
+	// Optional small wait to let rendering catch up
+	Thread.sleep(500);
+
+	// Click via JavaScript if still not interactable
 	
+	
+	
+	try {
+	    wait3.until(ExpectedConditions.elementToBeClickable(submitNewPassButton)).click();
+	} catch (ElementNotInteractableException e) {
+	    System.out.println("Fallback to JS click due to headless issues");
+	    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", submitNewPassButton);
+	}
 	
 	
 	
