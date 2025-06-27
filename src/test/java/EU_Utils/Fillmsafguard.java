@@ -47,7 +47,7 @@ public class Fillmsafguard {
 	        if (statusCode != 200) {
 	            System.err.println("❌ Failed for " + dataPoint + " — expected 200, got " + statusCode);
 	        } else {
-	            System.out.println("✅ Success for " + dataPoint);
+	            System.out.println("Success for " + dataPoint);
 	        }
 	    }
 	}
