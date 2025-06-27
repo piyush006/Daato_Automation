@@ -48,6 +48,7 @@ jobs:
             USERMANAGEMENT) mvn test -DsuiteXmlFile=Usermanagement.xml ;;
             REPORTINGSTRUCTURE) mvn test -DsuiteXmlFile=Reportingstructure.xml ;;
             ADDREGISTERSUPPLIER) mvn test -DsuiteXmlFile=Addregistersupplier.xml ;;
+            ESRSfull) mvn test -DsuiteXmlFile=testngESRSfull.xml ;;
             *) echo "Invalid module name"; exit 1 ;;
           esac
 
