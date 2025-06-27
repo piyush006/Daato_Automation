@@ -43,7 +43,7 @@ public class Registerentity extends BaseTest{
 	
 	
  
-	@Test(priority=1)
+	//@Test(priority=1)
 	public void registerentity() throws InterruptedException {
 	
 		

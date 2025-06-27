@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="Sequential-Part-2(failed)">
     <classes>
-      <class name="EU_Taxonomy.Registerdataprovider">
+      <class name="ESRS_Report.Answerdatarequest">
+        <methods>
+          <include name="completedatacollectionparent"/>
+          <include name="Completedatacollection"/>
+          <include name="startchilddatacollection"/>
+          <include name="startparentdatacollection"/>
+          <include name="completedatacollectionchild"/>
+          <include name="getadmintoken"/>
+        </methods>
+      </class> <!-- ESRS_Report.Answerdatarequest -->
+      <class name="ESRS_Report.ExcelDownloader">
         <methods>
           <include name="getadmintoken"/>
-          <include name="setupRuntimeFile"/>
-          <include name="registerdataprovider"/>
-          <include name="tearDown"/>
-          <include name="chrome_setup"/>
+          <include name="Verifyexceldata"/>
         </methods>
-      </class> <!-- EU_Taxonomy.Registerdataprovider -->
+      </class> <!-- ESRS_Report.ExcelDownloader -->
+      <class name="ESRS_Report.Checkaggregateresult">
+        <methods>
+          <include name="checkaggregatedv5E154"/>
+          <include name="checkaggregatedresultv5E152"/>
+          <include name="getadmintoken"/>
+        </methods>
+      </class> <!-- ESRS_Report.Checkaggregateresult -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Sequential-Part-2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

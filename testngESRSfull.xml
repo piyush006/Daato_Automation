@@ -1,24 +1,28 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite" preserve-order="true" parallel="none">
-  <test thread-count="1" name="Test">
+
+  <!-- Sequential Part 1 -->
+  <test name="Sequential-Part-1" thread-count="1">
     <classes>
+      <class name="ESRS_Report.CreateUsers"/>
+      <class name="ESRS_Report.CreateReport"/>
+      <class name="ESRS_Report.Createentityspecificdis"/>
+      <class name="ESRS_Report.Completefinalstep"/>
+      <class name="ESRS_Report.Bulkactions"/>
+      <class name="ESRS_Report.Registerentity"/>
+      <class name="ESRS_Report.Answerdatarequest"/>
+      <class name="ESRS_Report.Checkaggregateresult"/>
+      <class name="ESRS_Report.ExcelDownloader"/>
+      <class name="ESRS_Report.Generatereport"/>
+    </classes>
+  </test>
 
+  <!-- Parallel Part -->
+  <test name="Parallel-Execution" parallel="classes" thread-count="2">
+    <classes>
+      <class name="ESRS_Report.Startcollectinggovernance"/>
+      <class name="ESRS_Report.Generaldisclosures"/>
+    </classes>
+  </test>
 
- <class name="ESRS_Report.CreateUsers"/>
- <class name="ESRS_Report.CreateReport"/>
- <class name="ESRS_Report.Createentityspecificdis"/>
- <class name="ESRS_Report.Completefinalstep"/>
- <class name="ESRS_Report.Bulkactions"/>
- <class name="ESRS_Report.Startcollectinggovernance"/>
- <class name="ESRS_Report.Generaldisclosures"/>
- <class name="ESRS_Report.Registerentity"/>
- <class name="ESRS_Report.Answerdatarequest"/>
- <class name="ESRS_Report.Checkaggregateresult"/>
- <class name="ESRS_Report.ExcelDownloader"/>
- <class name="ESRS_Report.Generatereport"/>
-
-
-
-</classes>
-</test>
 </suite>

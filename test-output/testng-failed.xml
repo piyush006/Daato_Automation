@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="EU_Taxonomy.Registerdataprovider">
+      <class name="ESRS_Report.Registerentity">
         <methods>
           <include name="setupRuntimeFile"/>
+          <include name="registerparentenity"/>
           <include name="getadmintoken"/>
-          <include name="registerdataprovider"/>
           <include name="tearDown"/>
           <include name="chrome_setup"/>
         </methods>
-      </class> <!-- EU_Taxonomy.Registerdataprovider -->
+      </class> <!-- ESRS_Report.Registerentity -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
