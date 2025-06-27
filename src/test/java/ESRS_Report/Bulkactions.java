@@ -115,11 +115,24 @@ System.out.println("TEST PASSED: Assigned E15 data points to Parent and Child En
 }
 	
 	
-
-
-
-
 	@Test(priority=5)
+public void completestep2() {
+	
+	
+	
+	Bulkactionstep2.completestep2(admintoken, reportid);
+	
+	System.out.println("TEST PASSED: Step 2 Completed Successfully");
+	
+}
+	
+	
+	
+
+
+
+
+	@Test(priority=6)
 
 public void startdatacollection() {
 	
@@ -133,7 +146,7 @@ public void startdatacollection() {
 }
 
 
-	@Test(priority=6)
+	@Test(priority=7)
 
 public void getdatacollectionid() {
 	
@@ -149,7 +162,7 @@ public void getdatacollectionid() {
 }
 
 
-	@Test(priority=7)
+	@Test(priority=8)
 
 public void getesrsentitydatacollectionid() {
 	
@@ -169,7 +182,7 @@ public void getesrsentitydatacollectionid() {
 }
 
 
-	@Test(priority=8)
+	@Test(priority=9)
 public void getesrsentitydatacollectionidparent() {
 	
     
@@ -182,16 +195,7 @@ public void getesrsentitydatacollectionidparent() {
 
 }
 	
-	@Test(priority=9)
-public void completestep2() {
-	
-	
-	
-	Bulkactionstep2.completestep2(admintoken, reportid);
-	
-	System.out.println("TEST PASSED: Step 2 Completed Successfully");
-	
-}
+
 	
 
 }

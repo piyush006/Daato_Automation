@@ -11,6 +11,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -103,9 +104,32 @@ public class SelfAssessmentTest extends BaseTest {
 				passwordConfirmField.sendKeys("12");
 				
 				threadSleep(PageConstants.WAIT_ONE);
+				
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-				WebElement submitNewPassButton = driver.findElement(By.xpath("//input[@type='submit']"));
-				submitNewPassButton.click();
+				// Wait for the button to be visible and clickable
+			    
+
+				WebElement submitNewPassButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='submit']")));
+
+				// Scroll into view using JavaScript
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", submitNewPassButton);
+
+				// Optional small wait to let rendering catch up
+				Thread.sleep(500);
+
+				// Click via JavaScript if still not interactable
+				
+				
+				
+				try {
+				    wait.until(ExpectedConditions.elementToBeClickable(submitNewPassButton)).click();
+				} catch (ElementNotInteractableException e) {
+				    System.out.println("Fallback to JS click due to headless issues");
+				    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", submitNewPassButton);
+				}
+
+				
 				
 				threadSleep(PageConstants.WAIT_ONE);
 				
@@ -114,9 +138,29 @@ public class SelfAssessmentTest extends BaseTest {
 				
 				threadSleep(PageConstants.WAIT_ONE);
 				
-				// Using value attribute in XPath
-				WebElement submitUpdateButton = driver.findElement(By.xpath("//input[@value='Submit']"));
-				submitUpdateButton.click();
+				
+
+				// Wait for the button to be visible and clickable
+			    
+
+				WebElement submitNewPassButton2 = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='submit']")));
+
+				// Scroll into view using JavaScript
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", submitNewPassButton2);
+
+				// Optional small wait to let rendering catch up
+				Thread.sleep(500);
+
+				// Click via JavaScript if still not interactable
+				
+				
+				
+				try {
+				    wait.until(ExpectedConditions.elementToBeClickable(submitNewPassButton2)).click();
+				} catch (ElementNotInteractableException e) {
+				    System.out.println("Fallback to JS click due to headless issues");
+				    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", submitNewPassButton2);
+				}
 				
 				//login.YopmailLoginApplication(prop.getpassword());
 				
